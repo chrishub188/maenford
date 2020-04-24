@@ -1,0 +1,7 @@
+{
+  "name": "Maenford",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
