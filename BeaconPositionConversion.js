@@ -1,3 +1,21 @@
+/* Davids very very bad code
+I don't know how to make functions private so here's what you call
+
+BeaconMQTTHandler(MQTT Message)
+Send it beacon MQTT messages and it will add the beacon to the list or update things
+
+ContainerPosition(ContainerID)
+Returns the [Xposition, Yposition, Angle] of a container using the container ID
+The X and Y position are in meters and the Angle is the angle in degrees to the x axis
+
+RemoveContainer(ContainerID)
+Removes a containerID from the list of containers to track
+
+AddContainer(ContainerID)
+Adds a containerID to a list of containers to track
+
+*/
+
 //Anchor variables
 var AnchorLong, AnchorLat;
 AnchorLong = 0;
@@ -20,15 +38,27 @@ class Beacon {
         this.y = 0;
     }
 
-    //Set the long and lat position of the beacon
-    set setPosition(long, lat){
-        this.long = long;
-        this.lat = lat;
+    //Set the longitudinal position of the beacon
+    /**
+     * @param {Number} long_new
+     */
+    setLong(long_new){
+        this.long = long_new;
+        
+    }
+    //Set the latitudinal position of the beacon
+    /**
+     * @param {Number} lat_new
+     */
+    setLat(lat_new){
+        this.lat = lat_new;
     }
 
-    //Update the container associated with the beacon
-    set setContainer(container){
-        this.container = container
+    /**
+     * @param {String} container_new
+     */
+    setContainer(container_new){
+        this.container = container_new
     }
 
     //Returns the current container associated with this beacon
@@ -38,20 +68,20 @@ class Beacon {
 
     //Returns the current beacon ID
     get getID(){
-        return this.ID;
+        return this.id;
     }
 
     //Get X and Y position relative to the anchor beacon
     get positionX(){
         //Update the x position
-        this.x = 2*R*Math.cos((this.lat + AnchorLat)/2)*Math.sin((this.long - AnchorLong)/2);
+        this.x = 2*R*Math.cos((this.lat + AnchorLat)/2)*Math.sin(Math.abs((this.long - AnchorLong))/2);
 
         //return the x position
         return this.x
     }
     get positionY(){
         //Update the y position
-        this.y = 2*R*Math.sin((this.lat-AnchorLat)/2)
+        this.y = 2*R*Math.sin(Math.abs((this.lat-AnchorLat))/2)
 
         //return the y position
         return this.y;
@@ -59,7 +89,8 @@ class Beacon {
 }
 
 
-//Call whenever new beacon data is received in MQTT
+//Called by BeaconMQTTHandler
+//Updates the beacon data in the list
 function UpdateBeacon(MQTTINPUT){
     //Split input into sections basec on commas
     var MQTTData = MQTTINPUT.split(',');
@@ -73,7 +104,7 @@ function UpdateBeacon(MQTTINPUT){
     //The anchor will have an ID A0
     if(BeaconID == "A0"){
         AnchorLong = BeaconLong;
-        AnchorLat = AnchorLat;
+        AnchorLat = BeaconLat;
     }
     //Otherwise, what was detected must have been a beacon
     else{
@@ -83,13 +114,14 @@ function UpdateBeacon(MQTTINPUT){
             //Check if the beacon ID matches
             if(BeaconList[i].getID == BeaconID){
                 //If it matches, update the long and lat
-                BeaconList[i].setPosition(BeaconLong, BeaconLat);
+                BeaconList[i].setLong(BeaconLong);
+                BeaconList[i].setLat(BeaconLat);
                 contains = true;
             }
         } 
         //If no beacon matches, add it to the list
         if(contains == false){
-            newBeacon = new Beacon(BeaconID, BeaconLong, BeaconLat);
+            let newBeacon = new Beacon(BeaconID, BeaconLong, BeaconLat);
             BeaconList.push(newBeacon);
 
             //Issue a data received MQTT to the beacon
@@ -99,6 +131,7 @@ function UpdateBeacon(MQTTINPUT){
     }
 }
 
+//Called by beacon MQTT handler
 //Pairs a beacon with a container
 function PairContainer(MQTTINPUT){
     //Split input into sections basec on commas
@@ -119,6 +152,7 @@ function PairContainer(MQTTINPUT){
             //Issue a data received MQTT to the beacon
             var ReturnMQTT = 'ID';
             ReturnMQTT = ReturnMQTT.concat(',', BeaconID, 'ContainerPaired');
+            BeaconSendMQTT(ReturnMQTT);
         }
     }
 }
@@ -126,7 +160,7 @@ function PairContainer(MQTTINPUT){
 //Returns the X and Y position of a container and angle orientation
 //Takes the container ID as input
 function ContainerPosition(ContainerID){
-    var x1, x2, y1, y2, num, angle = 0;
+    var x1=0, x2=0, y1=0, y2=0, num=0, angle = 0;
     //If there are two, return the average xy and angle
     for(i=0; i<BeaconList.length; ++i){
         if(BeaconList[i].container == ContainerID){
@@ -152,7 +186,7 @@ function ContainerPosition(ContainerID){
     else{
         xavg = (x1+x2)/2;
         yavg = (y1+y2)/2;
-        angle * Math.atan2(y2-y1, x2-x1) * 180 / Math.PI;
+        angle = Math.atan2(y2-y1, x2-x1) * 180 / Math.PI;
         return [xavg, yavg, angle];
     }
 }
@@ -169,3 +203,46 @@ function RemoveContainer(ContainerID){
         }
     }
 }
+
+//Adds a container to the list of being tracked
+//Sends an MQTT message with this ID to the beacons
+function AddContainer(ContainerID){
+    //TODO
+}
+
+//Takes an MQTT command and sends it to the appropriate section
+//Does not send if the command does not match
+function BeaconMQTTHandler(MQTTINPUT){
+    //This code is initializing or sending new position data for a beacon
+    if (MQTTINPUT.includes("ID") && MQTTINPUT.includes("Long") && MQTTINPUT.includes("Lat")){
+        UpdateBeacon(MQTTINPUT);
+    }
+    else if(MQTTINPUT.includes("ID") && MQTTINPUT.includes("Cont")){
+        PairContainer(MQTTINPUT)
+    }
+}
+
+//Sends an MQTT command back to beacon
+function BeaconSendMQTT(MQTTMessage){
+    //TODO
+}
+
+//Test code
+/*
+MQTTAnchor = "ID,A0,Lat,37.427340,Long,-122.169748"
+MQTTString1 = "ID,B1,Lat,37.427335,Long,-122.169848";
+MQTTString2 = "ID,B1,Cont,MC-7410";
+MQTTString3 = "ID,B2,Lat,37.427330,Long,-122.169842";
+MQTTString4 = "ID,B2,Cont,MC-7410";
+
+BeaconMQTTHandler(MQTTAnchor);
+BeaconMQTTHandler(MQTTString1);
+BeaconMQTTHandler(MQTTString2);
+BeaconMQTTHandler(MQTTString3);
+BeaconMQTTHandler(MQTTString4);
+
+
+console.log(BeaconList[0]);
+console.log(BeaconList[1]);
+console.log(ContainerPosition("MC-7410"));
+*/
