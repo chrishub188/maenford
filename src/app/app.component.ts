@@ -42,6 +42,7 @@ export class AppComponent implements OnInit, OnDestroy  {
     this.msg = ''
   }
   logMsg(message): void {
+    BeaconMQTTHandler(message);
     this.msglog.nativeElement.innerHTML += '<br><hr>' + message;
   }
 

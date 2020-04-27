@@ -74,14 +74,14 @@ class Beacon {
     //Get X and Y position relative to the anchor beacon
     get positionX(){
         //Update the x position
-        this.x = 2*R*Math.cos((this.lat + AnchorLat)/2)*Math.sin(Math.abs((this.long - AnchorLong))/2);
+        this.x = 2*R*Math.cos((this.lat + AnchorLat)/2)*Math.sin(((this.long - AnchorLong))/2);
 
         //return the x position
         return this.x
     }
     get positionY(){
         //Update the y position
-        this.y = 2*R*Math.sin(Math.abs((this.lat-AnchorLat))/2)
+        this.y = 2*R*Math.sin(((this.lat-AnchorLat))/2)
 
         //return the y position
         return this.y;
