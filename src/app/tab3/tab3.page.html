@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 3
+      MQTT-log
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,9 +9,31 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
+      <ion-title size="large">MQTT-log</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+  <div style="margin: 20px;">
+    <table>
+      <tr>
+        <td>Topic: </td>
+        <td><input [(ngModel)]="topicname" type="text" /></td>
+        <td><button type="button" (click)="subscribeNewTopic()">Subscribe Topic</button></td>
+      </tr>
+      <tr>
+        <td>Message: </td>
+        <td><input [(ngModel)]="msg" type="text" /></td>
+        <td><button type="button" (click)="sendmsg()">Send</button></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>&nbsp;&nbsp;<button type="button" (click)="clear()">Clear Log</button></td>
+        <td></td>
+      </tr>
+    </table>
+    <br /><br />
+    <div #msglog>
+    </div>
+  </div>
+
 </ion-content>
