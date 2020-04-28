@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "mqtt-test"
+    }
+  },
+  "defaultProject": "mqtt-test",
+  "cli": {
+    "analytics": false
+  }
 }

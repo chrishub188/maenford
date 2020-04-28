@@ -1,18 +1,34 @@
-/* Davids very very bad code
+/* Davids very very ugly code
 I don't know how to make functions private so here's what you call
+Plz dont call the other functions
+-------------------------------------------------------------------------------
 
-BeaconMQTTHandler(MQTT Message)
-Send it beacon MQTT messages and it will add the beacon to the list or update things
+BeaconMQTTHandler(MQTT Message)====================================
+Send it beacon/output MQTT messages and it will add the beacon to the list or update things
 
-ContainerPosition(ContainerID)
+ContainerPosition(ContainerID)===================================
 Returns the [Xposition, Yposition, Angle] of a container using the container ID
 The X and Y position are in meters and the Angle is the angle in degrees to the x axis
 
-RemoveContainer(ContainerID)
+RemoveContainer(ContainerID)=======================================
 Removes a containerID from the list of containers to track
 
-AddContainer(ContainerID)
+AddContainer(ContainerID)=========================================
 Adds a containerID to a list of containers to track
+
+=========How it all works:=========================
+You add containers that you want to track by calling AddContainer. The beacon messages are handled
+using BeaconMQTTHandler which adds new beacons to the list and updates position data of previous
+beacons. Once a brand new beacon is paired, the software sends it our list of availbable containers
+via MQTT.Once the beacon has detected one of the container IDs from the list, it will send the name 
+of the beacon and paired container via MQTT, handled by BeaconMQTTHandler, to pair them.
+
+To get the position of a container, you call ContainerPosition with the name of the container. Each
+container should have 2 beacons associated with it and this returns the average position between them
+and the estimated angle of the container.
+
+If there is a container that no longer needs to be tracked, you can call RemoveContainer to remove
+the container from those being tracked and remove the associate beacon.
 
 */
 
@@ -26,6 +42,9 @@ var R = 6.371 * 10^6;
 
 //Array of beacons
 var BeaconList = new Array();
+
+//Array of currently being tracked container IDs
+var ContainerList = new Array();
 
 //Class that stores data on each on the beacons
 class Beacon {
@@ -124,9 +143,13 @@ function UpdateBeacon(MQTTINPUT){
             let newBeacon = new Beacon(BeaconID, BeaconLong, BeaconLat);
             BeaconList.push(newBeacon);
 
-            //Issue a data received MQTT to the beacon
+            //Issue a list of all valid containers to the beacon
             var ReturnMQTT = 'ID';
-            ReturnMQTT = ReturnMQTT.concat(',', BeaconID, 'BeaconAdded');
+            ReturnMQTT = ReturnMQTT.concat(',', BeaconID, 'ContainerList');
+            for(j=0; j<ContainerList.length; ++i){
+                ReturnMQTT = RETURNMQTT.concat(',',ContainerList[j]);
+            }
+            BeaconSendMQTT(ReturnMQTT);
         }
     }
 }
@@ -149,7 +172,8 @@ function PairContainer(MQTTINPUT){
             //Set the containerID
             BeaconList[i].setContainer(ContainerID);
 
-            //Issue a data received MQTT to the beacon
+            //Issue a list of containers for pairing to the beacon
+            //TODO
             var ReturnMQTT = 'ID';
             ReturnMQTT = ReturnMQTT.concat(',', BeaconID, 'ContainerPaired');
             BeaconSendMQTT(ReturnMQTT);
@@ -202,12 +226,28 @@ function RemoveContainer(ContainerID){
             --i;
         }
     }
+    //Remove the container from the list
+    for(i=0; i<ContainerList.length; ++i){
+        if(ContainerList[i] == ContainerID){
+            ContainerList.splice(i,1);
+            --i;
+        }
+    }
 }
 
 //Adds a container to the list of being tracked
-//Sends an MQTT message with this ID to the beacons
 function AddContainer(ContainerID){
-    //TODO
+    var DoesNotContain = true;
+    //Check if the list currently contains the container
+    //Only add the container if it is not here
+    for(i=0; i<ContainerList.length; ++i){
+        if(ContainerList[i] == ContainerID){
+            DoesNotContain = false;
+        }
+    }
+    if(DoesNotContain){
+        ContainerList.push(ContainerID);
+    }
 }
 
 //Takes an MQTT command and sends it to the appropriate section
