@@ -26,7 +26,7 @@ export class MapComponent implements OnInit, AfterViewInit {
     // Create map
     this.map = L.map('map', {
       center: [39.8282, -98.5795],
-      zoom: 12,
+      zoom: 25,
     });
     // Add  open streetmap map layer to the map
     this.tiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {

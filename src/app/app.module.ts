@@ -14,7 +14,8 @@ import {MatTabsModule} from '@angular/material/tabs';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatCardModule} from '@angular/material/card';
-import {MatCheckboxModule} from '@angular/material/checkbox'; 
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatExpansionModule} from '@angular/material/expansion';  
 
 /*Components to link in the menu-bar, each component represents the content below the top menu-bar */
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -49,7 +50,8 @@ import {MatTableModule} from '@angular/material/table';
     MatGridListModule,
     MatCardModule,
     MatTableModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatExpansionModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -3,4 +3,3 @@ enum containertype {
     BASKET,
     PALET
 }
-
