@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name maenford_components)(type Legacy)(uri ${KIPRJMOD}/maenford_components.lib)(options "")(descr ""))
+)
