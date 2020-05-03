@@ -17,11 +17,11 @@
         <!-- Insert embeded Angular list with items after test !!!!!-->
         <td mat-cell *matCellDef="let element" > 
     <mat-expansion-panel  > 
-    <mat-expansion-panel-header>
+      <mat-expansion-panel-header>
       <mat-panel-description>
-      Inventory 
+      Inventory of {{element.id}}
     </mat-panel-description>
-    </mat-expansion-panel-header>
+    </mat-expansion-panel-header> 
     <p *ngFor="let tille of convertCon(element)">{{tille.name}}</p>
   </mat-expansion-panel>
   </td>
