@@ -22,7 +22,8 @@
       Inventory of {{element.id}}
     </mat-panel-description>
     </mat-expansion-panel-header> 
-    <p *ngFor="let tille of convertCon(element)">{{tille.name}}</p>
+    <!-- <ng-template matExpansionPanelContent *ngFor="let tille of convertCon(element)">{{tille.name}}</ng-template> --> <!--content initialisation when panel is opened-->>
+   <p *ngFor="let tille of convertCon(element)">{{tille.name}}</p>  <!--content initialization at the beginning-->
   </mat-expansion-panel>
   </td>
     </ng-container>
