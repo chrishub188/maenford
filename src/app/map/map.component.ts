@@ -47,7 +47,7 @@ export class MapComponent implements OnInit, AfterViewInit {
     const imageUrl = 'assets/img/rig_plan_01.svg';
     const imageBounds: LatLngBoundsExpression = [[56.465552, -2.927335], [56.464787, -2.925404]];
     const image = L.imageOverlay(imageUrl, imageBounds).addTo(this.map);
-    this.map.flyTo([56.465130, -2.926664], 18);
+    this.map.setView([56.465130, -2.926664], 25);
   }
 
 }
