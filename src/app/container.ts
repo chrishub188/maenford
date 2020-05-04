@@ -6,9 +6,8 @@ export interface ContainerElement{
     recipient:string;  //where does the content goes after (for waste)   
   }
 export class Container{
-    datasourcetemp=[];
-    value=0;
     Quelle=[];
+    value=0;
 
     Containernull:ContainerElement[]=[
     {name: 'Empty', itemId:0 , amount:"", weight:"", recipient:""},
@@ -58,8 +57,7 @@ export class Container{
     {name: '1 ea Pup Joint, 6 5/8" REG Box x XT 57 Pin', itemId:null , amount:"2", weight:"", recipient:""},
   ];
   
-  
-   Container589446:ContainerElement[]=[
+    Container589446:ContainerElement[]=[
     {name: '1 set Ardyne div. Equipment', itemId:null , amount:"1", weight:"", recipient:""},
   ];
   
@@ -123,134 +121,107 @@ export class Container{
     this.value=needed;
     switch(this.value){
       case -1:{
-        this.datasourcetemp=this.FoodContainerEmpty;
-        this.Quelle = this.datasourcetemp;
+        this.Quelle=this.FoodContainerEmpty;
         break;
       }
         case 0:{
-        this.datasourcetemp=this.Containernull;
-        this.Quelle = this.datasourcetemp;
+        this.Quelle=this.Containernull; 
         break;
       }
       case 588519:{
-        this.datasourcetemp=this.Container588519;
-        this.Quelle = this.datasourcetemp;
+        this.Quelle=this.Container588519;
         break;
       }
       case 576414:{
-        this.datasourcetemp=this.Containernull;
-        this.Quelle = this.datasourcetemp;
+        this.Quelle=this.Containernull; 
         break;
       }
       case 589985:{
-        this.datasourcetemp=this.Container589985;
-        this.Quelle = this.datasourcetemp;      
+        this.Quelle=this.Container589985;       
         break;
       }
       case 589992:{
-        this.datasourcetemp=this.Container589992;
-        this.Quelle = this.datasourcetemp;
+        this.Quelle=this.Container589992; 
         break;
       }
-        
       case 589987:{
-        this.datasourcetemp=this.Container589987;
-        this.Quelle = this.datasourcetemp;
+        this.Quelle=this.Container589987; 
         break;
       }
       case 589988:{
-        this.datasourcetemp=this.Container589988;
-        this.Quelle = this.datasourcetemp;
+        this.Quelle=this.Container589988;
         break;
       }
       case 589989:{
-        this.datasourcetemp=this.Container589989;
-        this.Quelle = this.datasourcetemp;
+        this.Quelle=this.Container589989;
         break;
       }
       case 577228:{
-        this.datasourcetemp=this.Container577228;
-        this.Quelle = this.datasourcetemp;
+        this.Quelle=this.Container577228;
         break;
       }
       case 585895:{
-        this.datasourcetemp=this.Container585895;
-        this.Quelle = this.datasourcetemp;
+        this.Quelle=this.Container585895; 
         break;
       }
       case 589446:{
-        this.datasourcetemp=this.Container589446;
-        this.Quelle = this.datasourcetemp;
+        this.Quelle=this.Container589446;
         break;
       }
       case 582064:{
-        this.datasourcetemp=this.Container582064;
-        this.Quelle = this.datasourcetemp;
+        this.Quelle=this.Container582064; 
         break;
       }
       case 585893:{
-        this.datasourcetemp=this.Container585893;
-        this.Quelle = this.datasourcetemp;
+        this.Quelle=this.Container585893; 
         break;
       }
       case 585894:{
-        this.datasourcetemp=this.Container585894;
-        this.Quelle = this.datasourcetemp;
+        this.Quelle=this.Container585894;
         break;
       }
       case 576416:{
-        this.datasourcetemp=this.Container576416;
-        this.Quelle = this.datasourcetemp;
+        this.Quelle=this.Container576416; 
         break;
       }
       case 586440:{
-        this.datasourcetemp=this.Container586440;
-        this.Quelle = this.datasourcetemp;
+        this.Quelle=this.Container586440; 
         break;
       }
       case 589993:{
-        this.datasourcetemp=this.Container589993;
-        this.Quelle = this.datasourcetemp;
+        this.Quelle=this.Container589993; 
         break;
       }
       case579683 :{
-        this.datasourcetemp=this.Container579683;
-        this.Quelle = this.datasourcetemp;
+        this.Quelle=this.Container579683; 
         break;
       }
       case568956 :{
-        this.datasourcetemp=this.Container568956;
-        this.Quelle = this.datasourcetemp;
+        this.Quelle=this.Container568956; 
         break;
       }
       case 580616:{
-        this.datasourcetemp=this.Container580616;
-        this.Quelle = this.datasourcetemp;
+        this.Quelle=this.Container580616;
         break;
       }
       case 583639 :{
-        this.datasourcetemp=this.Container583639;
-        this.Quelle = this.datasourcetemp;
+        this.Quelle=this.Container583639; 
         break;
       }
       case 589289:{
-        this.datasourcetemp=this.Container589289;
-        this.Quelle = this.datasourcetemp;
+        this.Quelle=this.Container589289;
         break;
       }
       case 582067:{
-        this.datasourcetemp=this.Container582067;
-        this.Quelle = this.datasourcetemp;
+        this.Quelle=this.Container582067; 
         break;
       }
       case 589291 :{
-        this.datasourcetemp=this.Container589291;
-        this.Quelle = this.datasourcetemp;
+        this.Quelle=this.Container589291; 
         break;
       }
       case 589292:{
-        this.datasourcetemp=this.Container589292;
-        this.Quelle = this.datasourcetemp;
+        this.Quelle=this.Container589292; 
         break;
       }      
     
