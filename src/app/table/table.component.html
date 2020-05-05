@@ -1,4 +1,4 @@
-<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+<table mat-table [dataSource]="ELEMENT_DATA" class="mat-elevation-z8">
     <!-- Add Checkbox Column !!-->
 
     <!-- ID Column -->
@@ -22,9 +22,8 @@
                         Inventory of {{element.id}}
                     </mat-panel-description>
                 </mat-expansion-panel-header>
-                <!-- <ng-template matExpansionPanelContent *ngFor="let tille of convertCon(element)">{{tille.name}}</ng-template> -->
                 <!--content initialisation when panel is opened-->
-                <p *ngFor="let element"> {{element.content}} </p>
+                <p *ngFor="let tille of element.content" > {{tille}} </p>
                 <!--content initialization at the beginning-->
             </mat-expansion-panel>
         </td>
