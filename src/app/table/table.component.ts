@@ -14,7 +14,9 @@ export class TableComponent implements OnInit {
 
   selectedContainer:ManifestElement;
   ELEMENT_DATA: ManifestElement[];
-  displayedColumns: string[] = ['id', 'containerID', 'content', 'location'];
+  displayedColumns: string[] = ['id', 'containerID', 'content', 'location','type','weight','size','DG','arrival','sender'];
+ // displayedColumns: string[] = ['id', 'containerID', 'content', 'location',];
+ 
   selection = new SelectionModel<ManifestElement>(true, []);
   constructor(private ContainerService: ContainerService,) { }
   

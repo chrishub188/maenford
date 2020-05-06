@@ -10,8 +10,12 @@ export interface ContainerElement{
 export interface ManifestElement  {
   id: number;
   containerID: string;
-  // Should be a Array of something, but depends on the data  !!
   content:any //IN A SEPERAT STRINGS !!
   location: string;
-  //owner:string //owner of the container
+  type:string;
+  weight:string;
+  size:string;
+  DG:string;
+  arrival:string;
+  sender:string;
 }
