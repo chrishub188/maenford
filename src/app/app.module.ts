@@ -25,6 +25,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { MapComponent } from './map/map.component';
 import { TableComponent } from './table/table.component';
 import {MatTableModule} from '@angular/material/table';
+import { MatSort, MatSortModule } from '@angular/material/sort';
 
 
 @NgModule({
@@ -51,7 +52,8 @@ import {MatTableModule} from '@angular/material/table';
     MatCardModule,
     MatTableModule,
     MatCheckboxModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatSortModule
   ],
   providers: [],
   bootstrap: [AppComponent]

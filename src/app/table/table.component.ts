@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { SelectionModel } from '@angular/cdk/collections';
 import { ContainerService } from '../container.service';
 import { ManifestElement } from '../container';
+import { MatTableDataSource } from '@angular/material/table';
 
 
 @Component({
@@ -16,7 +17,6 @@ export class TableComponent implements OnInit {
   ELEMENT_DATA: ManifestElement[];
   displayedColumns: string[] = ['id', 'containerID', 'content', 'location','type','weight','size','DG','arrival','sender'];
  // displayedColumns: string[] = ['id', 'containerID', 'content', 'location',];
- 
   selection = new SelectionModel<ManifestElement>(true, []);
   constructor(private ContainerService: ContainerService,) { }
   
