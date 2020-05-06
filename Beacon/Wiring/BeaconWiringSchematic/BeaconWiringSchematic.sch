@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:BeaconWiringSchematic-cache
 EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
@@ -14,7 +15,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L maenford_components:ESP32 U6
+L BeaconWiringSchematic-rescue:ESP32-maenford_components U6
 U 1 1 5EA88EC5
 P 2950 2600
 F 0 "U6" H 2950 3775 50  0000 C CNN
@@ -150,9 +151,9 @@ Wire Wire Line
 Wire Wire Line
 	2350 1850 2050 1850
 Text Label 2050 1750 2    50   ~ 0
-Rx
-Text Label 2050 1850 2    50   ~ 0
 Tx
+Text Label 2050 1850 2    50   ~ 0
+Rx
 Text Label 1100 1000 0    50   ~ 0
 Rx
 Text Label 1100 900  0    50   ~ 0
@@ -265,17 +266,6 @@ F 3 "" H 2450 3400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+3.3V #PWR015
-U 1 1 5EABBC12
-P 2350 2350
-F 0 "#PWR015" H 2350 2200 50  0001 C CNN
-F 1 "+3.3V" V 2365 2478 50  0000 L CNN
-F 2 "" H 2350 2350 50  0001 C CNN
-F 3 "" H 2350 2350 50  0001 C CNN
-	1    2350 2350
-	0    -1   -1   0   
-$EndComp
-$Comp
 L power:+3.3V #PWR018
 U 1 1 5EABC3FE
 P 2700 3600
@@ -373,28 +363,6 @@ Connection ~ 2950 4750
 Wire Wire Line
 	4000 4600 3900 4600
 $Comp
-L power:+3.3V #PWR011
-U 1 1 5EACD8C5
-P 1950 650
-F 0 "#PWR011" H 1950 500 50  0001 C CNN
-F 1 "+3.3V" V 1965 778 50  0000 L CNN
-F 2 "" H 1950 650 50  0001 C CNN
-F 3 "" H 1950 650 50  0001 C CNN
-	1    1950 650 
-	0    -1   -1   0   
-$EndComp
-$Comp
-L power:+3.3V #PWR02
-U 1 1 5EACE28D
-P 1100 1100
-F 0 "#PWR02" H 1100 950 50  0001 C CNN
-F 1 "+3.3V" V 1115 1228 50  0000 L CNN
-F 2 "" H 1100 1100 50  0001 C CNN
-F 3 "" H 1100 1100 50  0001 C CNN
-	1    1100 1100
-	0    1    1    0   
-$EndComp
-$Comp
 L Connector:Conn_01x01_Male J2
 U 1 1 5EAD98B8
 P 1250 2400
@@ -430,10 +398,8 @@ F 3 "" H 2350 2050 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 NoConn ~ 2350 1950
-Text Label 3550 1650 0    50   ~ 0
-ADC2_CH1
 Text Label 3600 4250 0    50   ~ 0
-ADC2_CH1
+ADC
 Text Label 3550 1750 0    50   ~ 0
 SCL
 Text Label 3550 1850 0    50   ~ 0
@@ -533,10 +499,6 @@ F 3 "" H 4750 1800 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	4150 2150 3550 2150
-Wire Wire Line
-	3550 2050 4150 2050
-Wire Wire Line
-	4150 2050 4150 1800
 $Comp
 L Regulator_Linear:MCP1826S U5
 U 1 1 5EAE89B6
@@ -608,5 +570,88 @@ F 2 "" H 1350 2850 50  0001 C CNN
 F 3 "" H 1350 2850 50  0001 C CNN
 	1    1350 2850
 	0    -1   -1   0   
+$EndComp
+$Comp
+L power:VCC #PWR?
+U 1 1 5EADDAF8
+P 1100 1100
+F 0 "#PWR?" H 1100 950 50  0001 C CNN
+F 1 "VCC" V 1117 1228 50  0000 L CNN
+F 2 "" H 1100 1100 50  0001 C CNN
+F 3 "" H 1100 1100 50  0001 C CNN
+	1    1100 1100
+	0    1    1    0   
+$EndComp
+$Comp
+L power:VCC #PWR?
+U 1 1 5EADE699
+P 1950 650
+F 0 "#PWR?" H 1950 500 50  0001 C CNN
+F 1 "VCC" V 1968 777 50  0000 L CNN
+F 2 "" H 1950 650 50  0001 C CNN
+F 3 "" H 1950 650 50  0001 C CNN
+	1    1950 650 
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:VCC #PWR?
+U 1 1 5EADF293
+P 2750 2900
+F 0 "#PWR?" H 2750 2750 50  0001 C CNN
+F 1 "VCC" V 2767 3028 50  0000 L CNN
+F 2 "" H 2750 2900 50  0001 C CNN
+F 3 "" H 2750 2900 50  0001 C CNN
+	1    2750 2900
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:Conn_01x01_Male J?
+U 1 1 5EAE0B69
+P 2550 2900
+F 0 "J?" H 2658 3081 50  0000 C CNN
+F 1 "Header Pin" H 2658 2990 50  0000 C CNN
+F 2 "" H 2550 2900 50  0001 C CNN
+F 3 "~" H 2550 2900 50  0001 C CNN
+	1    2550 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x01_Male J?
+U 1 1 5EAE1404
+P 2550 2700
+F 0 "J?" H 2658 2881 50  0000 C CNN
+F 1 "Header Pin" H 2658 2790 50  0000 C CNN
+F 2 "" H 2550 2700 50  0001 C CNN
+F 3 "~" H 2550 2700 50  0001 C CNN
+	1    2550 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4150 1800 4150 1650
+Wire Wire Line
+	4150 1650 3550 1650
+Text Label 3550 2050 0    50   ~ 0
+ADC
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5EAE5915
+P 2350 2350
+F 0 "#PWR?" H 2350 2200 50  0001 C CNN
+F 1 "+3.3V" H 2365 2523 50  0000 C CNN
+F 2 "" H 2350 2350 50  0001 C CNN
+F 3 "" H 2350 2350 50  0001 C CNN
+	1    2350 2350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5EAE628F
+P 2750 2700
+F 0 "#PWR?" H 2750 2550 50  0001 C CNN
+F 1 "+3.3V" H 2765 2873 50  0000 C CNN
+F 2 "" H 2750 2700 50  0001 C CNN
+F 3 "" H 2750 2700 50  0001 C CNN
+	1    2750 2700
+	0    1    1    0   
 $EndComp
 $EndSCHEMATC
