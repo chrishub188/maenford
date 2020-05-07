@@ -16,7 +16,10 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {MatCardModule} from '@angular/material/card';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatExpansionModule} from '@angular/material/expansion';  
-
+import{MatFormFieldModule,} from '@angular/material/form-field'
+import {MAT_FORM_FIELD_DEFAULT_OPTIONS} from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import {HttpClientModule} from '@angular/common/http';
 /*Components to link in the menu-bar, each component represents the content below the top menu-bar */
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { InventoryComponent } from './inventory/inventory.component';
@@ -26,6 +29,8 @@ import { MapComponent } from './map/map.component';
 import { TableComponent } from './table/table.component';
 import {MatTableModule} from '@angular/material/table';
 import { MatSort, MatSortModule } from '@angular/material/sort';
+import { ExampletableComponent } from './exampletable/exampletable.component';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 
 @NgModule({
@@ -36,7 +41,8 @@ import { MatSort, MatSortModule } from '@angular/material/sort';
     ManifestComponent,
     NavbarComponent,
     MapComponent,
-    TableComponent
+    TableComponent,
+    ExampletableComponent
   ],
   imports: [
     BrowserModule,
@@ -53,9 +59,14 @@ import { MatSort, MatSortModule } from '@angular/material/sort';
     MatTableModule,
     MatCheckboxModule,
     MatExpansionModule,
-    MatSortModule
+    MatSortModule,
+    MatFormFieldModule,
+    MatPaginatorModule,
+    MatInputModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [{ provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { appearance: 'fill' } },
+],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

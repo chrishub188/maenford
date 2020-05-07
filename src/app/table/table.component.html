@@ -1,81 +1,69 @@
-<mat-expansion-panel>
-    <mat-expansion-panel-header>
-      <mat-panel-title >
-        Filter
-      </mat-panel-title>
-      <mat-panel-description>
-      </mat-panel-description>
-    </mat-expansion-panel-header>
-    <mat-expansion-panel>
-        <mat-expansion-panel-header>
-          <mat-panel-title>
-            TYPE
-          </mat-panel-title>
-          <mat-panel-description>
-          </mat-panel-description>
-        </mat-expansion-panel-header>
-    </mat-expansion-panel>
-</mat-expansion-panel>
+<mat-form-field>
+    <input matInput type="text" (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+</mat-form-field>
+<div class="mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource" matSort>
+        <!-- Add Checkbox Column !!-->
 
-<table mat-table [dataSource]="ELEMENT_DATA" matSort class="mat-elevation-z8">
-    <!-- Add Checkbox Column !!-->
-
-    <!-- ID Column -->
-    <ng-container matColumnDef="id">
-        <th mat-header-cell *matHeaderCellDef width=13%> ID </th>
-        <td mat-cell *matCellDef="let element" class="cell"> {{element.id}} </td>
-    </ng-container>
-    <!-- Container ID Column -->
-    <ng-container matColumnDef="containerID">
-        <th mat-header-cell *matHeaderCellDef width=20%> Container ID </th>
-        <td mat-cell *matCellDef="let element" class="cell"> {{element.containerID}} </td>
-    </ng-container>
-    <!-- Content Column -->
-    <ng-container matColumnDef="content">
-        <th mat-header-cell *matHeaderCellDef width=40%> Content </th>
-        <!-- Insert embeded Angular list with items after test !!!!!-->
-        <td mat-cell *matCellDef="let element" class="cell">
-            <mat-expansion-panel class="mat-elevation-z0" >
-                <mat-expansion-panel-header>
-                    <mat-panel-description>
-                        Inventory of {{element.id}}
-                    </mat-panel-description>
-                </mat-expansion-panel-header>
-                <!--content initialisation when panel is opened-->
-                <p *ngFor="let tille of element.content" > {{tille.name}} </p>
-                <!--content initialization at the beginning-->
-            </mat-expansion-panel>
-        </td>
-    </ng-container>
-    <ng-container matColumnDef="location">
-        <th mat-header-cell *matHeaderCellDef width=4%> Location </th>
-        <td mat-cell *matCellDef="let element" class="cell"> {{element.location}} </td>
-    </ng-container>
-    <ng-container matColumnDef="type">
-        <th mat-header-cell *matHeaderCellDef width=4%> Type </th>
-        <td mat-cell *matCellDef="let element" class="cell"> {{element.type}} </td>
-    </ng-container>
-    <ng-container matColumnDef="weight">
-        <th mat-header-cell *matHeaderCellDef width=4% > Weight </th>
-        <td mat-cell *matCellDef="let element" class="cell"> {{element.weight}} </td>
-    </ng-container>
-    <ng-container matColumnDef="size">
-        <th mat-header-cell *matHeaderCellDef width=4%> Size </th>
-        <td mat-cell *matCellDef="let element" class="cell"> {{element.size}} </td>
-    </ng-container>
-    <ng-container matColumnDef="DG">
-        <th mat-header-cell *matHeaderCellDef width=4%>DG </th>
-        <td mat-cell *matCellDef="let element" class="cell"> {{element.DG}} </td>
-    </ng-container>
-    <ng-container matColumnDef="arrival">
-        <th mat-header-cell *matHeaderCellDef width=4%> Arrival </th>
-        <td mat-cell *matCellDef="let element" class="cell"> {{element.arrival}} </td>
-    </ng-container>
-    <ng-container matColumnDef="sender">
-        <th mat-header-cell *matHeaderCellDef width=4% > Sender </th>
-        <td mat-cell *matCellDef="let element" class="cell"> {{element.sender}} </td>
-    </ng-container>
-    <!--Header row-->
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        <!-- ID Column -->
+        <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header width=13%> ID </th>
+            <td mat-cell *matCellDef="let element" class="cell"> {{element.id}} </td>
+        </ng-container>
+        <!-- Container ID Column -->
+        <ng-container matColumnDef="containerID">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header width=20%> Container ID </th>
+            <td mat-cell *matCellDef="let element" class="cell"> {{element.containerID}} </td>
+        </ng-container>
+        <!-- Content Column -->
+        <ng-container matColumnDef="content">
+            <th mat-header-cell *matHeaderCellDef  width=40%> Content </th>
+            <!-- Insert embeded Angular list with items after test !!!!!-->
+            <td mat-cell *matCellDef="let element" class="cell">
+                <mat-expansion-panel class="mat-elevation-z0">
+                    <mat-expansion-panel-header>
+                        <mat-panel-description>
+                            Inventory of {{element.id}}
+                        </mat-panel-description>
+                    </mat-expansion-panel-header>
+                    <!--content initialisation when panel is opened-->
+                    <p *ngFor="let tille of element.content"> {{tille.name}} </p>
+                    <!--content initialization at the beginning-->
+                </mat-expansion-panel>
+            </td>
+        </ng-container>
+        <ng-container matColumnDef="location">
+            <th mat-header-cell *matHeaderCellDef  mat-sort-header width=10%> Location </th>
+            <td mat-cell *matCellDef="let element" class="cell"> {{element.location}} </td>
+        </ng-container>
+        <ng-container matColumnDef="type">
+            <th mat-header-cell *matHeaderCellDef  mat-sort-header width=13%> Type </th>
+            <td mat-cell *matCellDef="let element" class="cell"> {{element.type}} </td>
+        </ng-container>
+        <ng-container matColumnDef="weight">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header width=13%> Weight </th>
+            <td mat-cell *matCellDef="let element" class="cell"> {{element.weight}} </td>
+        </ng-container>
+        <ng-container matColumnDef="size">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header width=13%> Size </th>
+            <td mat-cell *matCellDef="let element" class="cell"> {{element.size}} </td>
+        </ng-container>
+        <ng-container matColumnDef="DG">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header width=13%>DG </th>
+            <td mat-cell *matCellDef="let element" class="cell"> {{element.DG}} </td>
+        </ng-container>
+        <ng-container matColumnDef="arrival">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header width=13%> Arrival </th>
+            <td mat-cell *matCellDef="let element" class="cell"> {{element.arrival}} </td>
+        </ng-container>
+        <ng-container matColumnDef="sender">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header width=13%> Sender </th>
+            <td mat-cell *matCellDef="let element" class="cell"> {{element.sender}} </td>
+        </ng-container>
+        <!--Header row-->
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
 </table>
+    
+</div>
