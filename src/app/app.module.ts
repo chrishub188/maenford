@@ -17,11 +17,14 @@ import {MatDividerModule} from '@angular/material/divider';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatCardModule} from '@angular/material/card';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+
 import {MatExpansionModule} from '@angular/material/expansion';
 import {OverlayModule} from '@angular/cdk/overlay';
 import {MatSidenavModule} from '@angular/material/sidenav';
-
-
+import {MatFormFieldModule,} from '@angular/material/form-field'
+import {MAT_FORM_FIELD_DEFAULT_OPTIONS} from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import {HttpClientModule} from '@angular/common/http';
 
 /*Components to link in the menu-bar, each component represents the content below the top menu-bar */
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -31,6 +34,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { MapComponent } from './map/map.component';
 import { TableComponent } from './table/table.component';
 import {MatTableModule} from '@angular/material/table';
+
 import { MqttComponent } from './mqtt/mqtt.component';
 
 // MQTT imports and settings
@@ -40,6 +44,11 @@ export const MQTT_SERVICE_OPTIONS: IMqttServiceOptions = {
   port: 9001,
   path: '/mqtt'
 };
+
+import { MatSort, MatSortModule } from '@angular/material/sort';
+import { ExampletableComponent } from './exampletable/exampletable.component';
+import { MatPaginatorModule } from '@angular/material/paginator';
+
 
 
 @NgModule({
@@ -51,7 +60,9 @@ export const MQTT_SERVICE_OPTIONS: IMqttServiceOptions = {
     NavbarComponent,
     MapComponent,
     TableComponent,
-    MqttComponent
+    MqttComponent,
+    ExampletableComponent
+
   ],
   imports: [
     MqttModule.forRoot(MQTT_SERVICE_OPTIONS),
@@ -70,10 +81,14 @@ export const MQTT_SERVICE_OPTIONS: IMqttServiceOptions = {
     MatTableModule,
     MatCheckboxModule,
     MatExpansionModule,
-    OverlayModule,
-    MatSidenavModule
+    MatSortModule,
+    MatFormFieldModule,
+    MatPaginatorModule,
+    MatInputModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [{ provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { appearance: 'fill' } },
+],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -50,7 +50,7 @@ var ContainerList = new Array();
 class Beacon {
     constructor(ID, long, lat){
         this.id = ID;
-        this.container = null;
+        this.container = undefined;
         this.long = long;
         this.lat = lat;
         this.x = 0;

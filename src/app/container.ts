@@ -10,7 +10,7 @@ export interface ContainerElement{
 export interface ManifestElement  {
   id: number;
   containerID: string;
-  content:any //IN A SEPERAT STRINGS !!
+  content:ContainerElement[] //IN A SEPERAT STRINGS !!
   location: string;
   type:string;
   weight:string;
