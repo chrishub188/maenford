@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from "@angular/forms";
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,7 +17,11 @@ import {MatDividerModule} from '@angular/material/divider';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatCardModule} from '@angular/material/card';
 import {MatCheckboxModule} from '@angular/material/checkbox';
-import {MatExpansionModule} from '@angular/material/expansion';  
+import {MatExpansionModule} from '@angular/material/expansion';
+import {OverlayModule} from '@angular/cdk/overlay';
+import {MatSidenavModule} from '@angular/material/sidenav';
+
+
 
 /*Components to link in the menu-bar, each component represents the content below the top menu-bar */
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -25,6 +31,15 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { MapComponent } from './map/map.component';
 import { TableComponent } from './table/table.component';
 import {MatTableModule} from '@angular/material/table';
+import { MqttComponent } from './mqtt/mqtt.component';
+
+// MQTT imports and settings
+import { MqttModule, IMqttServiceOptions } from 'ngx-mqtt';
+export const MQTT_SERVICE_OPTIONS: IMqttServiceOptions = {
+  hostname: 'localhost',
+  port: 9001,
+  path: '/mqtt'
+};
 
 
 @NgModule({
@@ -35,9 +50,12 @@ import {MatTableModule} from '@angular/material/table';
     ManifestComponent,
     NavbarComponent,
     MapComponent,
-    TableComponent
+    TableComponent,
+    MqttComponent
   ],
   imports: [
+    MqttModule.forRoot(MQTT_SERVICE_OPTIONS),
+    FormsModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
@@ -51,7 +69,9 @@ import {MatTableModule} from '@angular/material/table';
     MatCardModule,
     MatTableModule,
     MatCheckboxModule,
-    MatExpansionModule
+    MatExpansionModule,
+    OverlayModule,
+    MatSidenavModule
   ],
   providers: [],
   bootstrap: [AppComponent]
