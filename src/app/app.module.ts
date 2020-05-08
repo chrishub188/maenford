@@ -49,6 +49,11 @@ import { MatSort, MatSortModule } from '@angular/material/sort';
 import { ExampletableComponent } from './exampletable/exampletable.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
 
+//Import for sidebar
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { SidebarModule } from 'ng-sidebar';
+
+
 
 
 @NgModule({
@@ -61,10 +66,12 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     MapComponent,
     TableComponent,
     MqttComponent,
-    ExampletableComponent
+    ExampletableComponent,
+    SidebarComponent
 
   ],
   imports: [
+    SidebarModule.forRoot(),
     MqttModule.forRoot(MQTT_SERVICE_OPTIONS),
     FormsModule,
     BrowserModule,
