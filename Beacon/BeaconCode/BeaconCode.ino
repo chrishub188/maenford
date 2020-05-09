@@ -1,7 +1,8 @@
-#include <NMEAGPS.h>
+#define CAMERA_MODEL_AI_THINKER
+//#include <NMEAGPS.h>
 
-#include <SerialTransfer.h>
-#include <ST_CRC.h>
+#include <HardwareSerial.h>
+#include <TinyGPS.h>
 
 #include <PubSubClient.h>
 #include <ESP32HTTPUpdateServer.h>
@@ -25,7 +26,6 @@ const char* RaspberryPiIP = "192.168.4.1";
 #define Button    16
 
 //Global variables
-uint16_t BatteryLevel = 0;
 uint8_t ButtonStatus = 0;
 String Lat = "0";
 String Long = "0";
@@ -44,10 +44,7 @@ EspMQTTClient client{
 };
 
 //Initialize GPS
-NMEAGPS gps;
-//Define the serial port
-#define gpsPort Serial
-#define GPS_PORT_NAME "Serial"
+TinyGPS gps;
   
 void setup() {
   //Initialize ports
@@ -62,17 +59,22 @@ void setup() {
     ContainerList[i] = "";
   }
 
-  //gpsPort.begin(9600);
+  //Initialize serial port for GPS
+  Serial.begin(9600);
 }
 
 void loop() {
+  //Update MQTT
   client.loop();
 
-  BatteryLevel = analogRead(ADC_Input);
-  Serial.println(BatteryLevel);
+  //Update Battery
+  UpdateBatteryLevel();
+
+  //Check button
   ButtonStatus = digitalRead(Button);
-  Serial.println(ButtonStatus);
-  
+  //Serial.println(ButtonStatus);
+
+  //Display wifi and MQTT connection
   digitalWrite(Light_1, HIGH);
   if(client.isWifiConnected()){
     digitalWrite(Light_2, HIGH);
@@ -89,27 +91,66 @@ void loop() {
     digitalWrite(Light_2, LOW);
   }
   delay(1500);
-  
-  //UpdateGPS();
+  digitalWrite(Light_2, LOW);
+
+  //Update the GPS reading
+  UpdateGPS();
+}
+
+//Updates the battery level
+void UpdateBatteryLevel(){
+  //Read the current battery level
+  uint16_t BatteryLevel = analogRead(ADC_Input);
+  //Convert this level to a voltage
+  float Vbatt = 3.3/4095 * (float)BatteryLevel * 1.27;
+  //Convert this voltage to a percent remaining
+  uint8_t BatteryPercent = 0;
+  if(Vbatt >= 4.2) BatteryPercent = 100;
+  else if (Vbatt >= 4.15) BatteryPercent = 95;
+  else if (Vbatt >= 4.11) BatteryPercent = 90;
+  else if (Vbatt >= 4.08) BatteryPercent = 85;
+  else if (Vbatt >= 4.02) BatteryPercent = 80;
+  else if (Vbatt >= 3.98) BatteryPercent = 75;
+  else if (Vbatt >= 3.95) BatteryPercent = 70;
+  else if (Vbatt >= 3.91) BatteryPercent = 65;
+  else if (Vbatt >= 3.87) BatteryPercent = 60;
+  else if (Vbatt >= 3.85) BatteryPercent = 55;
+  else if (Vbatt >= 3.84) BatteryPercent = 50;
+  else if (Vbatt >= 3.82) BatteryPercent = 45;
+  else if (Vbatt >= 3.80) BatteryPercent = 40;
+  else if (Vbatt >= 3.79) BatteryPercent = 35;
+  else if (Vbatt >= 3.77) BatteryPercent = 30;
+  else if (Vbatt >= 3.75) BatteryPercent = 25;
+  else if (Vbatt >= 3.73) BatteryPercent = 20;
+  else if (Vbatt >= 3.71) BatteryPercent = 15;
+  else if (Vbatt >= 3.69) BatteryPercent = 10;
+  else if (Vbatt >= 3.61) BatteryPercent = 5;
+  else BatteryPercent = 0;
+
+  String ReturnMessage = "ID," + BeaconName + ",Batt," + String(BatteryPercent); 
+  //Print the battery status to MQTT 
+  client.publish("beacon/output", ReturnMessage);
 }
 
 //Update the position data from the GPS
 void UpdateGPS(){
   //Read the NEO6m
-  gps_fix fix;
-  while(gps.available(gpsPort)){
-    fix = gps.read();
-  }
+  while (Serial.available()){
+      gps.encode(Serial.read());
+  }    
+  float flat, flon;
+  unsigned long age;
+  gps.f_get_position(&flat, &flon, &age);
+  String LatTemp = String(flat == TinyGPS::GPS_INVALID_F_ANGLE ? 0.0 : flat, 6);
+  String LongTemp = String(flon == TinyGPS::GPS_INVALID_F_ANGLE ? 0.0 : flon, 6);
 
-  //Extract the Lat and Lon from the GPS data
-  //Value in int is scaled 10e7
-  int32_t Lat_int = fix.latitudeL();
-  int32_t Long_int = fix.longitudeL();
-  Lat = String(Lat_int);
-  Long = String(Long_int);
-  
-  //Send the updated data via MQTT
-  UpdateDataMQTT();
+  //Post the information is it is different
+  if((LatTemp != Lat) || (LongTemp != Long)){
+    Lat = LatTemp;
+    Long = LongTemp;
+    //Send the updated data via MQTT
+    UpdateDataMQTT();
+  }
 }
 
 //Command sent when beacon connection is established
