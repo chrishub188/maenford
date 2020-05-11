@@ -34,7 +34,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { MapComponent } from './map/map.component';
 import { TableComponent } from './table/table.component';
 import {MatTableModule} from '@angular/material/table';
-
+import {SidebarComponent} from './sidebar/sidebar.component';
 import { MqttComponent } from './mqtt/mqtt.component';
 
 // MQTT imports and settings
@@ -63,10 +63,8 @@ import {DialogOverviewExampleDialog  } from './table/dialog-overview-exampl
     TableComponent,
     MqttComponent,
     ExampletableComponent,
-    SidebarComponent
+    SidebarComponent,
     DialogOverviewExampleDialog
-    
-
   ],
   imports: [
     MqttModule.forRoot(MQTT_SERVICE_OPTIONS),
