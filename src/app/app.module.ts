@@ -48,12 +48,8 @@ export const MQTT_SERVICE_OPTIONS: IMqttServiceOptions = {
 import { MatSort, MatSortModule } from '@angular/material/sort';
 import { ExampletableComponent } from './exampletable/exampletable.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
-
-// Import for sidebar
-import { SidebarComponent } from './sidebar/sidebar.component';
-import { SidebarModule } from 'ng-sidebar';
-
-
+import {MatDialogModule} from '@angular/material/dialog';
+import {DialogOverviewExampleDialog  } from './table/dialog-overview-example-dialog';
 
 
 @NgModule({
@@ -68,6 +64,8 @@ import { SidebarModule } from 'ng-sidebar';
     MqttComponent,
     ExampletableComponent,
     SidebarComponent
+    DialogOverviewExampleDialog
+    
 
   ],
   imports: [
