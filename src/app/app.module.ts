@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from "@angular/forms";
+import { FormsModule } from '@angular/forms';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -49,7 +49,7 @@ import { MatSort, MatSortModule } from '@angular/material/sort';
 import { ExampletableComponent } from './exampletable/exampletable.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
 
-//Import for sidebar
+// Import for sidebar
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { SidebarModule } from 'ng-sidebar';
 
@@ -71,7 +71,6 @@ import { SidebarModule } from 'ng-sidebar';
 
   ],
   imports: [
-    SidebarModule.forRoot(),
     MqttModule.forRoot(MQTT_SERVICE_OPTIONS),
     FormsModule,
     BrowserModule,
@@ -92,7 +91,8 @@ import { SidebarModule } from 'ng-sidebar';
     MatFormFieldModule,
     MatPaginatorModule,
     MatInputModule,
-    HttpClientModule
+    HttpClientModule,
+    SidebarModule.forRoot(),
   ],
   providers: [{ provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { appearance: 'fill' } },
 ],
