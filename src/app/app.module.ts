@@ -48,7 +48,8 @@ export const MQTT_SERVICE_OPTIONS: IMqttServiceOptions = {
 import { MatSort, MatSortModule } from '@angular/material/sort';
 import { ExampletableComponent } from './exampletable/exampletable.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
-
+import {MatDialogModule} from '@angular/material/dialog';
+import {DialogOverviewExampleDialog  } from './table/dialog-overview-example-dialog';
 
 
 @NgModule({
@@ -61,7 +62,9 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     MapComponent,
     TableComponent,
     MqttComponent,
-    ExampletableComponent
+    ExampletableComponent,
+    DialogOverviewExampleDialog
+    
 
   ],
   imports: [
@@ -85,7 +88,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     MatFormFieldModule,
     MatPaginatorModule,
     MatInputModule,
-    HttpClientModule
+    HttpClientModule,
+    MatDialogModule
   ],
   providers: [{ provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { appearance: 'fill' } },
 ],
