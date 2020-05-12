@@ -10,7 +10,11 @@ mat-expansion-panel{
   width:90%;
 }
 .cell{
-  vertical-align: text-top;
+  text-align: left;
+  font:  16px SF Pro Display;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
 }
 form-field{
   height:14px;
