@@ -43,7 +43,7 @@ import {MatTableModule} from '@angular/material/table';
 import {SidebarComponent} from './sidebar/sidebar.component';
 import { MqttComponent } from './mqtt/mqtt.component';
 import { ExampletableComponent } from './exampletable/exampletable.component';
-
+import { DialogOverviewExampleDialog } from './table/dialog-overview-example-dialog';
 // MQTT imports and settings
 import { MqttModule, IMqttServiceOptions } from 'ngx-mqtt';
 export const MQTT_SERVICE_OPTIONS: IMqttServiceOptions = {
@@ -54,7 +54,6 @@ export const MQTT_SERVICE_OPTIONS: IMqttServiceOptions = {
 
 // Others
 import { SidebarModule } from 'ng-sidebar';
-
 
 @NgModule({
   declarations: [
@@ -68,6 +67,8 @@ import { SidebarModule } from 'ng-sidebar';
     MqttComponent,
     ExampletableComponent,
     SidebarComponent,
+    DialogOverviewExampleDialog,
+    
   ],
   imports: [
     MqttModule.forRoot(MQTT_SERVICE_OPTIONS),
