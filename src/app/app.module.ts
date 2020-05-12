@@ -1,6 +1,8 @@
+// Default imports
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -17,14 +19,17 @@ import {MatDividerModule} from '@angular/material/divider';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatCardModule} from '@angular/material/card';
 import {MatCheckboxModule} from '@angular/material/checkbox';
-
 import {MatExpansionModule} from '@angular/material/expansion';
 import {OverlayModule} from '@angular/cdk/overlay';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatFormFieldModule,} from '@angular/material/form-field'
 import {MAT_FORM_FIELD_DEFAULT_OPTIONS} from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import {HttpClientModule} from '@angular/common/http';
+import { MatSort, MatSortModule } from '@angular/material/sort';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
+
 
 /*Components to link in the menu-bar, each component represents the content below the top menu-bar */
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -36,6 +41,7 @@ import { TableComponent } from './table/table.component';
 import {MatTableModule} from '@angular/material/table';
 import {SidebarComponent} from './sidebar/sidebar.component';
 import { MqttComponent } from './mqtt/mqtt.component';
+import { ExampletableComponent } from './exampletable/exampletable.component';
 
 // MQTT imports and settings
 import { MqttModule, IMqttServiceOptions } from 'ngx-mqtt';
@@ -45,11 +51,8 @@ export const MQTT_SERVICE_OPTIONS: IMqttServiceOptions = {
   path: '/mqtt'
 };
 
-import { MatSort, MatSortModule } from '@angular/material/sort';
-import { ExampletableComponent } from './exampletable/exampletable.component';
-import { MatPaginatorModule } from '@angular/material/paginator';
-import {MatDialogModule} from '@angular/material/dialog';
-import {DialogOverviewExampleDialog  } from './table/dialog-overview-example-dialog';
+// Others
+import { SidebarModule } from 'ng-sidebar';
 
 
 @NgModule({
@@ -64,7 +67,6 @@ import {DialogOverviewExampleDialog  } from './table/dialog-overview-exampl
     MqttComponent,
     ExampletableComponent,
     SidebarComponent,
-    DialogOverviewExampleDialog
   ],
   imports: [
     MqttModule.forRoot(MQTT_SERVICE_OPTIONS),
@@ -89,6 +91,8 @@ import {DialogOverviewExampleDialog  } from './table/dialog-overview-exampl
     MatInputModule,
     HttpClientModule,
     SidebarModule.forRoot(),
+    MatDialogModule,
+    MatButtonToggleModule
   ],
   providers: [{ provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { appearance: 'fill' } },
 ],
