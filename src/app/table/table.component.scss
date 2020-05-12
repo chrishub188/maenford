@@ -4,7 +4,7 @@ table {
   }
 
 mat-expansion-panel{
-  width:80%;
+  width:90%;
 }
 .cell{
   vertical-align: text-top;
@@ -12,4 +12,32 @@ mat-expansion-panel{
 form-field{
   height:14px;
   width:100%;
+}
+.bt1{
+  background-color: rgba(40, 172, 226, 0.96);
+}
+.buttontoggle1{
+  background-color: rgba(40, 172, 226, 0.96);
+ // height:35px;
+}
+.buttontoggle2{
+  background-color: rgba(256, 256, 256, 0.96);
+//  height: 35px;
+}
+.navpanelbackground{
+  background-color: rgba(256, 256, 256, 0.96)
+};
+
+.searchfeld{
+  outline-color: rgba(40, 172, 226, 0.96);
+  
+}
+
+.schrifttabelle{
+  color: rgba(4, 88, 184, 0.96);
+  font-size:16px;
+}
+.schrifttabelle{
+  color: rgba(4, 88, 184, 0.96);
+ 
 }
