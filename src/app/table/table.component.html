@@ -17,12 +17,16 @@
         </mat-button-toggle>
     </mat-button-toggle-group>
     <span class="example-fill-remaining-space" ></span>
-    <div class="input-group">
+    <!--Test with Bootstrap-->
+    <!-- <div class="input-group">
         <input class="form-control py-2 border-right-0 border" (keyup)="applyFilter($event.target.value)" type="search" value="search" >
         <span class="input-group-append">
             <div class="input-group-text bg-transparent"><i class="fa fa-search"></i></div>
         </span>
-    </div>
+    </div> -->
+    <mat-form-field appearance="outline">
+        <input matInput id=suchfeld type="text" (keyup)="applyFilter($event.target.value)" placeholder="Search">
+  </mat-form-field>
 </mat-toolbar>
 <!--Table-->
 <div class="mat-elevation-z8">
