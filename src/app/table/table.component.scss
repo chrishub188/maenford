@@ -2,7 +2,9 @@ table {
     height: 100%;
     width: 100%;
   }
-
+.header{
+  font-size: 18px;
+}
 mat-expansion-panel{
   width:80%;
 }
@@ -13,3 +15,85 @@ form-field{
   height:14px;
   width:100%;
 }
+.mat-elevation-z0{
+  vertical-align: text-top;
+}
+
+/*Filter toolbar style*/
+.mat-toolbar.mat-primary {
+  background: white;
+}
+.mat-flat-button.mat-primary{
+  background: #42B0D5;
+}  
+.mat-flat-button{
+  left: 69px;
+  width: 94px;
+  height: 36px;
+  background: #42B0D5 0% 0% no-repeat padding-box;
+  border: 1px solid #42B0D5;
+  border-radius: 2px;
+  opacity: 1;
+}
+#spacer{
+  width: 90px;
+}
+.input-group{
+  width: 285px;
+  height: 36px;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  border: 1px solid #42B0D5;
+  border-radius: 2px;
+  opacity: 1;
+}
+mat-button-toggle-group{
+  border: 1px solid #42B0D5;
+  border-radius: 2px;
+  opacity: 1;
+  // width: 71px;
+  // height: 36px;
+}
+mat-button-toggle{
+  // width: 36px;
+  // height: 36px;
+  // border-radius: 2px;
+  // opacity: 1;
+  // background: #42B0D5 0% 0% no-repeat padding-box;
+}
+.mat-button-toggle-checked {
+  background-color: mat-color(#42B0D5);
+  color: mat-color(#42B0D5, default-contrast);
+}
+.toggle-icon{
+  // width: 20px;
+  // height: 20px;
+  // opacity: 1;
+  // position: absolute;
+  // margin: auto;
+  // top: 0;
+  // right: 0;
+  // bottom: 0;
+  // left: 0;
+}
+
+/* Border */
+.mat-form-field-appearance-outline .mat-form-field-outline {
+  color: white;
+}
+/* Font color */
+input.mat-input-element {
+  color: white;
+}
+
+.example-fill-remaining-space {
+  /* This fills the remaining space, by using flexbox. 
+     Every toolbar row uses a flexbox row layout. */
+  flex: 1 1 auto;
+}
+mat-button-toggle.mat-button-toggle-checked, mat-button-toggle.cdk-focused, mat-button-toggle.cdk-mouse-focused {
+  background: #42B0D5;
+  }
+  mat-icon {
+    color: white;
+  }
+

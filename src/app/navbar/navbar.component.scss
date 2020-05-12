@@ -6,9 +6,34 @@
   .mat-toolbar.mat-primary {
     background: rgb(0, 36, 61);
     color: white;
+    height: 87px;
+
+}
+mat-button{
+  width: 163px;
+height: 24px;
+text-align: left;
+font: Regular 24px/33px Open Sans;
+letter-spacing: 0.96px;
+color: #FFFFFF;
+text-transform: uppercase;
+opacity: 1;
 }
 button:focus {
   outline: none;
   text-decoration: underline;
   text-decoration-thickness: 3px;
+}
+.spacer{
+  width: 94px;
+}
+.nav-menu{
+  width: 163px;
+    height: 33px;
+    text-align: left;
+    font: 24px Open Sans;
+    letter-spacing: 0.96px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    opacity: 1;
 }

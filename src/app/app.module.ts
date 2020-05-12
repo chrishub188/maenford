@@ -30,6 +30,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 
+/*Material mwc component*/
 
 /*Components to link in the menu-bar, each component represents the content below the top menu-bar */
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -92,7 +93,7 @@ import { SidebarModule } from 'ng-sidebar';
     HttpClientModule,
     SidebarModule.forRoot(),
     MatDialogModule,
-    MatButtonToggleModule
+    MatButtonToggleModule,
   ],
   providers: [{ provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { appearance: 'fill' } },
 ],

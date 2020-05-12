@@ -27,7 +27,9 @@ export class TableComponent implements OnInit {
 
     @ViewChild(MatPaginator) paginator: MatPaginator;
     @ViewChild(MatSort) sort: MatSort;
-    constructor(private ContainerService: ContainerService, public dialog: MatDialog) {
+    constructor(private ContainerService: ContainerService,
+        public dialog: MatDialog) {
+
         this.dataSource = new MatTableDataSource(this.ELEMENT_DATA);
         console.log(1);
     }
