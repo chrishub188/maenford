@@ -63,7 +63,7 @@ export class MapComponent implements OnInit, AfterViewInit, OnDestroy {
     this.map.setView([56.465130, -2.926664], 25);
   }
 
-  subscribeNewTopic(topic: string): void {
+  private subscribeNewTopic(topic: string): void {
     this.topicname = topic;
     this.subscription = this._mqttService.observe(this.topicname).subscribe((message: IMqttMessage) => {
       this.msg = message;
@@ -73,7 +73,7 @@ export class MapComponent implements OnInit, AfterViewInit, OnDestroy {
     });
   }
 
-  updateMarker(lat, lng): void {
+  private updateMarker(lat, lng): void {
     this.marker.setLatLng([lat, lng]).update();
   }
 }
