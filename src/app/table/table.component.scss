@@ -4,6 +4,7 @@ table {
   }
 .header{
   font-size: 18px;
+  border-bottom: 2px solid #292D5A;
 }
 mat-expansion-panel{
   width:90%;
@@ -22,6 +23,7 @@ form-field{
 /*Filter toolbar style*/
 .mat-toolbar.mat-primary {
   background: white;
+  height: 121px;
 }
 .mat-flat-button.mat-primary{
   background: #42B0D5;
