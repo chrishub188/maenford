@@ -115,3 +115,12 @@ mat-button-toggle.mat-button-toggle-checked, mat-button-toggle.cdk-focused, mat-
   .mat-elevation-z8 {
     box-shadow: unset;
   }
+  .mat-row:nth-child(even){
+    background-color:white;
+    }
+
+.mat-row:nth-child(odd){
+    background-color:#dddddd;
+    }
+
+.gray { background-color: #dddddd }
