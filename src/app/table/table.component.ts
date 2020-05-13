@@ -18,6 +18,10 @@ import { DialogOverviewExampleDialog } from './dialog-overview-example-dialog';
 
 export class TableComponent implements OnInit {
 
+    containers: number;
+    baskests: number;
+    items: number;
+
     name: string;
     selectedContainer: ManifestElement;
     ELEMENT_DATA: ManifestElement[];
@@ -44,6 +48,12 @@ export class TableComponent implements OnInit {
     }
 
     ngOnInit() {
+        //Count items on the rig
+        this.countBaskets();
+        this.countContainers();
+        this.countItems();
+
+        
         //this.dataSource.paginator = this.paginator;
         this.dataSource.sort = this.sort;
         this.getManifest();
@@ -71,6 +81,18 @@ export class TableComponent implements OnInit {
             this.name = result;
         });
     }
-
+    // Counts all containers from items in "database/file"
+    private countContainers(): void{
+        this.containers = 75;
+    }
+    // Counts all baskets from items in "database/file"
+    private countBaskets(): void{
+        this.baskests = 23;
+    }
+    // Counts all items from items in "database/file"
+    private countItems(): void{
+        this.items = 289;
+    }
+  
 }
 
