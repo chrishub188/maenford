@@ -116,7 +116,9 @@
                 </ng-container>
             
         <!--Header row-->
-            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <!-- Add sticky: true; for sticky header-row-->
+        <!--     <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true;"></tr> -->
+            <tr mat-header-row *matHeaderRowDef="displayedColumns;"></tr>
             <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
             <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
           </table>
