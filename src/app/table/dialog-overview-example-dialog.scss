@@ -11,3 +11,7 @@ mdcheckbox {
   md-checkbox.md-checked.green .md-icon {
     background-color: rgba(0, 255, 0, 0.87);
    }
+
+.mat-expansion-panel:not([class*='mat-elevation-z']) {
+  box-shadow: none;
+}
