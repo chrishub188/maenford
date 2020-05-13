@@ -13,5 +13,43 @@ mat-grid-tile {
     margin: 10px;
     border: 1px solid #555;
   }
+  .table{
 
+  }
+  .button{
+    top: 93px;
+  left: 1905px;
+  width: 16px;
+  height: 987px;
+  background: #42B0D5 0% 0% no-repeat padding-box;
+  border-radius: 45px 0px 0px 45px;
+  opacity: 1;
+  }
+
+  .icon-bar {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
   
+  .icon-bar a {
+    display: block;
+    text-align: center;
+    padding: 16px;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 20px;
+  }
+  .sidebutton{
+    width: 24px;
+    height: 600px;
+    background: #42B0D5 0% 0% no-repeat padding-box;
+    border-radius: 45px 0px 0px 45px;
+    opacity: 1;
+  }
+  .sidebutton{
+    color: white;
+  }
