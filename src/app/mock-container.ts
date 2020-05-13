@@ -8,7 +8,7 @@ export const Manifest:ManifestElement[]= [
     {name: '1 ea Pallet W/ Empty Cans', itemId: 300908252, amount:'1', weight:'1.01',recipient:' '}], location: 'Area II row 2. 3', type:'Container' ,weight:'2.1',size:'3 (1.6x1.9)', DG:'no' , arrival:'01.01.2020',sender:'ASCO',},
 
     {id: 571414, containerID: 'AMN550', content: [{name: 'instrument package (Gauges, transducer, debooster, hexnuts)', itemId:undefined , amount: '1', weight:'1.9',recipient:''},
-    {name: '5 ea MST Stinger protector', itemId: 300908252, amount: '1', weight:' ',recipient:' '},], location: 'Area II row 2. 3', type:'Container' ,weight:'',size:'', DG:'no' , arrival:'01.01.2020',sender:'Haliburton Cement' },
+    {name: '5 ea MST Stinger protector', itemId: 300908252, amount: '1', weight:' ',recipient:' '},], location: 'Area II row 2. 3', type:'Container' ,weight:'1.9',size:'3 (1.6x1.9)', DG:'no' , arrival:'01.01.2020',sender:'Haliburton Cement' },
 
     { id: 589985, containerID: 'AORU1004279', content:[
     {name: 'Empty', itemId:0 , amount:'', weight:'', recipient:''}], location: 'Area II row 2. 3', type:'Container' ,weight:'1.6',size:'3 (1.9x1.6)', DG:'no' , arrival:'01.01.2020',sender:'Maersk Drilling' },
