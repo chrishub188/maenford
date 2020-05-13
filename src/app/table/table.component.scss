@@ -90,6 +90,7 @@ mat-button-toggle{
 input.mat-input-element {
   color: #42B0D5;
   background-color: white; 
+  
 }
 
 .example-fill-remaining-space {
@@ -126,3 +127,7 @@ mat-button-toggle.mat-button-toggle-checked, mat-button-toggle.cdk-focused, mat-
     }
 
 .gray { background-color: #dddddd }
+
+::placeholder{
+  color:#42B0D5;
+}
