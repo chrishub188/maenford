@@ -61,7 +61,8 @@ export class TableComponent implements OnInit {
     }
     openDialog(): void {
         const dialogRef = this.dialog.open(DialogOverviewExampleDialog, {
-            width: '250px',
+            width: '750px',
+            height:'500px',
             data: { name: this.name, }
         });
 
