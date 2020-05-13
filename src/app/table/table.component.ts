@@ -23,7 +23,7 @@ export class TableComponent implements OnInit {
     ELEMENT_DATA: ManifestElement[];
     dataSource: MatTableDataSource<ManifestElement>;
 
-    displayedColumns: string[] = ['id', 'containerID', 'content', 'location', 'type', 'weight', 'size', 'DG', 'arrival', 'sender'];
+    displayedColumns: string[] = ['status','id', 'containerID', 'content', 'location', 'type', 'weight', 'size', 'DG', 'arrival', 'sender'];
 
 
     @ViewChild(MatSort, { static: true }) sort: MatSort;
