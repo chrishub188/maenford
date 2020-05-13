@@ -17,6 +17,9 @@ mat-expansion-panel{
   letter-spacing: 0px;
   color: #000000;
   opacity: 1;
+  vertical-align: text-top;
+  padding-top: 18px;
+  height: 46px;
 }
 form-field{
   height:14px;
@@ -110,6 +113,14 @@ mat-button-toggle.mat-button-toggle-checked, mat-button-toggle.cdk-focused, mat-
     background:  0% 0% no-repeat padding-box;
     opacity: 1;
     margin-bottom: 8px;
+  }
+  mat-expansion-panel-header{
+    text-align: left;
+    font:  16px SF Pro Display;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+    
   }
   .location-cell{
     width: 100px;
