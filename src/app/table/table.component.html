@@ -1,28 +1,20 @@
 <mat-toolbar color="primary">
     <button mat-flat-button (click)="openDialog()" color="primary">
-        <img style="width: 20px; height: 20px;"class="counter-icon" src="assets/img/Inventory List – equipment based/filter.svg">
+        <img style="width: 20px; height: 20px;" class="counter-icon"
+            src="assets/img/Inventory List – equipment based/filter.svg">
         <span style="font: 19px Open Sans;">Filter</span>
     </button>
-    <!-- <div class="btn-group btn-group-toggle" data-toggle="buttons">
-        <label class="btn btn-secondary active">
-          <input type="radio" name="options" id="option1" autocomplete="off" checked> <mat-icon>build</mat-icon>
-        </label>
-        <label class="btn btn-secondary">
-          <input type="radio" name="options" id="option2" autocomplete="off"> <mat-icon>build</mat-icon>
-        </label>
-      </div> -->
     <span id="spacer"></span>
-    <!-- <span class="example-fill-remaining-space"></span> -->
-    <mat-button-toggle-group #group="matButtonToggleGroup">
-        <mat-button-toggle value="left" aria-label="Text align left">
-            <!-- <img class="toggle-icon" src="assets/img/Inventory List – equipment based/cube.svg"> -->
-            <mat-icon>build</mat-icon>
-        </mat-button-toggle>
-        <mat-button-toggle value="center" aria-label="Text align center">
-            <!-- <img class="toggle-icon" src="assets/img/Inventory List – equipment based/tool.svg"> -->
-            <mat-icon>build</mat-icon>
-        </mat-button-toggle>
-    </mat-button-toggle-group>
+    <span >
+        <mat-button-toggle-group #group="matButtonToggleGroup">
+            <mat-button-toggle value="left" style="line-height: 36px;">
+                <img class="counter-icon"  src="assets/img/Inventory List – equipment based/cube.svg">
+            </mat-button-toggle>
+            <mat-button-toggle value="center" style="line-height: 36px;">
+                <img class="counter-icon"  src="assets/img/Inventory List – equipment based/tool.svg">
+            </mat-button-toggle>
+        </mat-button-toggle-group>
+    </span>
     <span class="example-fill-remaining-space"></span>
     <img class="counter-icon" src="assets/img/Inventory List – equipment based/blue_icons/cube.svg">
     <span class="counter">{{containers}}</span>
@@ -34,19 +26,6 @@
     <span class="counter">{{items}}</span>
     <span class="counter-text">Items</span>
     <span style="width: 30px;"></span>
-
-    <!--Test with Bootstrap-->
-    <!-- <div class="input-group">
-        <input class="form-control py-2 border-right-0 border" (keyup)="applyFilter($event.target.value)" type="search" value="search" >
-        <span class="input-group-append">
-            <div class="input-group-text bg-transparent"><i class="fa fa-search"></i></div>
-        </span>
-    </div> -->
-    <!--Test with Material-->
-    <!-- <mat-form-field appearance="outline">
-        <input matInput id=suchfeld type="text" (keyup)="applyFilter($event.target.value)" placeholder="Search">
-    </mat-form-field> -->
-
     <form action="#">
         <input type="search" placeholder="Seach..." (keyup)="applyFilter($event.target.value)">
     </form>
@@ -64,12 +43,12 @@
             <ng-container matColumnDef="status">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header width=13% class="header"> Status </th>
                     <td mat-cell  *matCellDef="let element" class="cell">
-                        <div *ngIf="element.status=='empty'"><span class="markerbuttonempty" ></span></div>
-                        <div *ngIf="element.status=='backload'"><span class="markerbuttonbackload" ></span></div>
-                        <div *ngIf="element.status=='inuse'"><span class="markerbuttoninuse" ></span></div>
-                    </td>
-            </ng-container>
-        
+                            <div *ngIf="element.status=='empty'"><span class="markerbuttonempty"  ></span></div>
+                            <div *ngIf="element.status=='backload'"><span class="markerbuttonbackload" ></span></div>
+                            <div *ngIf="element.status=='inuse'"><span class="markerbuttoninuse" ></span></div>
+                        </td>
+        </ng-container>
+
         <!-- ID Column -->
             <ng-container matColumnDef="id">
                   <th mat-header-cell *matHeaderCellDef mat-sort-header width=13% class="header"> ID </th>

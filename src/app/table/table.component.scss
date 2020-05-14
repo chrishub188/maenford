@@ -33,6 +33,10 @@ mat-button-toggle-group{
   opacity: 1;
   // width: 71px;
   // height: 36px;
+  line-height: 36px;
+}
+::ng-deep .mat-button-toggle-label-content {
+  line-height: 36px !important;
 }
 .mat-button-toggle-checked {
   background-color: mat-color(#42B0D5);
@@ -107,7 +111,6 @@ padding-top: 18px;
 /* Circles from the status cell*/
 
 .markerbuttonempty {
-
   border-radius: 50%;
   display: inline-block;
   border: solid 1px;
@@ -118,7 +121,6 @@ padding-top: 18px;
   opacity: 1;
 }
 .markerbuttoninuse {
-
   border-radius: 50%;
   display: inline-block;
   border: solid 1px;
@@ -129,6 +131,8 @@ padding-top: 18px;
   opacity: 1;
 }
 .markerbuttonbackload {
+  border-radius: 50%;
+  display: inline-block;
   border: solid 1px;
   width: 16px;
   height: 16px;
