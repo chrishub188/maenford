@@ -97,6 +97,7 @@ import { ItemTableComponent } from './item-table/item-table.component';
     SidebarModule.forRoot(),
     MatDialogModule,
     MatButtonToggleModule,
+    MatSidenavModule
   ],
   providers: [{ provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { appearance: 'fill' } },
 ],
