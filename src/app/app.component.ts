@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'maenford-app';
+   _opened: boolean = false;
+   _toggleSidebar() {
+    this._opened = !this._opened;
+  }
 }
