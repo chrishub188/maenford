@@ -29,6 +29,7 @@ import { MatSort, MatSortModule } from '@angular/material/sort';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 /*Material mwc component*/
 
@@ -97,7 +98,8 @@ import { ItemTableComponent } from './item-table/item-table.component';
     SidebarModule.forRoot(),
     MatDialogModule,
     MatButtonToggleModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatTooltipModule
   ],
   providers: [{ provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { appearance: 'fill' } },
 ],
