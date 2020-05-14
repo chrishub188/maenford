@@ -38,6 +38,7 @@ mat-button-toggle-group{
   background-color: mat-color(#42B0D5);
   color: mat-color(#42B0D5, default-contrast);
 }
+/* Toolbar Counters*/
 .counter{
   text-align: left;
   font: 20px/19px Open Sans;
@@ -60,6 +61,21 @@ mat-button-toggle-group{
   height: 20px;
   margin-right: 2px;
 }
+/* Toolbar Search*/
+
+form{
+  //width: 600px;
+  margin: 100px auto;
+  margin-right: 30px;
+  }
+  
+  input[type=search]{
+  font-size: 16px;
+  padding: 0px 20px 0px 40px;
+  outline: none;
+  border: solid #42B0D5 2px;
+  background: url('src/assets/img/Inventory List – equipment based/lens.svg') 7px center no-repeat;
+  }
 
 /*************************************Table****************************************************/
 table {

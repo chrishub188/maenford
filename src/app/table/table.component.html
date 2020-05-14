@@ -27,6 +27,7 @@
     <span class="counter">{{items}}</span>
     <span class="counter-text">Items</span>
     <span style="width: 30px;"></span>
+
     <!--Test with Bootstrap-->
     <!-- <div class="input-group">
         <input class="form-control py-2 border-right-0 border" (keyup)="applyFilter($event.target.value)" type="search" value="search" >
@@ -34,10 +35,18 @@
             <div class="input-group-text bg-transparent"><i class="fa fa-search"></i></div>
         </span>
     </div> -->
-    <mat-form-field appearance="outline">
+    <!--Test with Material-->
+    <!-- <mat-form-field appearance="outline">
         <input matInput id=suchfeld type="text" (keyup)="applyFilter($event.target.value)" placeholder="Search">
-    </mat-form-field>
+    </mat-form-field> -->
+
+    <form action="#">
+        <input type="search" placeholder="Seach...">
+    </form>
 </mat-toolbar>
+
+
+
 <!--Table-->
 <div class="mat-elevation-z8">
       <table mat-table [dataSource]="dataSource" matSort>
@@ -117,10 +126,11 @@
                 </ng-container>
             
         <!--Header row-->
-            <!-- Add sticky: true; for sticky header-row-->
+        <!-- Add sticky: true; for sticky header-row-->
         <!--     <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true;"></tr> -->
-            <tr mat-header-row *matHeaderRowDef="displayedColumns;"></tr>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns;"></tr>
             <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
             <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
-          </table>
+          
+    </table>
 </div>
