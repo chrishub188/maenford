@@ -104,6 +104,42 @@ vertical-align: text-top;
 padding-top: 18px;
 }
 
+/* Circles from the status cell*/
+
+.markerbuttonempty {
+
+  border-radius: 50%;
+  display: inline-block;
+  border: solid 1px;
+  width: 16px;
+  height: 16px;
+  background: #F9381C40 0% 0% no-repeat padding-box;
+  border: 2px solid #F9381C;
+  opacity: 1;
+}
+.markerbuttoninuse {
+
+  border-radius: 50%;
+  display: inline-block;
+  border: solid 1px;
+  width: 16px;
+  height: 16px;
+  background: #A3BF0040 0% 0% no-repeat padding-box;
+  border: 2px solid #A3BF00;
+  opacity: 1;
+}
+.markerbuttonbackload {
+
+  border-radius: 50%;
+  display: inline-block;
+  border: solid 1px;
+  width: 16px;
+  height: 16px;
+  background: #FFA20140 0% 0% no-repeat padding-box;
+  border: 2px solid #FFA201;
+  opacity: 1;
+}
+
 .mat-row{ min-height: 30px; }
 form-field{
 height:14px;
@@ -165,27 +201,4 @@ mat-button-toggle.mat-button-toggle-checked, mat-button-toggle.cdk-focused, mat-
 
 ::placeholder{
   color:#42B0D5;
-}
-
-
-.markerbuttoninuse{
-  border-radius: 100%;
-  background-color:green;
-  height:20px;
-  width:10px;
-  
-}
- 
-.markerbuttonbackload{
-  border-radius: 100%;
-  background-color:yellow;
-  height:20px;
-  width:10px;
-}
-  
-.markerbuttonempty{
-  border-radius: 100%;
-  background-color:red;
-  height:20px;
-  width:10px;
 }
