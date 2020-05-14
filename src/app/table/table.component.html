@@ -41,7 +41,7 @@
     </mat-form-field> -->
 
     <form action="#">
-        <input type="search" placeholder="Seach...">
+        <input type="search" placeholder="Seach..." (keyup)="applyFilter($event.target.value)">
     </form>
 </mat-toolbar>
 
