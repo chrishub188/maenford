@@ -1,9 +1,16 @@
 <mat-toolbar color="primary">
-    <!-- <button mat-stroked-button (click)="applyFilter('')">Reset all Filter</button> -->
     <button mat-flat-button (click)="openDialog()" color="primary">
-        <mat-icon>filter_list</mat-icon>
-        Filter
+        <img style="width: 20px; height: 20px;"class="counter-icon" src="assets/img/Inventory List – equipment based/filter.svg">
+        <span style="font: 19px Open Sans;">Filter</span>
     </button>
+    <!-- <div class="btn-group btn-group-toggle" data-toggle="buttons">
+        <label class="btn btn-secondary active">
+          <input type="radio" name="options" id="option1" autocomplete="off" checked> <mat-icon>build</mat-icon>
+        </label>
+        <label class="btn btn-secondary">
+          <input type="radio" name="options" id="option2" autocomplete="off"> <mat-icon>build</mat-icon>
+        </label>
+      </div> -->
     <span id="spacer"></span>
     <!-- <span class="example-fill-remaining-space"></span> -->
     <mat-button-toggle-group #group="matButtonToggleGroup">
