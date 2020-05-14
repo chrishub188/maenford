@@ -1,3 +1,4 @@
+
 mat-grid-tile {
     background: white;
 }
@@ -5,17 +6,10 @@ mat-grid-tile {
   app-table{
     width: 100%;
     height: 100%;
+    overflow: hidden;
   }
 
-  .example-container {
-    width: 400px;
-    height: 200px;
-    margin: 10px;
-    border: 1px solid #555;
-  }
-  .table{
 
-  }
   .button{
     top: 93px;
   left: 1905px;
@@ -53,3 +47,9 @@ mat-grid-tile {
   .sidebutton{
     color: white;
   }
+  .content{
+    height: 300px;
+    width: 300px;
+    background-color: #42B0D5;
+  }
+  
