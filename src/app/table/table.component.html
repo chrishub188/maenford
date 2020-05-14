@@ -17,15 +17,16 @@
         </mat-button-toggle>
     </mat-button-toggle-group>
     <span class="example-fill-remaining-space"></span>
-    <mat-icon class="counter-icon" fontSet="material-icons-outlined">build</mat-icon>
-    <span class="counter">{{containers}} Containers</span>
-    <span id="spacer"></span>
-    <mat-icon class="counter-icon" fontSet="material-icons-outlined">build</mat-icon>
-    <span class="counter">{{baskests}} Baskets</span>
-    <span id="spacer"></span>
-    <mat-icon class="counter-icon" fontSet="material-icons-outlined">build</mat-icon>
-    <span class="counter">{{items}} Items</span>
-    <span id="spacer"></span>
+    <img class="counter-icon" src="assets/img/Inventory List – equipment based/blue_icons/cube.svg">
+    <span class="counter">{{containers}}</span>
+    <span class="counter-text">Containers</span>
+    <img class="counter-icon" src="assets/img/Inventory List – equipment based/blue_icons/basket.svg">
+    <span class="counter">{{baskests}}</span>
+    <span class="counter-text">Baskets</span>
+    <img class="counter-icon" src="assets/img/Inventory List – equipment based/blue_icons/tool.svg">
+    <span class="counter" style="margin-right: 16px;">{{items}}</span>
+    <span class="counter-text">Items</span>
+    <span style="width: 30px;"></span>
     <!--Test with Bootstrap-->
     <!-- <div class="input-group">
         <input class="form-control py-2 border-right-0 border" (keyup)="applyFilter($event.target.value)" type="search" value="search" >

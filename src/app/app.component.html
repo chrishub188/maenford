@@ -2,7 +2,7 @@
 <app-navbar></app-navbar>
 <!--Content-->
 <div class="icon-bar">
-  <button mat-icon-button  class="sidebutton">
+  <button mat-icon-button  (click)="_toggleSidebar()" class="sidebutton" >
     <mat-icon fontSet="material-icons-outlined">location_on
     </mat-icon>
   </button>
@@ -10,15 +10,19 @@
 <app-table></app-table>
 
 
+<!-- Sidenav example test
+<ng-sidebar-container style="height: 100vh;">
+<ng-sidebar [(opened)]="_opened" position="right">
+  <div class="content">Hello from sidebar</div>
+</ng-sidebar>
 
-<!-- <div>
-  <mat-grid-list cols="2" rowHeight="1:1">
-    <mat-grid-tile>
-       <app-table></app-table>
-    </mat-grid-tile>
-    <mat-grid-tile>
-     <app-map></app-map> 
-    </mat-grid-tile>
-  </mat-grid-list>
-  <app-sidebar></app-sidebar>
-</div> -->
+<div ng-sidebar-content style="overflow: hidden;">
+  <div class="icon-bar">
+    <button mat-icon-button  (click)="_toggleSidebar()" class="sidebutton" >
+      <mat-icon fontSet="material-icons-outlined">location_on
+      </mat-icon>
+    </button>
+  </div>
+  <app-table></app-table>
+</div>
+</ng-sidebar-container> -->

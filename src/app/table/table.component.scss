@@ -39,11 +39,31 @@ mat-button-toggle-group{
   color: mat-color(#42B0D5, default-contrast);
 }
 .counter{
+  width: 24px;
+  height: 27px;
+  text-align: left;
+  font: 20px/19px Open Sans;
+  letter-spacing: 0.4px;
   color: #00243D;
-font: 14px Open Sans;
+  text-transform: uppercase;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+.counter-text{
+  width: 87px;
+  height: 27px;
+  text-align: left;
+  font: 14px/19px Open Sans;
+  letter-spacing: 0.28px;
+  color: #00243D;
+  text-transform: uppercase;
+  margin-right: 68px;
 }
 .counter-icon{
   color: #42B0D5;
+  width: 20px;
+  height: 20px;
+  margin-bottom: 8px;
 }
 
 /*************************************Table****************************************************/
