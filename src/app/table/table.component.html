@@ -53,11 +53,16 @@
             
         <!-- Add Checkbox Column !!-->
             
-        <!-- ID Column -->
+        <!-- Status Column -->
             <ng-container matColumnDef="status">
-                  <th mat-header-cell *matHeaderCellDef mat-sort-header width=13% class="header"> Status </th>
-                  <td mat-cell *matCellDef="let element" class="cell"> {{element.status}} </td>
-                </ng-container>
+                              <th mat-header-cell *matHeaderCellDef mat-sort-header width=13% class="header"> Status </th>
+                              <td mat-cell  *matCellDef="let element" class="cell">
+                            <div *ngIf="element.status=='empty'"><button class=markerbuttonempty ></button></div>
+                            <div *ngIf="element.status=='backload'"><button class=markerbuttonbackload ></button></div>
+                            <div *ngIf="element.status=='inuse'"><button class=markerbuttoninuse ></button></div>
+                        </td>
+                            </ng-container>
+            
         <!-- ID Column -->
             <ng-container matColumnDef="id">
                   <th mat-header-cell *matHeaderCellDef mat-sort-header width=13% class="header"> ID </th>

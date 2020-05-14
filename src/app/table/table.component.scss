@@ -164,3 +164,26 @@ mat-button-toggle.mat-button-toggle-checked, mat-button-toggle.cdk-focused, mat-
 ::placeholder{
   color:#42B0D5;
 }
+
+
+.markerbuttoninuse{
+  border-radius: 100%;
+  background-color:green;
+  height:20px;
+  width:10px;
+  
+}
+ 
+.markerbuttonbackload{
+  border-radius: 100%;
+  background-color:yellow;
+  height:20px;
+  width:10px;
+}
+  
+.markerbuttonempty{
+  border-radius: 100%;
+  background-color:red;
+  height:20px;
+  width:10px;
+}
