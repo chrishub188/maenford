@@ -42,7 +42,6 @@ import { TableComponent } from './table/table.component';
 import {MatTableModule} from '@angular/material/table';
 import {SidebarComponent} from './sidebar/sidebar.component';
 import { MqttComponent } from './mqtt/mqtt.component';
-import { ExampletableComponent } from './exampletable/exampletable.component';
 import { DialogOverviewExampleDialog } from './table/dialog-overview-example-dialog';
 // MQTT imports and settings
 import { MqttModule, IMqttServiceOptions } from 'ngx-mqtt';
@@ -66,7 +65,6 @@ import { RequestsComponent } from './requests/requests.component';
     MapComponent,
     TableComponent,
     MqttComponent,
-    ExampletableComponent,
     SidebarComponent,
     DialogOverviewExampleDialog,
     ItemTableComponent,
