@@ -34,7 +34,6 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 /*Material mwc component*/
 
 /*Components to link in the menu-bar, each component represents the content below the top menu-bar */
-import { DashboardComponent } from './dashboard/dashboard.component';
 import { InventoryComponent } from './inventory/inventory.component';
 import { ManifestComponent } from './manifest/manifest.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -60,7 +59,6 @@ import { ItemTableComponent } from './item-table/item-table.component';
 @NgModule({
   declarations: [
     AppComponent,
-    DashboardComponent,
     InventoryComponent,
     ManifestComponent,
     NavbarComponent,
