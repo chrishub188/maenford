@@ -49,6 +49,8 @@ export const MQTT_SERVICE_OPTIONS: IMqttServiceOptions = {
 };
 
 import { RequestsComponent } from './requests/requests.component';
+import { BackloadComponent } from './backload/backload.component';
+import { LoadoutComponent } from './loadout/loadout.component';
 
 @NgModule({
   declarations: [
@@ -61,6 +63,8 @@ import { RequestsComponent } from './requests/requests.component';
     SidebarComponent,
     DialogOverviewExampleDialog,
     RequestsComponent,
+    BackloadComponent,
+    LoadoutComponent,
   ],
   imports: [
     MqttModule.forRoot(MQTT_SERVICE_OPTIONS),
@@ -84,7 +88,6 @@ import { RequestsComponent } from './requests/requests.component';
     MatPaginatorModule,
     MatInputModule,
     HttpClientModule,
-    SidebarModule.forRoot(),
     MatDialogModule,
     MatButtonToggleModule,
     MatSidenavModule,
