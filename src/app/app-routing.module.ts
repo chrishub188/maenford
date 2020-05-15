@@ -13,7 +13,7 @@ const routes: Routes = [
   { path: 'requests', component: RequestsComponent },
   { path: 'backload', component: BackloadComponent },
   { path: 'loadout', component: LoadoutComponent },
-  { path: '', redirectTo: '/home', pathMatch: 'full' }
+  //{ path: '', redirectTo: '/home', pathMatch: 'full' }
 ];
 
 @NgModule({

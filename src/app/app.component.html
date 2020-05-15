@@ -1,28 +1,11 @@
 <!--Navbar-->
 <app-navbar></app-navbar>
 <!--Content-->
-<div class="icon-bar">
+<!-- <div class="icon-bar">
   <button mat-icon-button  (click)="_toggleSidebar()" class="sidebutton" >
     <mat-icon fontSet="material-icons-outlined">location_on
     </mat-icon>
   </button>
 </div>
-<app-table></app-table>
-
-
-<!-- Sidenav example test
-<ng-sidebar-container style="height: 100vh;">
-<ng-sidebar [(opened)]="_opened" position="right">
-  <div class="content">Hello from sidebar</div>
-</ng-sidebar>
-
-<div ng-sidebar-content style="overflow: hidden;">
-  <div class="icon-bar">
-    <button mat-icon-button  (click)="_toggleSidebar()" class="sidebutton" >
-      <mat-icon fontSet="material-icons-outlined">location_on
-      </mat-icon>
-    </button>
-  </div>
-  <app-table></app-table>
-</div>
-</ng-sidebar-container> -->
+<app-table></app-table> -->
+<router-outlet></router-outlet>
