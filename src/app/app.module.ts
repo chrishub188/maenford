@@ -20,7 +20,6 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {MatCardModule} from '@angular/material/card';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatExpansionModule} from '@angular/material/expansion';
-import {OverlayModule} from '@angular/cdk/overlay';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatFormFieldModule,} from '@angular/material/form-field'
 import {MAT_FORM_FIELD_DEFAULT_OPTIONS} from '@angular/material/form-field';
@@ -31,11 +30,8 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {MatTooltipModule} from '@angular/material/tooltip';
 
-/*Material mwc component*/
-
 /*Components to link in the menu-bar, each component represents the content below the top menu-bar */
 import { InventoryComponent } from './inventory/inventory.component';
-import { ManifestComponent } from './manifest/manifest.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { MapComponent } from './map/map.component';
 import { TableComponent } from './table/table.component';
@@ -43,6 +39,7 @@ import {MatTableModule} from '@angular/material/table';
 import {SidebarComponent} from './sidebar/sidebar.component';
 import { MqttComponent } from './mqtt/mqtt.component';
 import { DialogOverviewExampleDialog } from './table/dialog-overview-example-dialog';
+
 // MQTT imports and settings
 import { MqttModule, IMqttServiceOptions } from 'ngx-mqtt';
 export const MQTT_SERVICE_OPTIONS: IMqttServiceOptions = {
@@ -51,15 +48,12 @@ export const MQTT_SERVICE_OPTIONS: IMqttServiceOptions = {
   path: '/mqtt'
 };
 
-// Others
-import { SidebarModule } from 'ng-sidebar';
 import { RequestsComponent } from './requests/requests.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     InventoryComponent,
-    ManifestComponent,
     NavbarComponent,
     MapComponent,
     TableComponent,
