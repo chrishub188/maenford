@@ -55,7 +55,7 @@ export const MQTT_SERVICE_OPTIONS: IMqttServiceOptions = {
 // Others
 import { SidebarModule } from 'ng-sidebar';
 import { ItemTableComponent } from './item-table/item-table.component';
-import { HomeComponent } from './home/home.component';
+import { RequestsComponent } from './requests/requests.component';
 
 @NgModule({
   declarations: [
@@ -70,8 +70,7 @@ import { HomeComponent } from './home/home.component';
     SidebarComponent,
     DialogOverviewExampleDialog,
     ItemTableComponent,
-    HomeComponent,
-    
+    RequestsComponent,    
   ],
   imports: [
     MqttModule.forRoot(MQTT_SERVICE_OPTIONS),
