@@ -45,6 +45,7 @@ import {SidebarComponent} from './sidebar/sidebar.component';
 import { MqttComponent } from './mqtt/mqtt.component';
 import { ExampletableComponent } from './exampletable/exampletable.component';
 import { DialogOverviewExampleDialog } from './table/dialog-overview-example-dialog';
+import {MatTreeModule} from '@angular/material/tree'; 
 // MQTT imports and settings
 import { MqttModule, IMqttServiceOptions } from 'ngx-mqtt';
 export const MQTT_SERVICE_OPTIONS: IMqttServiceOptions = {
@@ -99,7 +100,8 @@ import { ItemTableComponent } from './item-table/item-table.component';
     MatDialogModule,
     MatButtonToggleModule,
     MatSidenavModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatTreeModule
   ],
   providers: [{ provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { appearance: 'fill' } },
 ],

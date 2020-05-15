@@ -1,42 +1,30 @@
 
-
-
-
-<mat-expansion-panel  class="mat-elevation-z0"> 
-         <mat-expansion-panel-header>
-                     <mat-panel-description>Type</mat-panel-description>
-         </mat-expansion-panel-header>
-        <mat-checkbox  >Container</mat-checkbox>
-        <mat-checkbox>Palet</mat-checkbox>
-        <mat-checkbox>Basket</mat-checkbox>
-        <mat-checkbox>Skip</mat-checkbox>
-        <mat-checkbox>Tank</mat-checkbox>
-        <mat-checkbox>Loose</mat-checkbox>
-    </mat-expansion-panel>
-    <mat-expansion-panel>
-        <mat-expansion-panel-header>
-                     <mat-panel-description>Location </mat-panel-description>
-                      </mat-expansion-panel-header>
-        <mat-checkbox>Area I</mat-checkbox>
-        <mat-checkbox>Area II</mat-checkbox>
-        <mat-checkbox>Area III</mat-checkbox>
-        <mat-checkbox>Area IV</mat-checkbox>
-    </mat-expansion-panel>
-    <mat-expansion-panel>
-        <mat-expansion-panel-header>
-                     <mat-panel-description>Size </mat-panel-description>
-                      </mat-expansion-panel-header>
-        <mat-checkbox>6ft</mat-checkbox>
-        <mat-checkbox>8ft</mat-checkbox>
-    </mat-expansion-panel>
-    <mat-expansion-panel>
-        <mat-expansion-panel-header>
-       <mat-panel-description>Weight</mat-panel-description>
-        </mat-expansion-panel-header>
-        <mat-checkbox>1T</mat-checkbox>
-        <mat-checkbox>2T</mat-checkbox>
-        <mat-checkbox>3T</mat-checkbox>
-        <mat-checkbox>5T</mat-checkbox>
-    </mat-expansion-panel>
-    
-    
+  
+<mat-tree [dataSource]="dataSourcee" [treeControl]="treeControl" class="example-tree">
+  <!-- This is the tree node template for leaf nodes -->
+    <mat-tree-node *matTreeNodeDef="let node" matTreeNodeToggle>
+      <li class="mat-tree-node">
+        <!-- use a disabled button to provide padding for tree leaf -->
+        <button mat-icon-button disabled></button>
+        {{node.name}}
+      </li>
+    </mat-tree-node>
+    <!-- This is the tree node template for expandable nodes -->
+    <mat-nested-tree-node *matTreeNodeDef="let node; when: hasChild">
+      <li>
+        <div class="mat-tree-node">
+          <button mat-icon-button matTreeNodeToggle
+                  [attr.aria-label]="'toggle ' + node.name">
+            <mat-icon class="mat-icon-rtl-mirror">
+              {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
+            </mat-icon>
+          </button>
+          {{node.name}}
+        </div>
+        <ul [class.example-tree-invisible]="!treeControl.isExpanded(node)">
+          <ng-container matTreeNodeOutlet></ng-container>
+        </ul>
+      </li>
+    </mat-nested-tree-node>
+  </mat-tree>
+ 
