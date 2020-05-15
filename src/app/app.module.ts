@@ -1,9 +1,8 @@
-// Default imports
+/*Default imports*/
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
-
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -40,7 +39,11 @@ import {SidebarComponent} from './sidebar/sidebar.component';
 import { MqttComponent } from './mqtt/mqtt.component';
 import { DialogOverviewExampleDialog } from './table/dialog-overview-example-dialog';
 import {MatTreeModule} from '@angular/material/tree'; 
-// MQTT imports and settings
+import { RequestsComponent } from './requests/requests.component';
+import { BackloadComponent } from './backload/backload.component';
+import { LoadoutComponent } from './loadout/loadout.component';
+
+/* MQTT imports and settings */
 import { MqttModule, IMqttServiceOptions } from 'ngx-mqtt';
 export const MQTT_SERVICE_OPTIONS: IMqttServiceOptions = {
   hostname: 'localhost',
@@ -48,9 +51,7 @@ export const MQTT_SERVICE_OPTIONS: IMqttServiceOptions = {
   path: '/mqtt'
 };
 
-import { RequestsComponent } from './requests/requests.component';
-import { BackloadComponent } from './backload/backload.component';
-import { LoadoutComponent } from './loadout/loadout.component';
+
 
 @NgModule({
   declarations: [
