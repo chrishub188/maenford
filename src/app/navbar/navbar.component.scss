@@ -18,22 +18,18 @@ mat-button {
   text-transform: uppercase;
   opacity: 1;
 }
-.active{
- //border-bottom: 5px solid #42b0d5;
-}
+// Underline navbar item when active
 .topnav a.active {
   border-bottom: 5px solid #42b0d5;
   margin-top: 25px;
   padding-bottom: 56px;
   text-align: center
 }
-.active .nav-indicator{
-  transform: scaleY(1);
-  right: 16px;
-  left: 16px;
-  background: #42b0d5;
-  height: 10px;
+// remove default click outline border
+*:focus {
+  outline: 0 !important;
 }
+// remove default underline when active
 a:hover{
   text-decoration: none;
 }
