@@ -31,7 +31,7 @@ export class DialogOverviewExampleDialog {
         this.temp=this.data.name;
         console.log(into +' hinzugefügt');
       };
-      deleteOptions() {
+      deleteOptions(){
         console.log( this.data.name);
         this.temp=' ';
         this.data.name=this.temp;
@@ -41,7 +41,7 @@ export class DialogOverviewExampleDialog {
         this.data.func(this.emptystring);
         console.log('filter aufgerufen');
       };
-    
+    sendfiltervalue(){this.data.func(this.temp);}
 
   hasChild = (_: number, node: FoodNode) => !!node.children && node.children.length > 0;
 }
