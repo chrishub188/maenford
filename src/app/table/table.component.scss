@@ -182,6 +182,10 @@ mat-button-toggle.mat-button-toggle-checked, mat-button-toggle.cdk-focused, mat-
     opacity: 1;
     margin-bottom: 8px;
   }
+  // remove default click outline border
+  *:focus {
+    outline: 0 !important;
+  }
   mat-expansion-panel-header{
     text-align: left;
     font:  16px SF Pro Display;
