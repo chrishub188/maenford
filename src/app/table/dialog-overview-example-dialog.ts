@@ -13,7 +13,8 @@ import { MatTreeNestedDataSource } from '@angular/material/tree';
   styleUrls: ['./dialog-overview-example-dialog.scss'],
 })
 export class DialogOverviewExampleDialog {
-  searchitem:string;
+  emptystring:string='';
+  temp:string;
   treeControl = new NestedTreeControl<FoodNode>(node => node.children);
   dataSourcee = new MatTreeNestedDataSource<FoodNode>();
 
@@ -25,19 +26,22 @@ export class DialogOverviewExampleDialog {
     this.dialogRef.close();
   }
 
-  addfiltervalue(into:string) {
-    this.searchitem=into;
-    alert(into +' ubergebene');
-  };
-  sendfiltervalue() {
-
-    alert(this.searchitem+' aufgerufen');
-  };
-  deletefiltervalue() {
-    this.searchitem='';
-    this.sendfiltervalue();
-    alert('loeschung');
-  };
+    addfiltervalue(into:string) {
+        this.data.name=into;
+        this.temp=this.data.name;
+        console.log(into +' hinzugefügt');
+      };
+      deleteOptions(){
+        console.log( this.data.name);
+        this.temp=' ';
+        this.data.name=this.temp;
+        console.log( this.data.name);
+        console.log('auswahl entfernt');
+    
+        this.data.func(this.emptystring);
+        console.log('filter aufgerufen');
+      };
+    sendfiltervalue(){this.data.func(this.temp);}
 
   hasChild = (_: number, node: FoodNode) => !!node.children && node.children.length > 0;
 }

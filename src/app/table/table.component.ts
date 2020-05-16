@@ -46,10 +46,7 @@ export class TableComponent implements OnInit {
             this.dataSource.paginator.firstPage();
         }
     }
-    applyFilterDialog(){
-        this.applyFilter(this.name);
-    }
-
+    
     ngOnInit() {
         //Count items on the rig
         this.countBaskets();
@@ -76,7 +73,7 @@ export class TableComponent implements OnInit {
         const dialogRef = this.dialog.open(DialogOverviewExampleDialog, {
             width: '750px',
             height:'1000px',
-            data: { name: this.name, }
+            data: { name: this.name, func:this.applyFilter ,dataSource:this.dataSource}
         });
 
         dialogRef.afterClosed().subscribe(result => {
