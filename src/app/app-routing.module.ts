@@ -5,6 +5,7 @@ import { InventoryComponent } from './inventory/inventory.component';
 import { RequestsComponent } from './requests/requests.component';
 import { BackloadComponent } from './backload/backload.component';
 import { LoadoutComponent } from './loadout/loadout.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
 
 
 const routes: Routes = [
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'requests', component: RequestsComponent },
   { path: 'backload', component: BackloadComponent },
   { path: 'loadout', component: LoadoutComponent },
+  { path: 'sidebartest', component: SidebarComponent },
   //{ path: '', redirectTo: '/home', pathMatch: 'full' }
 ];
 

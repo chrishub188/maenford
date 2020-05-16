@@ -1,0 +1,13 @@
+<div class="sidebarcontainer">
+  <mat-sidenav-container class="example-container" >
+    <mat-sidenav #sidenav [mode]="mode.value" position="end">
+      <iframe src="https://leafletjs.com/examples/quick-start/example.html" style="width: 1037px; height: 987px;">
+      </iframe>
+    </mat-sidenav>
+  
+    <mat-sidenav-content>
+      <p><button mat-button (click)="sidenav.toggle()">Toggle</button></p>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
+<!-- <p>sidebar works!</p> -->

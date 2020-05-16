@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-sidebar',
@@ -6,17 +7,13 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./sidebar.component.scss']
 })
 export class SidebarComponent implements OnInit {
-
-  public opened = false;
-  @Input() name: string;
+    //showFiller = false;
+    mode = new FormControl('over');
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  public toggleSidebar() {
-    this.opened = !this.opened;
-  }
 
 }
