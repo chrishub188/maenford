@@ -28,12 +28,12 @@
     </mat-nested-tree-node>
   </mat-tree>
   <div>
-    <button mat-flat-button (click)="deletefiltervalue()" color="primary">
+    <button mat-flat-button (click)="this.deleteOptions()" color="primary">
       <img style="width: 20px; height: 20px;" class="counter-icon-delete"
           src="assets/img/Inventory List – equipment based/filter.svg">
       <span style="font: 19px Open Sans;">Delete</span>
   </button>
-  <button mat-flat-button (click)="sendfiltervalue()" color="primary">
+  <button mat-flat-button (click)="this.data.func(this.temp)" color="primary">
     <img style="width: 20px; height: 20px;" class="counter-icon-apply"
         src="assets/img/Inventory List – equipment based/filter.svg">
     <span style="font: 19px Open Sans;">Apply</span>
