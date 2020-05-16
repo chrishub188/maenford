@@ -1,58 +1,70 @@
 .example-fill-remaining-space {
-    /* This fills the remaining space, by using flexbox. 
+  /* This fills the remaining space, by using flexbox. 
        Every toolbar row uses a flexbox row layout. */
-    flex: 1 1 auto;
-  };
-  .mat-toolbar.mat-primary {
-    background: rgb(0, 36, 61);
-    color: white;
-    height: 87px;
-
+  flex: 1 1 auto;
 }
-mat-button{
-width: 163px;
-height: 24px;
-text-align: left;
-font: Regular 24px/33px Open Sans;
-letter-spacing: 0.96px;
-color: #FFFFFF;
-text-transform: uppercase;
-opacity: 1;
+.mat-toolbar.mat-primary {
+  background: rgb(0, 36, 61);
+  color: white;
+  height: 87px;
 }
-// button:focus {
-//   outline: none;
-//   text-decoration: underline;
-//   text-decoration-thickness: 5px;
-//   text-decoration-color: #42B0D5;;
-// }
-.spacer{
+mat-button {
+  width: 163px;
+  height: 24px;
+  text-align: left;
+  font: Regular 24px/33px Open Sans;
+  letter-spacing: 0.96px;
+  color: #ffffff;
+  text-transform: uppercase;
+  opacity: 1;
+}
+.active{
+ //border-bottom: 5px solid #42b0d5;
+}
+.topnav a.active {
+  border-bottom: 5px solid #42b0d5;
+  margin-top: 25px;
+  padding-bottom: 56px;
+  text-align: center
+}
+.active .nav-indicator{
+  transform: scaleY(1);
+  right: 16px;
+  left: 16px;
+  background: #42b0d5;
+  height: 10px;
+}
+a:hover{
+  text-decoration: none;
+}
+.spacer {
   width: 75px;
 }
-.nav-menu{
-    width: max-content;
-    height: 33px;
-    text-align: left;
-    font: 24px Open Sans;
-    letter-spacing: 0.96px;
-    color: #FFFFFF;
-    text-transform: uppercase;
-    opacity: 1;
+.nav-menu {
+  width: max-content;
+  height: 33px;
+  text-align: left;
+  font: 24px Open Sans;
+  letter-spacing: 0.96px;
+  color: #ffffff;
+  text-transform: uppercase;
+  opacity: 1;
 }
-#name{
+#name {
   width: 108px;
   height: 26px;
   text-align: left;
   font: 20px Open Sans;
   letter-spacing: 0px;
-  color: #FFFFFF;
+  color: #ffffff;
   opacity: 1;
 }
-#title{
+#title {
   width: 157px;
   height: 17px;
   text-align: left;
   font: 14px Open Sans;
   letter-spacing: 0px;
-  color: #FFFFFF;
+  color: #ffffff;
   opacity: 1;
 }
