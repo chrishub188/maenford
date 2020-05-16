@@ -13,7 +13,7 @@ import { MatTreeNestedDataSource } from '@angular/material/tree';
   styleUrls: ['./dialog-overview-example-dialog.scss'],
 })
 export class DialogOverviewExampleDialog {
-
+  searchitem:string;
   treeControl = new NestedTreeControl<FoodNode>(node => node.children);
   dataSourcee = new MatTreeNestedDataSource<FoodNode>();
 
@@ -25,16 +25,26 @@ export class DialogOverviewExampleDialog {
     this.dialogRef.close();
   }
 
-  getfiltervalue(into: string) {
-
-    alert(into);
+  addfiltervalue(into:string) {
+    this.searchitem=into;
+    alert(into +' ubergebene');
   };
+  sendfiltervalue() {
+
+    alert(this.searchitem+' aufgerufen');
+  };
+  deletefiltervalue() {
+    this.searchitem='';
+    this.sendfiltervalue();
+    alert('loeschung');
+  };
+
   hasChild = (_: number, node: FoodNode) => !!node.children && node.children.length > 0;
 }
 
 
 //submit button einfügen on click function ändern erste element anzeigen dafür html in cell elemnet und alle anderen elemente treestrukture;
-// tree ng repeat ng class-even und-odd. 
+// tree ng repeat ng class-even und-odd.
 //
 interface FoodNode {
   name: string;
@@ -82,24 +92,9 @@ const TREE_DATA: FoodNode[] = [
     name: 'DG',
     children: [
       { name: '-' },
-      { name: '1.4 UN 0352' },
+      { name:'1.4 UN 0352'},
     ]
-  }, {
-    name: 'Arrival',
-    children: [
-      { name: '01.01.2020' },
-      { name: '02.01.2020' },
-      { name: '03.01.2020' },
-    ]
-  }, {
-    name: 'Weight',
-    children: [
-      { name: '0t-0.9t' },
-      { name: '1.0t-1.9t' },
-      { name: '2.0t-2.9t' },
-      { name: '3.0t-3.9t' },
-    ]
-  }, {
+  },{
     name: 'Sender',
     children: [
       { name: 'Maersk Drilling' },
@@ -115,6 +110,21 @@ const TREE_DATA: FoodNode[] = [
       { name: 'Westco Miljostasjon' },
       { name: 'Westco 8cup' },
       { name: 'Haliburton Baroid' },
+    ]
+  }, {
+    name: 'Arrival',
+    children: [
+      { name:'01.01.2020'},
+      { name:'02.01.2020'},
+      { name:'03.01.2020'},
+    ]
+  }, {
+    name: 'Weight',
+    children: [
+      { name: '0t-0.9t' },
+      { name: '1.0t-1.9t' },
+      { name: '2.0t-2.9t' },
+      { name: '3.0t-3.9t' },
     ]
   },
 ];

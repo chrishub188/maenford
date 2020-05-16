@@ -46,6 +46,9 @@ export class TableComponent implements OnInit {
             this.dataSource.paginator.firstPage();
         }
     }
+    applyFilterDialog(){
+        this.applyFilter(this.name);
+    }
 
     ngOnInit() {
         //Count items on the rig
@@ -72,7 +75,7 @@ export class TableComponent implements OnInit {
     openDialog(): void {
         const dialogRef = this.dialog.open(DialogOverviewExampleDialog, {
             width: '750px',
-            height:'500px',
+            height:'1000px',
             data: { name: this.name, }
         });
 
@@ -83,11 +86,11 @@ export class TableComponent implements OnInit {
     }
     // Counts all containers from items in "database/file"
     private countContainers(): void{
-        this.containers = 75;
+        this.containers = 14;
     }
     // Counts all baskets from items in "database/file"
     private countBaskets(): void{
-        this.baskests = 23;
+        this.baskests = 10;
     }
     // Counts all items from items in "database/file"
     private countItems(): void{

@@ -147,10 +147,15 @@ form-field{
 height:14px;
 width:100%;
 }
-.mat-elevation-z0{
-vertical-align: text-top;
+.evencontent{
+ vertical-align: text-top;
+  background-color:#dddddd;
+  z-index: 0;
 }
-
+.oddcontent{
+  background-color: white;
+  vertical-align: text-top;
+  }
 
 /* Font color */
 input.mat-input-element {
