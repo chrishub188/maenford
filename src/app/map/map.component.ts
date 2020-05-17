@@ -47,17 +47,17 @@ export class MapComponent implements OnInit, AfterViewInit, OnDestroy {
     }).addTo(this.map);
     /// Add container marker with text popup
     this.containerMarker = L.icon({
-      iconUrl: 'assets/img/rig/map_container_small_green.svg',
+      iconUrl: 'assets/img/dev_map/containers/map_container_small_green.svg',
       iconSize: [30, 42],
       iconAnchor: [15, 42]
     });
     this.marker = L.marker([56.465070, -2.926915], { icon: this.containerMarker });
     this.marker.addTo(this.map);
     // Add rig image
-    const imageUrl = 'assets/img/rig/map_maersk_basis.svg';
+    const imageUrl = 'assets/img/dev_map/map_maersk_basis.svg';
     const imageBounds: LatLngBoundsExpression = [[56.465552, -2.927335], [56.464787, -2.925404]];
     const image = L.imageOverlay(imageUrl, imageBounds).addTo(this.map);
-    L.imageOverlay('assets/img/rig/map_maersk_only_areas.svg', [[56.465552, -2.927335], [56.464787, -2.925404]]).addTo(this.map);
+    L.imageOverlay('assets/img/dev_map/map_maersk_only_areas.svg', [[56.465552, -2.927335], [56.464787, -2.925404]]).addTo(this.map);
     // Set view on image
     this.map.setView([56.465130, -2.926664], 19);
   }
