@@ -99,6 +99,9 @@ height: 46px;
 mat-expansion-panel{
 width:90%;
 }
+::ng-deep mat-expansion-panel{
+  box-shadow: unset !important;
+}
 .cell{
 text-align: left;
 font:  16px SF Pro Display;
