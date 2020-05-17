@@ -1,6 +1,6 @@
 <div class="sidebarcontainer">
   <mat-sidenav-container class="example-container" >
-    <mat-sidenav #sidenav [mode]="mode.value" position="end">
+    <mat-sidenav #sidenav [mode]="mode.value" [disableClose]="true" position="end">
       <div class="icon-bar-left">
         <button mat-icon-button  class="sidebutton-left" (click)="sidenav.toggle()">
           <mat-icon fontSet="material-icons-outlined">location_on
