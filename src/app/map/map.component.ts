@@ -39,7 +39,15 @@ export class MapComponent implements OnInit, AfterViewInit, OnDestroy {
     this.map = L.map('map', {
       center: [39.8282, -98.5795],
       zoom: 20,
+      //disable zoomControl when initializing map (which is topleft by default)
+      zoomControl: false
     });
+
+
+    //add zoom control with topright option
+    L.control.zoom({
+      position: 'topright'
+    }).addTo(this.map);
     // Add  open streetmap map layer to the map
     this.tiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       maxZoom: 20,
