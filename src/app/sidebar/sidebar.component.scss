@@ -72,16 +72,11 @@
   height: 100%;
 }
 
-/*Styles for test card*/
-.example-card {
-  max-width: 600px;
-}
 // Remove background from overlay
 ::ng-deep .mat-drawer-backdrop.mat-drawer-shown {
   background-color: transparent !important;
 }
 
-.mat-drawer-inner-container {
-  display: flex;
-  flex-direction: column;
+::ng-deep .mat-drawer-inner-container {
+  background-color: #C3ECFF33 !important;
 }
