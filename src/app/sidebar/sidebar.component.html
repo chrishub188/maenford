@@ -1,6 +1,6 @@
 <div class="sidebarcontainer">
-  <mat-sidenav-container class="example-container" >
-    <mat-sidenav #sidenav [mode]="mode.value" [disableClose]="true" position="end">
+  <mat-drawer-container class="example-container" [hasBackdrop]="false">
+    <mat-drawer #sidenav [mode]="mode.value" [disableClose]="true" position="end">
       <div class="icon-bar-left">
         <button mat-icon-button  class="sidebutton-left" (click)="sidenav.toggle();switchTable();">
           <mat-icon fontSet="material-icons-outlined">location_on
@@ -10,9 +10,9 @@
       <div id="mapcontainer">
         <app-map></app-map>
       </div>      
-    </mat-sidenav>
+    </mat-drawer>
   
-    <mat-sidenav-content>
+    <mat-drawer-content>
       <div class="icon-bar">
         <button mat-icon-button  class="sidebutton" (click)="sidenav.toggle();switchTable();">
           <mat-icon fontSet="material-icons-outlined">location_on
@@ -20,7 +20,7 @@
         </button>
       </div>
       <app-table></app-table>
-    </mat-sidenav-content>
-  </mat-sidenav-container>
+    </mat-drawer-content>
+  </mat-drawer-container>
 </div>
 <!-- <app-map></app-map> -->
