@@ -7,7 +7,7 @@ import { FormControl } from '@angular/forms';
   styleUrls: ['./sidebar.component.scss']
 })
 export class SidebarComponent implements OnInit {
-    //showFiller = false;
+    showFiller = false;
     mode = new FormControl('over');
 
   constructor() { }
