@@ -1,46 +1,49 @@
 /* Styles for sticky sidebutton*/
-.button{
-    top: 93px;
+.button {
+  top: 93px;
   left: 1905px;
   width: 16px;
   height: 987px;
-  background: #42B0D5 0% 0% no-repeat padding-box;
+  background: #42b0d5 0% 0% no-repeat padding-box;
   border-radius: 45px 0px 0px 45px;
   opacity: 1;
-  }
- 
-  .icon-bar {
-    position: fixed;
-    top: 50%;
-    right: 0;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-  }
-  .sidebutton{
-    width: 24px;
-    height: 800px;
-    background: #42B0D5 0% 0% no-repeat padding-box;
-    border-radius: 45px 0px 0px 45px;
-    opacity: 1;
-  }
-  .sidebutton{
-    color: white;
-  }
-  .content{
-    height: 300px;
-    width: 300px;
-    background-color: #42B0D5;
-  }
-  /* Styles for sidebar content */
-  #mapcontainer{
-    margin: 20px;
-    width: 100%;
-    height: 100%;
-  }
+}
 
-  /*Styles for test card*/
-  .example-card {
-    max-width: 600px;
-  }
-  
+.icon-bar {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.sidebutton {
+  width: 24px;
+  height: 800px;
+  background: #42b0d5 0% 0% no-repeat padding-box;
+  border-radius: 45px 0px 0px 45px;
+  opacity: 1;
+}
+.sidebutton {
+  color: white;
+}
+.content {
+  height: 300px;
+  width: 300px;
+  background-color: #42b0d5;
+}
+/* Styles for sidebar content */
+#mapcontainer {
+  margin: 20px;
+  width: 100%;
+  height: 100%;
+}
+
+/*Styles for test card*/
+.example-card {
+  max-width: 600px;
+}
+// Remove background from overlay
+::ng-deep .mat-drawer-backdrop.mat-drawer-shown {
+  background-color: transparent !important;
+}

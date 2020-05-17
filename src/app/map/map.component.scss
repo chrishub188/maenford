@@ -14,7 +14,8 @@
   
   #map {
     height: 800px;
-    width: 800px;
+    width: 1000px;
+    position: sticky;
   }
   .marker-pin {
     width: 30px;
@@ -47,3 +48,15 @@
      margin: 10px auto;
      text-align: center;
   }
+  //Zoom Buttons color
+  ::ng-deep .leaflet-bar a{
+    color: white !important;
+    background-color: #42B0D5 !important;
+  }
+  // Remove Zoom Buttons shadow
+  ::ng-deep .leaflet-bar {
+    // color: white !important;
+    // background-color: #42B0D5 !important;
+    box-shadow: unset;
+  }
+
