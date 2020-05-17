@@ -15,5 +15,9 @@ export class SidebarComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  switchTable(): void{
+    // todo
+    console.log('Table switched');
+  }
 
 }

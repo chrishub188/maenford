@@ -2,7 +2,7 @@
   <mat-sidenav-container class="example-container" >
     <mat-sidenav #sidenav [mode]="mode.value" [disableClose]="true" position="end">
       <div class="icon-bar-left">
-        <button mat-icon-button  class="sidebutton-left" (click)="sidenav.toggle()">
+        <button mat-icon-button  class="sidebutton-left" (click)="sidenav.toggle();switchTable();">
           <mat-icon fontSet="material-icons-outlined">location_on
           </mat-icon>
         </button>
@@ -14,13 +14,12 @@
   
     <mat-sidenav-content>
       <div class="icon-bar">
-        <button mat-icon-button  class="sidebutton" (click)="sidenav.toggle()">
+        <button mat-icon-button  class="sidebutton" (click)="sidenav.toggle();switchTable();">
           <mat-icon fontSet="material-icons-outlined">location_on
           </mat-icon>
         </button>
       </div>
       <app-table></app-table>
-      <!-- <p><button mat-button (click)="sidenav.toggle()">Toggle</button></p> -->
     </mat-sidenav-content>
   </mat-sidenav-container>
 </div>
