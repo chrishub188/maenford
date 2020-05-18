@@ -15,7 +15,7 @@ const routes: Routes = [
   { path: 'backload', component: BackloadComponent },
   { path: 'loadout', component: LoadoutComponent },
   { path: 'sidebartest', component: SidebarComponent },
-  //{ path: '', redirectTo: '/home', pathMatch: 'full' }
+  { path: '', redirectTo: 'home', pathMatch: 'full' }
 ];
 
 @NgModule({
