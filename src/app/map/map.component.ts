@@ -68,7 +68,7 @@ export class MapComponent implements OnInit, AfterViewInit, OnDestroy {
     const image = L.imageOverlay(imageUrl, imageBounds).addTo(this.map);
     L.imageOverlay('assets/img/dev_map/map_maersk_only_areas.svg', [[56.465552, -2.927335], [56.464787, -2.925404]]).addTo(this.map);
     // Set view on image
-    this.map.setView([56.465185, -2.926394], 19.8);
+    this.map.setView([56.465185, -2.926419], 19.8);
   }
 
   private subscribeNewTopic(topic: string): void {
