@@ -17,7 +17,7 @@ import { DialogOverviewExampleDialog } from './dialog-overview-example-dialog';
 })
 
 export class TableComponent implements OnInit {
-
+    // Value of toggle-button containers and items
     toggleValue: string;
 
     containers: number;
@@ -40,11 +40,8 @@ export class TableComponent implements OnInit {
         console.log(1);
     }
 
-
+    // Change value to toggle between containers and items
     public onValChange(val: string) {
-        console.log('Val:' + val);
-        console.log('Val:' + this.toggleValue);
-
         this.toggleValue = val;
     }
 
@@ -58,7 +55,7 @@ export class TableComponent implements OnInit {
     }
     
     ngOnInit() {
-        // Initial value of toggle switch
+        // Initial displayed table
         this.toggleValue = 'containers';
 
         //Count items on the rig
