@@ -81,3 +81,7 @@
   background-color: #C3ECFF33 !important;
   padding: 25px
 }
+// Remove button outline onclick
+*:focus {
+  outline: 0 !important;
+}
