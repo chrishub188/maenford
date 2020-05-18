@@ -1,3 +1,27 @@
+<!--Toolbar with it's content-->
+<mat-toolbar color="primary">
+  <button mat-flat-button  color="primary">
+      <img style="width: 20px; height: 20px; padding-right: 5px;" class="counter-icon"
+          src="assets/img/Inventory List – equipment based/filter.svg">
+      <span style="font: 19px Open Sans;">Filter</span>
+  </button>
+  <span id="spacer"></span>
+  <form action="#">
+      <input type="search" placeholder="Search..." (keyup)="applyFilter($event.target.value)">
+  </form>
+  <span style="width: 210px;"></span>
+  <span class="button-label">Areas</span>
+  <span style="width: 15px;"></span>
+  <mat-slide-toggle
+  class="example-margin"
+  [color]="color"
+  [checked]="checked"
+  [disabled]="disabled">
+</mat-slide-toggle>
+</mat-toolbar>
+
+
+<!--Table with it's content-->
 <div class="mat-elevation-z8">
   <table mat-table class="full-width-table" matSort aria-label="Elements">
     <!-- Id Column -->

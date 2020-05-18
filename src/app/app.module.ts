@@ -42,6 +42,8 @@ import { RequestsComponent } from './requests/requests.component';
 import { BackloadComponent } from './backload/backload.component';
 import { LoadoutComponent } from './loadout/loadout.component';
 import { MaptableComponent } from './maptable/maptable.component';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+
 
 /* MQTT imports and settings */
 import { MqttModule, IMqttServiceOptions } from 'ngx-mqtt';
@@ -94,7 +96,8 @@ export const MQTT_SERVICE_OPTIONS: IMqttServiceOptions = {
     MatButtonToggleModule,
     MatSidenavModule,
     MatTooltipModule,
-    MatTreeModule
+    MatTreeModule,
+    MatSlideToggleModule
   ],
   providers: [{ provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { appearance: 'fill' } },
 ],

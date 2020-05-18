@@ -1,3 +1,90 @@
+/******************** Toolbar *************************/
+.mat-toolbar.mat-primary {
+  background: white;
+  height: 121px;
+}
+.mat-flat-button.mat-primary {
+  background: #42b0d5;
+}
+
+.mat-flat-button {
+  left: 69px;
+  width: 94px;
+  height: 36px;
+  background: #42b0d5 0% 0% no-repeat padding-box;
+  border: 1px solid #42b0d5;
+  border-radius: 2px;
+  opacity: 1;
+}
+#spacer {
+  width: 90px;
+}
+
+// Toolbar Search
+form {
+  //width: 600px;
+  //margin: 100px;
+  margin-right: 30px;
+  height: 36px;
+}
+
+input[type="search"] {
+  font-size: 16px;
+  padding: 0px 20px 0px 40px;
+  outline: none;
+  border: solid #42b0d5 2px;
+  background: url("src/assets/img/Inventory List – equipment based/lens.svg") 7px center no-repeat;
+}
+/* Font color */
+input.mat-input-element {
+  color: #42b0d5;
+  background-color: white;
+}
+::placeholder {
+  color: #42b0d5;
+  text-align: left;
+  font: 14px/19px Open Sans;
+  letter-spacing: 0.28px;
+  color: #42B0D5;
+  text-transform: uppercase;
+  opacity: 1;
+}
+// remove default click outline border
+*:focus {
+  outline: 0 !important;
+}
+.button-label{
+  width: 43px;
+  height: 19px;
+  text-align: left;
+  font:  14px/19px Open Sans;
+  letter-spacing: 0.28px;
+  color: #00243D;
+  text-transform: uppercase;
+  opacity: 1;
+  margin-left: 14px;
+}
+
+::ng-deep .mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-bar {
+  background-color: #42B0D555;
+  opacity: 1;
+}
+
+::ng-deep .mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-thumb {
+  background-color: #42B0D5;
+  opacity: 1;
+}
+
+
+/***************** Table *****************************/
 .full-width-table {
-  width: 100%;
+  width: 850px;
+}
+.table-location-icon {
+  color: #42b0d5;
+  width: 20px;
+  height: 20px;
+  background: 0% 0% no-repeat padding-box;
+  opacity: 1;
+  margin-bottom: 8px;
 }
