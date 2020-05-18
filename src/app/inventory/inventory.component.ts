@@ -9,14 +9,15 @@ import { FormControl } from '@angular/forms';
 export class InventoryComponent implements OnInit {
     showFiller = false;
     mode = new FormControl('over');
-
+    mapPosition: string;
   constructor() { }
 
   ngOnInit(): void {
+    this.mapPosition = 'closed';
   }
 
-  switchTable(): void{
-    // todo
+  switchTable(position: string): void{
+    this.mapPosition = position;
     console.log('Table switched');
   }
 

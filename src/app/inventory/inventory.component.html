@@ -1,8 +1,9 @@
 <div class="sidebarcontainer">
+  <!-- Map-->
   <mat-drawer-container class="example-container" [hasBackdrop]="false">
     <mat-drawer #sidenav [mode]="mode.value" [disableClose]="true" position="end">
       <div class="icon-bar-left">
-        <button mat-icon-button  class="sidebutton-left" (click)="sidenav.toggle();switchTable();">
+        <button mat-icon-button  class="sidebutton-left" (click)="sidenav.toggle();switchTable('closed');">
           <mat-icon fontSet="material-icons-outlined">location_on
           </mat-icon>
         </button>
@@ -11,16 +12,22 @@
         <app-map></app-map>
       </div>      
     </mat-drawer>
-  
+   <!-- Table-->
     <mat-drawer-content>
       <div class="icon-bar">
-        <button mat-icon-button  class="sidebutton" (click)="sidenav.toggle();switchTable();">
+        <button mat-icon-button  class="sidebutton" (click)="sidenav.toggle();switchTable('open');">
           <mat-icon fontSet="material-icons-outlined">location_on
           </mat-icon>
         </button>
       </div>
-      <app-table></app-table>
+      <div [ngSwitch]="mapPosition">
+        <div class="map-table" *ngSwitchCase="'closed'">
+          <app-table></app-table>
+        </div>
+        <div class="only-table" *ngSwitchCase="'open'">
+          <app-maptable></app-maptable>
+        </div>
+      </div>
     </mat-drawer-content>
   </mat-drawer-container>
 </div>
-<!-- <app-map></app-map> -->
