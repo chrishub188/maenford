@@ -1,34 +1,33 @@
-
 /*Filter toolbar style*/
 .mat-toolbar.mat-primary {
   background: white;
   height: 121px;
 }
-.mat-flat-button.mat-primary{
-  background: #42B0D5;
-}  
-.mat-flat-button{
+.mat-flat-button.mat-primary {
+  background: #42b0d5;
+}
+.mat-flat-button {
   left: 69px;
   width: 94px;
   height: 36px;
-  background: #42B0D5 0% 0% no-repeat padding-box;
-  border: 1px solid #42B0D5;
+  background: #42b0d5 0% 0% no-repeat padding-box;
+  border: 1px solid #42b0d5;
   border-radius: 2px;
   opacity: 1;
 }
-#spacer{
+#spacer {
   width: 90px;
 }
-.input-group{
+.input-group {
   width: 285px;
   height: 36px;
-  background: #FFFFFF 0% 0% no-repeat padding-box;
-  border: 1px solid #42B0D5;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 1px solid #42b0d5;
   border-radius: 2px;
   opacity: 1;
 }
-mat-button-toggle-group{
-  border: 1px solid #42B0D5;
+mat-button-toggle-group {
+  border: 1px solid #42b0d5;
   border-radius: 2px;
   opacity: 1;
   // width: 71px;
@@ -40,77 +39,80 @@ mat-button-toggle-group{
   line-height: 36px !important;
 }
 .mat-button-toggle-checked {
-  background-color: mat-color(#42B0D5);
-  color: mat-color(#42B0D5, default-contrast);
+  background-color: mat-color(#42b0d5);
+  color: mat-color(#42b0d5, default-contrast);
 }
 /* Toolbar Counters*/
-.counter{
+.counter {
   text-align: left;
   font: 20px/19px Open Sans;
   letter-spacing: 0.4px;
-  color: #00243D;
+  color: #00243d;
   text-transform: uppercase;
   margin-right: 5px;
 }
-.counter-text{
+.counter-text {
   text-align: left;
   font: 14px/19px Open Sans;
   letter-spacing: 0.28px;
-  color: #00243D;
+  color: #00243d;
   text-transform: uppercase;
   margin-right: 68px;
 }
-.counter-icon{
-  color: #42B0D5;
+.counter-icon {
+  color: #42b0d5;
   width: 20px;
   height: 20px;
   margin-right: 2px;
 }
 /* Toolbar Search*/
 
-form{
+form {
   //width: 600px;
   margin: 100px auto;
   margin-right: 30px;
   height: 36px;
+}
 
-  }
-  
-  input[type=search]{
+input[type="search"] {
   font-size: 16px;
   padding: 0px 20px 0px 40px;
   outline: none;
-  border: solid #42B0D5 2px;
-  background: url('src/assets/img/Inventory List – equipment based/lens.svg') 7px center no-repeat;
-  }
+  border: solid #42b0d5 2px;
+  background: url("src/assets/img/Inventory List – equipment based/lens.svg") 7px center no-repeat;
+}
 
 /*************************************Table****************************************************/
 table {
   height: 100%;
   width: 100%;
 }
-.header{
-color: #00243D;
-font: 24px Open Sans;
-text-align: left;
-border-bottom: 2px solid #292D5A;
-height: 46px;
+.header {
+  color: #00243d;
+  font: 24px Open Sans;
+  text-align: left;
+  border-bottom: 2px solid #292d5a;
+  height: 46px;
 }
-mat-expansion-panel{
-width:90%;
+mat-expansion-panel {
+  width: 90%;
 }
-::ng-deep mat-expansion-panel{
+::ng-deep mat-expansion-panel {
   box-shadow: unset !important;
 }
-.cell{
-text-align: left;
-font:  16px SF Pro Display;
-letter-spacing: 0px;
-color: #000000;
-opacity: 1;
-// vertical-align: text-top;
-// padding-top: 18px;
+.cell {
+  text-align: left;
+  font: 16px SF Pro Display;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+  // vertical-align: text-top;
+  // padding-top: 18px;
 }
+::ng-deep .mat-drawer-container{
+  background-color: unset !important;
+}
+
 
 /* Circles from the status cell*/
 
@@ -120,8 +122,8 @@ opacity: 1;
   border: solid 1px;
   width: 16px;
   height: 16px;
-  background: #F9381C40 0% 0% no-repeat padding-box;
-  border: 2px solid #F9381C;
+  background: #f9381c40 0% 0% no-repeat padding-box;
+  border: 2px solid #f9381c;
   opacity: 1;
 }
 .markerbuttoninuse {
@@ -130,8 +132,8 @@ opacity: 1;
   border: solid 1px;
   width: 16px;
   height: 16px;
-  background: #A3BF0040 0% 0% no-repeat padding-box;
-  border: 2px solid #A3BF00;
+  background: #a3bf0040 0% 0% no-repeat padding-box;
+  border: 2px solid #a3bf00;
   opacity: 1;
 }
 .markerbuttonbackload {
@@ -140,30 +142,32 @@ opacity: 1;
   border: solid 1px;
   width: 16px;
   height: 16px;
-  background: #FFA20140 ;
-  border: 2px solid #FFA201;
+  background: #ffa20140;
+  border: 2px solid #ffa201;
   opacity: 1;
 }
 
-.mat-row{ min-height: 30px; }
-form-field{
-height:14px;
-width:100%;
+.mat-row {
+  min-height: 30px;
 }
-.evencontent{
- vertical-align: text-top;
-  background-color:#dddddd;
+form-field {
+  height: 14px;
+  width: 100%;
+}
+.evencontent {
+  vertical-align: text-top;
+  background-color: #dddddd;
   z-index: 0;
 }
-.oddcontent{
+.oddcontent {
   background-color: white;
-  vertical-align: text-top;
-  }
+  vertical-align: text-top;
+}
 
 /* Font color */
 input.mat-input-element {
-  color: #42B0D5;
-  background-color: white;   
+  color: #42b0d5;
+  background-color: white;
 }
 
 .example-fill-remaining-space {
@@ -171,48 +175,51 @@ input.mat-input-element {
      Every toolbar row uses a flexbox row layout. */
   flex: 1 1 auto;
 }
-mat-button-toggle.mat-button-toggle-checked, mat-button-toggle.cdk-focused, mat-button-toggle.cdk-mouse-focused {
-  background: #42B0D5;
-  }
-  mat-icon {
-    color: white;
-  }
-  .table-location-icon{
-    color: #42B0D5;
-    width: 20px;
-    height: 20px;
-    background:  0% 0% no-repeat padding-box;
-    opacity: 1;
-    margin-bottom: 8px;
-  }
-  // remove default click outline border
-  *:focus {
-    outline: 0 !important;
-  }
-  mat-expansion-panel-header{
-    text-align: left;
-    font:  16px SF Pro Display;
-    letter-spacing: 0px;
-    color: #000000;
-    opacity: 1;
-    
-  }
-  .location-cell{
-    width: 100px;
-  }
-  .mat-elevation-z8 {
-    box-shadow: unset;
-  }
-  .mat-row:nth-child(even){
-    background-color:white;
-    }
+mat-button-toggle.mat-button-toggle-checked,
+mat-button-toggle.cdk-focused,
+mat-button-toggle.cdk-mouse-focused {
+  background: #42b0d5;
+}
+mat-icon {
+  color: white;
+}
+.table-location-icon {
+  color: #42b0d5;
+  width: 20px;
+  height: 20px;
+  background: 0% 0% no-repeat padding-box;
+  opacity: 1;
+  margin-bottom: 8px;
+}
+// remove default click outline border
+*:focus {
+  outline: 0 !important;
+}
+mat-expansion-panel-header {
+  text-align: left;
+  font: 16px SF Pro Display;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+}
+.location-cell {
+  width: 100px;
+}
+.mat-elevation-z8 {
+  box-shadow: unset;
+}
+.mat-row:nth-child(even) {
+  background-color: white;
+}
 
-.mat-row:nth-child(odd){
-    background-color:#dddddd;
-    }
+.mat-row:nth-child(odd) {
+  background-color: #dddddd;
+}
 
-.gray { background-color: #dddddd }
+.gray {
+  background-color: #dddddd;
+}
 
-::placeholder{
-  color:#42B0D5;
+::placeholder {
+  color: #42b0d5;
 }
