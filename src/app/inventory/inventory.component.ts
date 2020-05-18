@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-inventory',
@@ -6,10 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./inventory.component.scss']
 })
 export class InventoryComponent implements OnInit {
+    showFiller = false;
+    mode = new FormControl('over');
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  switchTable(): void{
+    // todo
+    console.log('Table switched');
   }
 
 }

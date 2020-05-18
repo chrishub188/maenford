@@ -35,7 +35,6 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { MapComponent } from './map/map.component';
 import { TableComponent } from './table/table.component';
 import {MatTableModule} from '@angular/material/table';
-import {SidebarComponent} from './sidebar/sidebar.component';
 import { MqttComponent } from './mqtt/mqtt.component';
 import { DialogOverviewExampleDialog } from './table/dialog-overview-example-dialog';
 import {MatTreeModule} from '@angular/material/tree'; 
@@ -61,7 +60,6 @@ export const MQTT_SERVICE_OPTIONS: IMqttServiceOptions = {
     MapComponent,
     TableComponent,
     MqttComponent,
-    SidebarComponent,
     DialogOverviewExampleDialog,
     RequestsComponent,
     BackloadComponent,
