@@ -58,4 +58,34 @@
     // background-color: #42B0D5 !important;
     box-shadow: unset;
   }
+  // Easy button style
+  ::ng-deep  .easy-button-button{
+    border-radius: 4px;
+    border: solid 0px transparent; 
+    background-color: #42B0D5;
+  }
+  ::ng-deep .material-icons {
+    color: white;
+  }
 
+  .widget-code {
+    display: block;
+    height: 18px;
+    left: 6px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 6px;
+    width: 18px;
+}
+::ng-deep .easy-button-container {
+  left: 955px;
+  top: 60px;
+
+}
+::ng-deep .easy-button-button{
+  width: 26px;
+  height: 26px;
+}
+
+  

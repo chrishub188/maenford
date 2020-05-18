@@ -3,6 +3,8 @@ import * as L from 'leaflet';
 import { LatLngBoundsExpression } from 'leaflet';
 import { Subscription } from 'rxjs';
 import { IMqttMessage, MqttService } from 'ngx-mqtt';
+import 'leaflet-easybutton';
+import 'leaflet-easybutton/src/easy-button.css';
 
 
 @Component({
@@ -39,7 +41,7 @@ export class MapComponent implements OnInit, AfterViewInit, OnDestroy {
     this.map = L.map('map', {
       center: [39.8282, -98.5795],
       zoomSnap: 0.1,
-      //zoom: 20,
+      scrollWheelZoom: false,
       //disable zoomControl when initializing map (which is topleft by default)
       zoomControl: false
     });
@@ -54,7 +56,24 @@ export class MapComponent implements OnInit, AfterViewInit, OnDestroy {
       maxZoom: 20,
       attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     }).addTo(this.map);
-    /// Add container marker with text popup
+    //Add easy button to center location
+    L.easyButton(
+    //'<span class="material-icons">location_on</span>',
+    '<img src="assets/img/marker_white.svg" style="width: 20px; height: 20px; padding-right: 5px;">',
+    (btn, map) => {map.setView([56.465185, -2.926419], 19.8); }).addTo(this.map);
+
+    // let toggle = L.easyButton ({
+    //   position: 'topright',
+    //   states: [{
+    //   stateName: 'remove-legend',
+    //   icon: '<img src="assets/img/marker_white.svg" style="width: 20px; height: 20px">',
+    //   title: 'masquer la légende',
+    //   onClick: (btn, map) => {map.setView([56.465185, -2.926419], 19.8); }
+    //     }]
+    //   });
+    //   toggle.addTo(map);
+
+    // Add container marker with text popup
     this.containerMarker = L.icon({
       iconUrl: 'assets/img/dev_map/containers/map_container_small_green.svg',
       iconSize: [30, 42],
