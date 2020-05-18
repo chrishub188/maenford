@@ -38,7 +38,8 @@ export class MapComponent implements OnInit, AfterViewInit, OnDestroy {
     // Create map
     this.map = L.map('map', {
       center: [39.8282, -98.5795],
-      zoom: 20,
+      zoomSnap: 0.25,
+      //zoom: 20,
       //disable zoomControl when initializing map (which is topleft by default)
       zoomControl: false
     });
@@ -67,7 +68,7 @@ export class MapComponent implements OnInit, AfterViewInit, OnDestroy {
     const image = L.imageOverlay(imageUrl, imageBounds).addTo(this.map);
     L.imageOverlay('assets/img/dev_map/map_maersk_only_areas.svg', [[56.465552, -2.927335], [56.464787, -2.925404]]).addTo(this.map);
     // Set view on image
-    this.map.setView([56.465130, -2.926664], 19);
+    this.map.setView([56.465130, -2.926664], 19.50);
   }
 
   private subscribeNewTopic(topic: string): void {
