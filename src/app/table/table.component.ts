@@ -18,6 +18,8 @@ import { DialogOverviewExampleDialog } from './dialog-overview-example-dialog';
 
 export class TableComponent implements OnInit {
 
+    toggleValue: string;
+
     containers: number;
     baskests: number;
     items: number;
@@ -38,6 +40,14 @@ export class TableComponent implements OnInit {
         console.log(1);
     }
 
+
+    public onValChange(val: string) {
+        console.log('Val:' + val);
+        console.log('Val:' + this.toggleValue);
+
+        this.toggleValue = val;
+    }
+
     applyFilter(filterValue: string) {
         //const filterValue=(event.target as HTMLInputElement).value;
         this.dataSource.filter = filterValue.trim().toLowerCase();
@@ -48,6 +58,9 @@ export class TableComponent implements OnInit {
     }
     
     ngOnInit() {
+        // Initial value of toggle switch
+        this.toggleValue = 'containers';
+
         //Count items on the rig
         this.countBaskets();
         this.countContainers();
