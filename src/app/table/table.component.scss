@@ -223,3 +223,8 @@ mat-expansion-panel-header {
 ::placeholder {
   color: #42b0d5;
 }
+
+#Search::-webkit-search-cancel-button{
+
+  -webkit-appearance: none;
+}
