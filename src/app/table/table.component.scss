@@ -156,7 +156,7 @@ form-field {
 }
 .evencontent {
   vertical-align: text-top;
-  background-color: #dddddd;
+  background-color: #F2F2F299;
   z-index: 0;
 }
 .oddcontent {
@@ -213,11 +213,11 @@ mat-expansion-panel-header {
 }
 
 .mat-row:nth-child(odd) {
-  background-color: #dddddd;
+  background-color: #F2F2F299  ;
 }
 
 .gray {
-  background-color: #dddddd;
+  background-color: #F2F2F299;
 }
 
 ::placeholder {
