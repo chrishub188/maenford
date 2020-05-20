@@ -47,6 +47,7 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 
 /* MQTT imports and settings */
 import { MqttModule, IMqttServiceOptions } from 'ngx-mqtt';
+import { ItemtableComponent } from './itemtable/itemtable.component';
 export const MQTT_SERVICE_OPTIONS: IMqttServiceOptions = {
   hostname: 'localhost',
   port: 9001,
@@ -68,6 +69,7 @@ export const MQTT_SERVICE_OPTIONS: IMqttServiceOptions = {
     BackloadComponent,
     LoadoutComponent,
     MaptableComponent,
+    ItemtableComponent,
   ],
   imports: [
     MqttModule.forRoot(MQTT_SERVICE_OPTIONS),

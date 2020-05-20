@@ -16,8 +16,14 @@ export class MaptableComponent implements AfterViewInit, OnInit {
   @ViewChild(MatTable) table: MatTable<MaptableItem>;
   dataSource: MaptableDataSource;
 
+  // id: number;
+  // containerID: string;
+  // status: string;
+  // content: string;
+  // location: string;
+
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
-  displayedColumns = ['id', 'name'];
+  displayedColumns = [ 'status', 'containerID', 'content', 'location'];
 
   // Switch button
   color: ThemePalette = 'accent';
@@ -35,7 +41,10 @@ export class MaptableComponent implements AfterViewInit, OnInit {
   }
 
   applyFilter(filterValue: string) {
-    //const filterValue=(event.target as HTMLInputElement).value;
-    console.log(filterValue);
+    // //const filterValue=(event.target as HTMLInputElement).value;
+    // this.dataSource.filter = filterValue.trim().toLowerCase();
+    // if (this.dataSource.paginator) {
+    //     this.dataSource.paginator.firstPage();
+    // }
 }
 }

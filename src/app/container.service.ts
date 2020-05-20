@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable, of} from 'rxjs';
-import{ManifestElement} from './container';
-import{Manifest} from './mock-container';
+import {ManifestElement} from './container';
+import {Manifest} from './mock-container';
 
 @Injectable({
   providedIn: 'root'
