@@ -48,15 +48,25 @@ background-color: white;
   opacity: 1;
 }
 .filtercheckbox{
-  background: #FFFFFF 0% 0% no-repeat padding-box;
-//border: 1px solid #919191;
-border-radius: 2px;
-opacity: 1;
-}
-.mat-tree-node{
+  top: 280px;
+//left: 500px;
+width: 24px;
+height: 17px;
 text-align: left;
 font: Regular 14px/19px Open Sans;
 letter-spacing: 0.14px;
 color: #313131;
-opacity: 1;
+opacity: 1;  
+}
+.mat-tree-node{
+  top: 337px;
+  left: 383px;
+  width: 174px;
+  height: 33px;
+  text-align: left;
+  font: Semibold 14px/19px Open Sans;
+  letter-spacing: 0.28px;
+  color: #313131;
+  text-transform: uppercase;
+  opacity: 1;  
 }
