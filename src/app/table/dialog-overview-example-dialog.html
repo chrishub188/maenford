@@ -1,5 +1,5 @@
 <div>
-<mat-grid-list cols="3">
+<mat-grid-list class="mat-grid-listdialog"cols="2" >
 <mat-tree [dataSource]="dataSourcee" [treeControl]="treeControl" class="example-tree">
   <!-- This is the tree node template for leaf nodes -->
     <mat-tree-node *matTreeNodeDef="let node" matTreeNodeToggle>
@@ -10,7 +10,7 @@
       </li>
     </mat-tree-node>
     <!-- This is the tree node template for expandable nodes -->
-    <mat-nested-tree-node *matTreeNodeDef="let node; when: hasChild"><mat-grid-tile>
+    <mat-nested-tree-node *matTreeNodeDef="let node; when: hasChild"><mat-grid-tile class="gridtiledialog">
       <li>
         <div class="mat-tree-node">
           <button mat-icon-button class="nodetreebutton" matTreeNodeToggle
