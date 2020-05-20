@@ -1,4 +1,4 @@
-
+<div>
 <mat-grid-list cols="3">
 <mat-tree [dataSource]="dataSourcee" [treeControl]="treeControl" class="example-tree">
   <!-- This is the tree node template for leaf nodes -->
@@ -26,8 +26,8 @@
         </ul>
       </li></mat-grid-tile>
     </mat-nested-tree-node>
-  </mat-tree>
-  <div>
+  </mat-tree></mat-grid-list>
+
     <mat-dialog-actions align="end">
     <button mat-flat-button (click)="this.deleteOptions()"  class="deletebutton" mat-dialog-close>
          <span style="font: 19px Open Sans;">Delete all</span>
