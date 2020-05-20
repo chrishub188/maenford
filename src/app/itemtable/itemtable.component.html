@@ -3,7 +3,7 @@
 
     <!-- Name status -->
     <ng-container matColumnDef="status">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header>status</th>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header class="header">Status</th>
       <td mat-cell *matCellDef="let row">
         <div *ngIf="row.status=='empty'">
           <div matTooltip="{{row.status}}"><span class="markerbuttonempty"></span></div>
@@ -19,25 +19,25 @@
 
     <!-- Id Column -->
     <ng-container matColumnDef="id">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header>Id</th>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header class="header">ID</th>
       <td mat-cell *matCellDef="let row">{{row.id}}</td>
     </ng-container>
 
     <!-- item Column -->
     <ng-container matColumnDef="item">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header>Item</th>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header class="header">Item</th>
       <td mat-cell *matCellDef="let row">{{row.item}}</td>
     </ng-container>
 
     <!-- number Column -->
     <ng-container matColumnDef="number">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header>Number</th>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header class="header">Number</th>
       <td mat-cell *matCellDef="let row">{{row.number}}</td>
     </ng-container>
 
     <!-- location Column -->
     <ng-container matColumnDef="location">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header>Location</th>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header class="header">Location</th>
       <td mat-cell *matCellDef="let row">
         <span>{{row.location}}</span>
         <button mat-icon-button>
@@ -49,31 +49,31 @@
 
     <!-- containerID Column -->
     <ng-container matColumnDef="containerID">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header>Container ID</th>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header class="header">Container ID</th>
       <td mat-cell *matCellDef="let row">{{row.containerID}}</td>
     </ng-container>
 
     <!-- weight Column -->
     <ng-container matColumnDef="weight">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header>Weight</th>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header class="header">Weight</th>
       <td mat-cell *matCellDef="let row">{{row.weight}}</td>
     </ng-container>
 
     <!-- dg Column -->
     <ng-container matColumnDef="dg">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header>DG</th>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header class="header">DG</th>
       <td mat-cell *matCellDef="let row">{{row.dg}}</td>
     </ng-container>
 
     <!-- arrival Column -->
     <ng-container matColumnDef="arrival">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header>Arrival</th>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header class="header">Arrival</th>
       <td mat-cell *matCellDef="let row">{{row.arrival}}</td>
     </ng-container>
 
-    <!-- number sender -->
+    <!-- sender Column -->
     <ng-container matColumnDef="sender">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header>Sender</th>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header class="header">Sender</th>
       <td mat-cell *matCellDef="let row">{{row.sender}}</td>
     </ng-container>
 

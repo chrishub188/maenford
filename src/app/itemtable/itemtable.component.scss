@@ -1,6 +1,23 @@
+
 .full-width-table {
   width: 100%;
 }
+.header {
+  color: #00243d;
+  font: 24px Open Sans;
+  text-align: left;
+  border-bottom: 2px solid #292d5a;
+  height: 46px;
+}
+// Remove box-shadow of table
+.mat-elevation-z8 {
+  box-shadow: unset;
+}
+// Cell background grey
+.mat-row:nth-child(odd) {
+  background-color: #F2F2F299  ;
+}
+
 // Button in location column
 .table-location-icon {
   color: #42b0d5;
