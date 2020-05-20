@@ -2,12 +2,25 @@
 .full-width-table {
   width: 100%;
 }
+// Style of table header
 .header {
   color: #00243d;
   font: 24px Open Sans;
   text-align: left;
   border-bottom: 2px solid #292d5a;
   height: 46px;
+}
+// Style of the table cell
+.cell {
+  height: 27px;
+  text-align: left;
+  font: 14px/18px Roboto;
+  letter-spacing: 0px;
+  color: #313131;
+  opacity: 1;
+}
+.mat-row {
+  height: 60px;
 }
 // Remove box-shadow of table
 .mat-elevation-z8 {
@@ -17,6 +30,7 @@
 .mat-row:nth-child(odd) {
   background-color: #F2F2F299  ;
 }
+// Style of the status cell
 
 // Button in location column
 .table-location-icon {
@@ -42,6 +56,8 @@
   background: #f9381c40 0% 0% no-repeat padding-box;
   border: 2px solid #f9381c;
   opacity: 1;
+  margin-left: 25%;
+  margin-right: 25%;
 }
 .markerbuttoninuse {
   border-radius: 50%;
@@ -52,6 +68,8 @@
   background: #a3bf0040 0% 0% no-repeat padding-box;
   border: 2px solid #a3bf00;
   opacity: 1;
+  margin-left: 25%;
+  margin-right: 25%;
 }
 .markerbuttonbackload {
   border-radius: 50%;
@@ -62,4 +80,6 @@
   background: #ffa20140;
   border: 2px solid #ffa201;
   opacity: 1;
+  margin-left: 25%;
+  margin-right: 25%;
 }
