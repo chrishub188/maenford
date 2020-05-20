@@ -70,7 +70,10 @@ opacity: 1;
   text-transform: uppercase;
   opacity: 1;  
 }
-gridtiledialog{}
+gridtiledialog{
+  
+}
+
 mat-grid-listdialog{
-  min-height: 56px;
+  rowHeight:fit;
 }
