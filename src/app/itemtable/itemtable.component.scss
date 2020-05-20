@@ -1,3 +1,48 @@
 .full-width-table {
   width: 100%;
 }
+// Button in location column
+.table-location-icon {
+  color: #42b0d5;
+  width: 20px;
+  height: 20px;
+  background: 0% 0% no-repeat padding-box;
+  opacity: 1;
+  margin-bottom: 8px;
+}
+// remove default click outline border
+*:focus {
+  outline: 0 !important;
+}
+/* Circles from the status cell*/
+
+.markerbuttonempty {
+  border-radius: 50%;
+  display: inline-block;
+  border: solid 1px;
+  width: 16px;
+  height: 16px;
+  background: #f9381c40 0% 0% no-repeat padding-box;
+  border: 2px solid #f9381c;
+  opacity: 1;
+}
+.markerbuttoninuse {
+  border-radius: 50%;
+  display: inline-block;
+  border: solid 1px;
+  width: 16px;
+  height: 16px;
+  background: #a3bf0040 0% 0% no-repeat padding-box;
+  border: 2px solid #a3bf00;
+  opacity: 1;
+}
+.markerbuttonbackload {
+  border-radius: 50%;
+  display: inline-block;
+  border: solid 1px;
+  width: 16px;
+  height: 16px;
+  background: #ffa20140;
+  border: 2px solid #ffa201;
+  opacity: 1;
+}

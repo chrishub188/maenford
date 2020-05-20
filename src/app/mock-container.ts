@@ -1,6 +1,5 @@
 import { ContainerElement } from './container';
 import { ManifestElement } from './container';
-import { Container } from '@angular/compiler/src/i18n/i18n_ast';
 
 export const Manifest: ManifestElement[] = [
     {

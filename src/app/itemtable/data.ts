@@ -1,0 +1,36 @@
+// All Data for the items table
+
+export const DataTable = [
+    // tslint:disable: max-line-length
+    { id: 589987, status: 'in use', item: '5 ea Drums w/ oil contaminated Waste', number: 1, location: 'Area 2', containerID: 'AME171', weight: 0.8, dg: '1.4 UN 0455', arrival: '02.06.2020', sender: 'Maersk Drilling', },
+    { id: 589987, status: 'in use', item: '5 ea Drums w/ oil contaminated Waste', number: 1, location: 'Area 2', containerID: 'AME171', weight: 0.8, dg: '1.4 UN 0455', arrival: '02.06.2020', sender: 'Maersk Drilling', },
+    { id: 589987, status: 'in use', item: '5 ea Drums w/ oil contaminated Waste', number: 1, location: 'Area 2', containerID: 'AME171', weight: 0.8, dg: '1.4 UN 0455', arrival: '02.06.2020', sender: 'Maersk Drilling', },
+    { id: 589987, status: 'in use', item: '5 ea Drums w/ oil contaminated Waste', number: 1, location: 'Area 2', containerID: 'AME171', weight: 0.8, dg: '1.4 UN 0455', arrival: '02.06.2020', sender: 'Maersk Drilling', },
+    { id: 589987, status: 'in use', item: '5 ea Drums w/ oil contaminated Waste', number: 1, location: 'Area 2', containerID: 'AME171', weight: 0.8, dg: '1.4 UN 0455', arrival: '02.06.2020', sender: 'Maersk Drilling', },
+    { id: 589987, status: 'in use', item: '5 ea Drums w/ oil contaminated Waste', number: 1, location: 'Area 2', containerID: 'AME171', weight: 0.8, dg: '1.4 UN 0455', arrival: '02.06.2020', sender: 'Maersk Drilling', },
+    { id: 589987, status: 'in use', item: '5 ea Drums w/ oil contaminated Waste', number: 1, location: 'Area 2', containerID: 'AME171', weight: 0.8, dg: '1.4 UN 0455', arrival: '02.06.2020', sender: 'Maersk Drilling', },
+    { id: 589987, status: 'in use', item: '5 ea Drums w/ oil contaminated Waste', number: 1, location: 'Area 2', containerID: 'AME171', weight: 0.8, dg: '1.4 UN 0455', arrival: '02.06.2020', sender: 'Maersk Drilling', },
+    { id: 589987, status: 'in use', item: '5 ea Drums w/ oil contaminated Waste', number: 1, location: 'Area 2', containerID: 'AME171', weight: 0.8, dg: '1.4 UN 0455', arrival: '02.06.2020', sender: 'Maersk Drilling', },
+    { id: 589987, status: 'in use', item: '5 ea Drums w/ oil contaminated Waste', number: 1, location: 'Area 2', containerID: 'AME171', weight: 0.8, dg: '1.4 UN 0455', arrival: '02.06.2020', sender: 'Maersk Drilling', },
+    { id: 589987, status: 'in use', item: '5 ea Drums w/ oil contaminated Waste', number: 1, location: 'Area 2', containerID: 'AME171', weight: 0.8, dg: '1.4 UN 0455', arrival: '02.06.2020', sender: 'Maersk Drilling', },
+    { id: 589987, status: 'in use', item: '5 ea Drums w/ oil contaminated Waste', number: 1, location: 'Area 2', containerID: 'AME171', weight: 0.8, dg: '1.4 UN 0455', arrival: '02.06.2020', sender: 'Maersk Drilling', },
+    { id: 589987, status: 'in use', item: '5 ea Drums w/ oil contaminated Waste', number: 1, location: 'Area 2', containerID: 'AME171', weight: 0.8, dg: '1.4 UN 0455', arrival: '02.06.2020', sender: 'Maersk Drilling', },
+    { id: 589987, status: 'in use', item: '5 ea Drums w/ oil contaminated Waste', number: 1, location: 'Area 2', containerID: 'AME171', weight: 0.8, dg: '1.4 UN 0455', arrival: '02.06.2020', sender: 'Maersk Drilling', },
+    { id: 589987, status: 'in use', item: '5 ea Drums w/ oil contaminated Waste', number: 1, location: 'Area 2', containerID: 'AME171', weight: 0.8, dg: '1.4 UN 0455', arrival: '02.06.2020', sender: 'Maersk Drilling', },
+    { id: 589987, status: 'in use', item: '5 ea Drums w/ oil contaminated Waste', number: 1, location: 'Area 2', containerID: 'AME171', weight: 0.8, dg: '1.4 UN 0455', arrival: '02.06.2020', sender: 'Maersk Drilling', },
+    { id: 589987, status: 'in use', item: '5 ea Drums w/ oil contaminated Waste', number: 1, location: 'Area 2', containerID: 'AME171', weight: 0.8, dg: '1.4 UN 0455', arrival: '02.06.2020', sender: 'Maersk Drilling', },
+    { id: 589987, status: 'in use', item: '5 ea Drums w/ oil contaminated Waste', number: 1, location: 'Area 2', containerID: 'AME171', weight: 0.8, dg: '1.4 UN 0455', arrival: '02.06.2020', sender: 'Maersk Drilling', },
+    { id: 589987, status: 'in use', item: '5 ea Drums w/ oil contaminated Waste', number: 1, location: 'Area 2', containerID: 'AME171', weight: 0.8, dg: '1.4 UN 0455', arrival: '02.06.2020', sender: 'Maersk Drilling', },
+    { id: 589987, status: 'in use', item: '5 ea Drums w/ oil contaminated Waste', number: 1, location: 'Area 2', containerID: 'AME171', weight: 0.8, dg: '1.4 UN 0455', arrival: '02.06.2020', sender: 'Maersk Drilling', },
+    { id: 589987, status: 'in use', item: '5 ea Drums w/ oil contaminated Waste', number: 1, location: 'Area 2', containerID: 'AME171', weight: 0.8, dg: '1.4 UN 0455', arrival: '02.06.2020', sender: 'Maersk Drilling', },
+    { id: 589987, status: 'in use', item: '5 ea Drums w/ oil contaminated Waste', number: 1, location: 'Area 2', containerID: 'AME171', weight: 0.8, dg: '1.4 UN 0455', arrival: '02.06.2020', sender: 'Maersk Drilling', },
+    { id: 589987, status: 'in use', item: '5 ea Drums w/ oil contaminated Waste', number: 1, location: 'Area 2', containerID: 'AME171', weight: 0.8, dg: '1.4 UN 0455', arrival: '02.06.2020', sender: 'Maersk Drilling', },
+    { id: 589987, status: 'in use', item: '5 ea Drums w/ oil contaminated Waste', number: 1, location: 'Area 2', containerID: 'AME171', weight: 0.8, dg: '1.4 UN 0455', arrival: '02.06.2020', sender: 'Maersk Drilling', },
+    { id: 589987, status: 'in use', item: '5 ea Drums w/ oil contaminated Waste', number: 1, location: 'Area 2', containerID: 'AME171', weight: 0.8, dg: '1.4 UN 0455', arrival: '02.06.2020', sender: 'Maersk Drilling', },
+    { id: 589987, status: 'in use', item: '5 ea Drums w/ oil contaminated Waste', number: 1, location: 'Area 2', containerID: 'AME171', weight: 0.8, dg: '1.4 UN 0455', arrival: '02.06.2020', sender: 'Maersk Drilling', },
+    { id: 589987, status: 'in use', item: '5 ea Drums w/ oil contaminated Waste', number: 1, location: 'Area 2', containerID: 'AME171', weight: 0.8, dg: '1.4 UN 0455', arrival: '02.06.2020', sender: 'Maersk Drilling', },
+    { id: 589987, status: 'in use', item: '5 ea Drums w/ oil contaminated Waste', number: 1, location: 'Area 2', containerID: 'AME171', weight: 0.8, dg: '1.4 UN 0455', arrival: '02.06.2020', sender: 'Maersk Drilling', },
+    { id: 589987, status: 'in use', item: '5 ea Drums w/ oil contaminated Waste', number: 1, location: 'Area 2', containerID: 'AME171', weight: 0.8, dg: '1.4 UN 0455', arrival: '02.06.2020', sender: 'Maersk Drilling', },
+    { id: 589987, status: 'in use', item: '5 ea Drums w/ oil contaminated Waste', number: 1, location: 'Area 2', containerID: 'AME171', weight: 0.8, dg: '1.4 UN 0455', arrival: '02.06.2020', sender: 'Maersk Drilling', },
+
+];

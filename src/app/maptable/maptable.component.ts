@@ -16,12 +16,6 @@ export class MaptableComponent implements AfterViewInit, OnInit {
   @ViewChild(MatTable) table: MatTable<MaptableItem>;
   dataSource: MaptableDataSource;
 
-  // id: number;
-  // containerID: string;
-  // status: string;
-  // content: string;
-  // location: string;
-
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
   displayedColumns = [ 'status', 'containerID', 'content', 'location'];
 

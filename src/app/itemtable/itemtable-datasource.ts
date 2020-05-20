@@ -3,36 +3,25 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { map } from 'rxjs/operators';
 import { Observable, of as observableOf, merge } from 'rxjs';
+import {DataTable} from './data';
 
 // TODO: Replace this with your own data model type
-export interface ItemtableItem {
-  name: string;
+export interface ItemtableItem{
   id: number;
+  status: string;
+  item: string;
+  number: number;
+  location: string;
+  containerID: string;
+  weight: number;
+  dg: string;
+  arrival: string;
+  sender: string;
 }
 
 // TODO: replace this with real data from your application
-const EXAMPLE_DATA: ItemtableItem[] = [
-  {id: 1, name: 'Hydrogen'},
-  {id: 2, name: 'Helium'},
-  {id: 3, name: 'Lithium'},
-  {id: 4, name: 'Beryllium'},
-  {id: 5, name: 'Boron'},
-  {id: 6, name: 'Carbon'},
-  {id: 7, name: 'Nitrogen'},
-  {id: 8, name: 'Oxygen'},
-  {id: 9, name: 'Fluorine'},
-  {id: 10, name: 'Neon'},
-  {id: 11, name: 'Sodium'},
-  {id: 12, name: 'Magnesium'},
-  {id: 13, name: 'Aluminum'},
-  {id: 14, name: 'Silicon'},
-  {id: 15, name: 'Phosphorus'},
-  {id: 16, name: 'Sulfur'},
-  {id: 17, name: 'Chlorine'},
-  {id: 18, name: 'Argon'},
-  {id: 19, name: 'Potassium'},
-  {id: 20, name: 'Calcium'},
-];
+const EXAMPLE_DATA: ItemtableItem[] = DataTable;
+
 
 /**
  * Data source for the Itemtable view. This class should
@@ -90,12 +79,19 @@ export class ItemtableDataSource extends DataSource<ItemtableItem> {
     if (!this.sort.active || this.sort.direction === '') {
       return data;
     }
-
     return data.sort((a, b) => {
       const isAsc = this.sort.direction === 'asc';
       switch (this.sort.active) {
-        case 'name': return compare(a.name, b.name, isAsc);
+        case 'status': return compare(a.status, b.status, isAsc);
         case 'id': return compare(+a.id, +b.id, isAsc);
+        case 'item': return compare(+a.item, +b.item, isAsc);
+        case 'number': return compare(+a.number, +b.number, isAsc);
+        case 'location': return compare(+a.location, +b.location, isAsc);
+        case 'containerID': return compare(+a.containerID, +b.containerID, isAsc);
+        case 'weight': return compare(+a.weight, +b.weight, isAsc);
+        case 'dg': return compare(+a.dg, +b.dg, isAsc);
+        case 'arrival': return compare(+a.arrival, +b.arrival, isAsc);
+        case 'sender': return compare(+a.sender, +b.sender, isAsc);
         default: return 0;
       }
     });

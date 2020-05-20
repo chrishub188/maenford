@@ -28,6 +28,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 
 /*Components to link in the menu-bar, each component represents the content below the top menu-bar */
 import { InventoryComponent } from './inventory/inventory.component';
@@ -42,12 +43,11 @@ import { RequestsComponent } from './requests/requests.component';
 import { BackloadComponent } from './backload/backload.component';
 import { LoadoutComponent } from './loadout/loadout.component';
 import { MaptableComponent } from './maptable/maptable.component';
-import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import { ItemtableComponent } from './itemtable/itemtable.component';
 
 
 /* MQTT imports and settings */
 import { MqttModule, IMqttServiceOptions } from 'ngx-mqtt';
-import { ItemtableComponent } from './itemtable/itemtable.component';
 export const MQTT_SERVICE_OPTIONS: IMqttServiceOptions = {
   hostname: 'localhost',
   port: 9001,
