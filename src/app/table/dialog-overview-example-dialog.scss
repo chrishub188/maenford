@@ -1,7 +1,8 @@
 
-  md-checkbox.md-checked.green .md-icon {
-    background-color: rgba(0, 255, 0, 0.87);
-   }
+  .mat-icon-rtl-mirror{
+color:#42b0d5;
+background-color: white;
+  }
 
 .mat-expansion-panel:not([class*='mat-elevation-z']) {
   box-shadow: none;
@@ -46,4 +47,16 @@
   border: solid white 1px;
   opacity: 1;
 }
-
+.filtercheckbox{
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+//border: 1px solid #919191;
+border-radius: 2px;
+opacity: 1;
+}
+.mat-tree-node{
+text-align: left;
+font: Regular 14px/19px Open Sans;
+letter-spacing: 0.14px;
+color: #313131;
+opacity: 1;
+}
