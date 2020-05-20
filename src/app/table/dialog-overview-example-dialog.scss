@@ -32,6 +32,18 @@
   text-transform: uppercase;
   margin-right: 68px;
 }
-.counter-icon-delete{}
-.counter-icon-apply{}
+.applybutton{
+  align-self: baseline;
+  color: #42b0d5;
+  font:16px SF Pro Display;
+  border: solid #42b0d5 1px;
+  opacity: 1;
+}
+.deletebutton{
+  align-self: baseline;
+  color: #42b0d5;
+  font:16px SF Pro Display;
+  border: solid white 1px;
+  opacity: 1;
+}
 

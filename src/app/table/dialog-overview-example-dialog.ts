@@ -59,18 +59,18 @@ const TREE_DATA: FoodNode[] = [
   {
     name: 'Status',
     children: [
-      { name: 'Empty' },
       { name: 'Backload' },
+      { name: 'Empty'},
       { name: 'In use' },
     ]
   }, {
     name: 'Type',
     children: [
-      { name: 'Container' },
       { name: 'Basket' },
+      { name: 'Container' },
+      { name: 'Frame' },      
       { name: 'Palet' },
       { name: 'Skip' },
-      { name: 'Frame' },
       { name: 'Tank' },
     ]
   }, {
@@ -88,32 +88,34 @@ const TREE_DATA: FoodNode[] = [
   }, {
     name: 'Size',
     children: [
-      { name: ' 6ft' },
-      { name: ' 8ft' },
-      { name: '10 ft' },
+      { name: ' 3 (1.6x1.9)' },
+      { name: ' 3 (1.9 x 1.6)' },
+      { name: '7.0 (6.5x1.2)' },
+      { name: '7.3 (3x4.2)' },
     ]
   }, {
     name: 'DG',
     children: [
-      { name: '-' },
+      { name: ' -' },
       { name:'1.4 UN 0352'},
     ]
   },{
     name: 'Sender',
     children: [
-      { name: 'Maersk Drilling' },
-      { name: 'BH Fishing Service' },
       { name: 'Ardyne AS' },
-      { name: 'Haliburton CleanWell' },
-      { name: 'Haliburton Cement' },
-      { name: 'Ardyne AS Titan Systems' },
-      { name: 'D.Danielsen' },
-      { name: 'Haliburton BSS' },
-      { name: 'Haliburton Bits' },
+      { name: 'Ardyne AS Titan Systems'},
       { name: 'Baker Hughes' },
+      { name: 'BH Fishing Service' },
+      { name: 'D.Danielsen' },
+      { name: 'Haliburton Baroid' },
+      { name: 'Haliburton Bits' },
+      { name: 'Haliburton BSS' },
+      { name: 'Haliburton Cement' },
+      { name: 'Haliburton CleanWell'},  
+      { name: 'Maersk Drilling' },
       { name: 'Westco Miljostasjon' },
       { name: 'Westco 8cup' },
-      { name: 'Haliburton Baroid' },
+      
     ]
   }, {
     name: 'Arrival',
@@ -125,10 +127,10 @@ const TREE_DATA: FoodNode[] = [
   }, {
     name: 'Weight',
     children: [
-      { name: '0t-0.9t' },
-      { name: '1.0t-1.9t' },
-      { name: '2.0t-2.9t' },
-      { name: '3.0t-3.9t' },
+      { name: '1.6' },
+      { name: '1.9' },
+      { name: '2.1' },
+      { name: '2.5' },
     ]
   },
 ];

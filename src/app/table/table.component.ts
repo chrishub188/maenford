@@ -82,7 +82,7 @@ export class TableComponent implements OnInit {
     openDialog(): void {
         const dialogRef = this.dialog.open(DialogOverviewExampleDialog, {
             width: '750px',
-            height:'1000px',
+            height:'321px',
             data: { name: this.name, func:this.applyFilter ,dataSource:this.dataSource}
         });
 
