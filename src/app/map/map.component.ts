@@ -39,7 +39,7 @@ export class MapComponent implements OnInit, AfterViewInit, OnDestroy {
   private initMap(): void {
     // Create map
     this.map = L.map('map', {
-      center: [40.251528, -74.630083],
+      center: [39.8282, -98.5795],
       zoomSnap: 0.1,
       scrollWheelZoom: false,
       //disable zoomControl when initializing map (which is topleft by default)
@@ -60,7 +60,7 @@ export class MapComponent implements OnInit, AfterViewInit, OnDestroy {
     L.easyButton(
     //'<span class="material-icons">location_on</span>',
     '<img src="assets/img/marker_white.svg" style="width: 20px; height: 20px; padding-right: 5px;">',
-    (btn, map) => {map.setView([40.251528, -74.630083], 19.8); }).addTo(this.map);
+    (btn, map) => {map.setView([56.465185, -2.926419], 19.8); }).addTo(this.map);
 
     // let toggle = L.easyButton ({
     //   position: 'topright',
@@ -79,15 +79,15 @@ export class MapComponent implements OnInit, AfterViewInit, OnDestroy {
       iconSize: [30, 42],
       iconAnchor: [15, 42]
     });
-    this.marker = L.marker([40.251391, -74.629992], { icon: this.containerMarker });
+    this.marker = L.marker([56.465070, -2.926915], { icon: this.containerMarker });
     this.marker.addTo(this.map);
     // Add rig image
     const imageUrl = 'assets/img/dev_map/map_maersk_basis.svg';
-    const imageBounds: LatLngBoundsExpression = [[40.251268, -74.630554], [40.251591, -74.629473]];
+    const imageBounds: LatLngBoundsExpression = [[56.465552, -2.927335], [56.464787, -2.925404]];
     const image = L.imageOverlay(imageUrl, imageBounds).addTo(this.map);
-    L.imageOverlay('assets/img/dev_map/map_maersk_only_areas.svg', [[40.251268, -74.630554], [40.251591, -74.629473]]).addTo(this.map);
+    L.imageOverlay('assets/img/dev_map/map_maersk_only_areas.svg', [[56.465552, -2.927335], [56.464787, -2.925404]]).addTo(this.map);
     // Set view on image
-    this.map.setView([40.251364, -74.629905], 25);
+    this.map.setView([56.465185, -2.926419], 19.8);
   }
 
   private subscribeNewTopic(topic: string): void {
