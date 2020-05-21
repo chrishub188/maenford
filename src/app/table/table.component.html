@@ -47,7 +47,7 @@
                     
                 <!-- Status Column -->
                     <ng-container matColumnDef="status">
-                        <th mat-header-cell *matHeaderCellDef mat-sort-header width=13% class="statusheader"> Status </th>
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header width=13% class="header"> Status </th>
                             <td mat-cell  *matCellDef="let element" class="cell">
                                     <div *ngIf="element.status=='empty'">
                             <div matTooltip="{{element.status}}"><span class="markerbuttonempty"></span></div>
@@ -69,23 +69,23 @@
              -->
                 <!-- Container ID Column -->
                     <ng-container matColumnDef="containerID">
-                          <th mat-header-cell *matHeaderCellDef mat-sort-header width=20% class="containerIDheader"> Container ID 
+                          <th mat-header-cell *matHeaderCellDef mat-sort-header width=20% class="header"> Container ID 
                     </th>
-                          <td mat-cell *matCellDef="let element" class="containerIDcell"> {{element.containerID}} </td>
+                          <td mat-cell *matCellDef="let element" class="cell"> {{element.containerID}} </td>
                         </ng-container>
                     
                  
                 <!-- Content Column -->
                             <ng-container matColumnDef="content">
-                                      <th mat-header-cell *matHeaderCellDef class="contentheader"> Content </th>
+                                      <th mat-header-cell *matHeaderCellDef class="header"> Content </th>
 
                                 
                     <!-- Insert embeded Angular list with items after test !!!!!-->
-                                      <td mat-cell *matCellDef="let element; let i = index;" class="contentcell" >
+                                      <td mat-cell *matCellDef="let element; let i = index;" class="cell" >
                                       <div *ngIf="i%2==0">
                                                          <mat-expansion-panel  class="evencontent">
                                                               <mat-expansion-panel-header>
-                                                                        <mat-panel-description class="evenpaneldescription">
+                                                                        <mat-panel-description>
                                                                                 Inventory of {{element.containerID}}
                                                                                 </mat-panel-description>
                                                                       </mat-expansion-panel-header>                   
@@ -117,7 +117,7 @@
 
                                    </ng-container>
                     <ng-container matColumnDef="location">
-                          <th mat-header-cell *matHeaderCellDef mat-sort-header width=18% class="locationheader"> Location </th>
+                          <th mat-header-cell *matHeaderCellDef mat-sort-header width=18% class="header"> Location </th>
                           <td mat-cell *matCellDef="let element" class="cell location-cell"> 
                         <span>{{element.location}}</span>
                         <button mat-icon-button>
@@ -127,28 +127,28 @@
                     </td>
                         </ng-container>
                     <ng-container matColumnDef="type">
-                          <th mat-header-cell *matHeaderCellDef mat-sort-header width=13% class="typeheader"> Type </th>
-                          <td mat-cell *matCellDef="let element" class="typecell"> {{element.type}} </td>
+                          <th mat-header-cell *matHeaderCellDef mat-sort-header width=13% class="header"> Type </th>
+                          <td mat-cell *matCellDef="let element" class="cell"> {{element.type}} </td>
                         </ng-container>
                     <ng-container matColumnDef="weight">
-                          <th mat-header-cell *matHeaderCellDef mat-sort-header width=13% class="weightheader"> Weight </th>
-                          <td mat-cell *matCellDef="let element" class="weightcell"> {{element.weight}} </td>
+                          <th mat-header-cell *matHeaderCellDef mat-sort-header width=13% class="header"> Weight </th>
+                          <td mat-cell *matCellDef="let element" class="cell"> {{element.weight}} </td>
                         </ng-container>
                     <ng-container matColumnDef="size">
-                          <th mat-header-cell *matHeaderCellDef mat-sort-header width=13% class="sizeheader"> Size </th>
-                          <td mat-cell *matCellDef="let element" class="sizecell"> {{element.size}} </td>
+                          <th mat-header-cell *matHeaderCellDef mat-sort-header width=13% class="header"> Size </th>
+                          <td mat-cell *matCellDef="let element" class="cell"> {{element.size}} </td>
                         </ng-container>
                     <ng-container matColumnDef="DG">
-                          <th mat-header-cell *matHeaderCellDef mat-sort-header width=13% class="dgheader">DG </th>
-                          <td mat-cell *matCellDef="let element" class="dgcell"> {{element.DG}} </td>
+                          <th mat-header-cell *matHeaderCellDef mat-sort-header width=13% class="header">DG </th>
+                          <td mat-cell *matCellDef="let element" class="cell"> {{element.DG}} </td>
                         </ng-container>
                     <ng-container matColumnDef="arrival">
-                          <th mat-header-cell *matHeaderCellDef mat-sort-header width=13% class="arrivalheader"> Arrival </th>
-                          <td mat-cell *matCellDef="let element" class="arrivalcell"> {{element.arrival}} </td>
+                          <th mat-header-cell *matHeaderCellDef mat-sort-header width=13% class="header"> Arrival </th>
+                          <td mat-cell *matCellDef="let element" class="cell"> {{element.arrival}} </td>
                         </ng-container>
                     <ng-container matColumnDef="sender">
-                          <th mat-header-cell *matHeaderCellDef mat-sort-header width=13% class="senderheader"> Sender </th>
-                          <td mat-cell *matCellDef="let element" class="sendercell"> {{element.sender}} </td>
+                          <th mat-header-cell *matHeaderCellDef mat-sort-header width=13% class="header"> Sender </th>
+                          <td mat-cell *matCellDef="let element" class="cell"> {{element.sender}} </td>
                         </ng-container>
                     
                 <!--Header row-->

@@ -94,6 +94,12 @@ table {
   border-bottom: 2px solid #292d5a;
   height: 46px;
 }
+mat-expansion-panel {
+  width: 90%;
+}
+::ng-deep mat-expansion-panel {
+  box-shadow: unset !important;
+}
 .cell {
   text-align: left;
   font: 16px Roboto;
@@ -103,14 +109,12 @@ table {
   // vertical-align: text-top;
   // padding-top: 18px;
 }
-/* Circles from the status cell*/
-.statusheader{
-  color: #00243d;
-  font: 24px Open Sans;
-  text-align: left;
-  border-bottom: 2px solid #292d5a;
-  height: 46px;
+::ng-deep .mat-drawer-container{
+  background-color: unset !important;
 }
+
+
+/* Circles from the status cell*/
 
 .markerbuttonempty {
   border-radius: 50%;
@@ -121,9 +125,6 @@ table {
   background: #f9381c40 0% 0% no-repeat padding-box;
   border: 2px solid #f9381c;
   opacity: 1;
-  position: relative;
-  left: 10px;
-  top: 12px;
 }
 .markerbuttoninuse {
   border-radius: 50%;
@@ -134,9 +135,6 @@ table {
   background: #a3bf0040 0% 0% no-repeat padding-box;
   border: 2px solid #a3bf00;
   opacity: 1;
-  position: relative;
-  left: 10px;
-  top: -6px;
 }
 .markerbuttonbackload {
   border-radius: 50%;
@@ -147,197 +145,7 @@ table {
   background: #ffa20140;
   border: 2px solid #ffa201;
   opacity: 1;
-  position: relative;
-  left: 10px;
-  top: 3px;
 }
-.containerIDheader{
-  color: #00243d;
-  font: 24px Open Sans;
-  text-align: left;
-  border-bottom: 2px solid #292d5a;
-  height: 46px;
-  position: relative; 
-  left:20px;
-}
-
-.containerIDcell{
-  text-align: left;
-  font: 16px Roboto;
-  letter-spacing: 0px;
-  color: #000000;
-  opacity: 1;
-  position: relative; 
-  left: 20px;
-}
-
-.contentheader{
-  color: #00243d;
-  font: 24px Open Sans;
-  text-align: left;
-  border-bottom: 2px solid #292d5a;
-  height: 46px;
-  position: relative;
-  left:67px;
-  
-  
-}
-.contentcell{
-  text-align: left;
-  font: 16px Roboto;
-  letter-spacing: 0px;
-  color: #000000;
-  opacity: 1;
-  position: relative; 
-  left:50px;
-  
-}
-.locationheader{
-  color: #00243d;
-  font: 24px Open Sans;
-  text-align: left;
-  border-bottom: 2px solid #292d5a;
-  height: 46px; 
-  position: relative;
-  left:-90px ;
-}
-.location-cell {
-  width: 100px;
-  position:relative;
-  left:-90px;
-}
-.table-location-icon {
-  color: #42b0d5;
-  width: 20px;
-  height: 20px;
-  background: 0% 0% no-repeat padding-box;
-  opacity: 1;
-  margin-bottom: 8px;
-  
-}
-
-.typeheader {
-  color: #00243d;
-  font: 24px Open Sans;
-  text-align: left;
-  border-bottom: 2px solid #292d5a;
-  height: 6px;
-  position:relative;
-  left:-83px;
-}
-.typecell {
-  text-align: left;
-  font: 16px Roboto;
-  letter-spacing: 0px;
-  color: #000000;
-  opacity: 1;
-  position:relative;
-  left:-80px;
-}
-.weightheader {
-  color: #00243d;
-  font: 24px Open Sans;
-  text-align: left;
-  border-bottom: 2px solid #292d5a;
-  height: 46px;
-  position: relative;
-  left:-55px;
-}
-.weightcell {
-  text-align: left;
-  font: 16px Roboto;
-  letter-spacing: 0px;
-  color: #000000;
-  opacity: 1;
-  position: relative;
-  left:-50px;
-
-}.sizeheader {
-  color: #00243d;
-  font: 24px Open Sans;
-  text-align: left;
-  border-bottom: 2px solid #292d5a;
-  height: 46px;
-  position: relative;
-  left:-32px;
-}
-.sizecell {
-  text-align: left;
-  font: 16px Roboto;
-  letter-spacing: 0px;
-  color: #000000;
-  opacity: 1;
-  position: relative;
-  left:-30px;
-}
-.dgheader {
-  color: #00243d;
-  font: 24px Open Sans;
-  text-align: left;
-  border-bottom: 2px solid #292d5a;
-  height: 46px;
-  position: relative;
-  left:-30px;
-}
-.dgcell {
-  text-align: left;
-  font: 16px Roboto;
-  letter-spacing: 0px;
-  color: #000000;
-  opacity: 1;
-  position: relative;
-  left:-30px;
-}
-.arrivalheader {
-  color: #00243d;
-  font: 24px Open Sans;
-  text-align: left;
-  border-bottom: 2px solid #292d5a;
-  height: 46px;
-  position: relative;
-  
-}
-.arrivalcell {
-  text-align: left;
-  font: 16px Roboto;
-  letter-spacing: 0px;
-  color: #000000;
-  opacity: 1;
- position:relative;
- 
-}
-.senderheader {
-  color: #00243d;
-  font: 24px Open Sans;
-  text-align: left;
-  border-bottom: 2px solid #292d5a;
-  height: 46px;
-  
-}
-.sendercell {
-  text-align: left;
-  font: 16px Roboto;
-  letter-spacing: 0px;
-  color: #000000;
-  opacity: 1;
-}
-
-
-
-mat-expansion-panel {
-  //width: 90%;
-  width:70%;
-}
-::ng-deep mat-expansion-panel {
-  box-shadow: unset !important;
-}
-
-::ng-deep .mat-drawer-container{
-  background-color: unset !important;
-}
-
-
-
 
 .mat-row {
   min-height: 30px;
@@ -349,10 +157,7 @@ form-field {
 .evencontent {
   vertical-align: text-top;
   background-color: #F2F2F299;
-  z-index: 0; 
-}
-.evenpaneldescription{
-  vertical-align: text-top;
+  z-index: 0;
 }
 .oddcontent {
   background-color: white;
@@ -383,7 +188,14 @@ mat-button-toggle.cdk-mouse-focused {
 mat-icon {
   color: white;
 }
-
+.table-location-icon {
+  color: #42b0d5;
+  width: 20px;
+  height: 20px;
+  background: 0% 0% no-repeat padding-box;
+  opacity: 1;
+  margin-bottom: 8px;
+}
 // remove default click outline border
 *:focus {
   outline: 0 !important;
@@ -395,7 +207,9 @@ mat-expansion-panel-header {
   color: #000000;
   opacity: 1;
 }
-
+.location-cell {
+  width: 100px;
+}
 .mat-elevation-z8 {
   box-shadow: unset;
 }

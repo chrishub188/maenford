@@ -1,5 +1,5 @@
 <div>
-<!-- <mat-grid-list class="mat-grid-listdialog"cols="2" > -->
+<mat-grid-list class="mat-grid-listdialog"cols="2" >
 <mat-tree [dataSource]="dataSourcee" [treeControl]="treeControl" class="example-tree">
   <!-- This is the tree node template for leaf nodes -->
     <mat-tree-node *matTreeNodeDef="let node" matTreeNodeToggle>
@@ -10,8 +10,7 @@
       </li>
     </mat-tree-node>
     <!-- This is the tree node template for expandable nodes -->
-    <mat-nested-tree-node *matTreeNodeDef="let node; when: hasChild">
-      <!-- <mat-grid-tile class="gridtiledialog"> -->
+    <mat-nested-tree-node *matTreeNodeDef="let node; when: hasChild"><mat-grid-tile class="gridtiledialog">
             <li>
         <div class="mat-tree-node">
           <button mat-icon-button class="nodetreebutton" matTreeNodeToggle
@@ -25,13 +24,11 @@
         <ul [class.example-tree-invisible]="!treeControl.isExpanded(node)">
           <ng-container matTreeNodeOutlet></ng-container>
         </ul>
-      </li>
-    <!-- </mat-grid-tile> -->
+      </li></mat-grid-tile>
     </mat-nested-tree-node>
-  </mat-tree>
-<!-- </mat-grid-list> -->
+  </mat-tree></mat-grid-list>
 
-    <mat-dialog-actions  class="actiondialog" align="end">
+    <mat-dialog-actions align="end">
     <button mat-flat-button (click)="this.deleteOptions()"  class="deletebutton" mat-dialog-close>
          <span style="font: 19px Open Sans;">Delete all</span>
   </button>
