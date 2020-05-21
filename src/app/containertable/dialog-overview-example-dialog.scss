@@ -10,13 +10,36 @@ background-color: white;
 .example-tree-invisible {
   display: none;
 }
+.example-tree-two-invisible {
+  display: none;
+}
 
 .example-tree ul,
 .example-tree li {
   margin-top: 0;
   margin-bottom: 0;
   list-style-type: none;
+  //width:200px;
 }
+.example-tree-two ul,
+.example-tree-two li {
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style-type: none;
+  //width:200px;
+
+}
+
+.example-tree{
+  position: relative;
+  top:20px;
+}
+.example-tree-two{
+  position: relative;
+   right:-200px;
+   top:-170px;
+}
+
 .counter{
   text-align: left;
   font: 20px/19px Open Sans;
@@ -53,11 +76,20 @@ background-color: white;
 width: 24px;
 height: 17px;
 text-align: left;
-font: Semibold 14px/19px Open Sans;
+font: Semibold 14px Open Sans;
 letter-spacing: 0.14px;
-color: #313131;
-opacity: 1;  
+opacity: 1;
 }
+
+::ng-deep .mat-checkbox .mat-checkbox-frame {
+  border-color:#919191;
+}
+
+::ng-deep .mat-checkbox-checked .mat-checkbox-background {
+  background-color: #42b0d5 !important;
+}
+
+
 .mat-tree-node{
   top: 337px;
   left: 383px;
@@ -68,12 +100,31 @@ opacity: 1;
   letter-spacing: 0.28px;
   color: #313131;
   text-transform: uppercase;
-  opacity: 1;  
-}
-gridtiledialog{
-  
+  opacity: 1;
 }
 
-mat-grid-listdialog{
-  
+.mat-tree-node-two{
+  top: 337px;
+  left: 383px;
+  width: 174px;
+  height: 33px;
+  text-align: left;
+  font: Regular 14px/19px Open Sans;
+  letter-spacing: 0.28px;
+  color: #313131;
+  text-transform: uppercase;
+  opacity: 1;
 }
+
+
+
+.actionsdialog{
+  position: relative;
+  bottom:20px;
+  right: 50px;
+}
+
+.dialogfenster{
+  width: 750px;
+}
+

@@ -15,11 +15,16 @@ export class DialogOverviewExampleDialog {
   emptystring:string='';
   temp:string;
   treeControl = new NestedTreeControl<FoodNode>(node => node.children);
+
+  dataSource = new MatTreeNestedDataSource<FoodNode>();
   dataSourcee = new MatTreeNestedDataSource<FoodNode>();
+  dataSourceetwo = new MatTreeNestedDataSource<FoodNode>();
+
+
 
   constructor(
     public dialogRef: MatDialogRef<DialogOverviewExampleDialog>,
-    @Inject(MAT_DIALOG_DATA) public data) { this.dataSourcee.data = TREE_DATA; }
+    @Inject(MAT_DIALOG_DATA) public data) { this.dataSourcee.data = TREE_DATA; this.dataSourceetwo.data=TREE_DATA_TWO;}
 
   onNoClick(): void {
     this.dialogRef.close();
@@ -36,7 +41,7 @@ export class DialogOverviewExampleDialog {
         this.data.name=this.temp;
         console.log( this.data.name);
         console.log('auswahl entfernt');
-    
+
         this.data.func(this.emptystring);
         console.log('filter aufgerufen');
       };
@@ -67,7 +72,7 @@ const TREE_DATA: FoodNode[] = [
     children: [
       { name: 'Basket' },
       { name: 'Container' },
-      { name: 'Frame' },      
+      { name: 'Frame' },
       { name: 'Palet' },
       { name: 'Skip' },
       { name: 'Tank' },
@@ -79,12 +84,18 @@ const TREE_DATA: FoodNode[] = [
       { name: 'Area 2' },
       { name: 'Area 3' },
       { name: 'Area 4' },
-      { name: 'Cantilever C1' },
-      { name: 'Cantilever C2' },
-      { name: 'Cantilever C3' },
-      { name: 'Cantilever C4' },
+      { name: 'Cantilever'},
     ]
-  }, {
+  },{
+    name: 'Arrival',
+    children: [
+      { name:'01.01.2020'},
+      { name:'02.01.2020'},
+      { name:'03.01.2020'},
+    ]
+  },
+];
+  const TREE_DATA_TWO: FoodNode[] = [ {
     name: 'Size',
     children: [
       { name: ' 3 (1.6x1.9)' },
@@ -102,28 +113,19 @@ const TREE_DATA: FoodNode[] = [
     name: 'Sender',
     children: [
       { name: 'Ardyne AS' },
-      { name: 'Ardyne AS Titan Systems'},
       { name: 'Baker Hughes' },
-      { name: 'BH Fishing Service' },
       { name: 'D.Danielsen' },
       { name: 'Haliburton Baroid' },
       { name: 'Haliburton Bits' },
       { name: 'Haliburton BSS' },
       { name: 'Haliburton Cement' },
-      { name: 'Haliburton CleanWell'},  
+      { name: 'Haliburton CleanWell'},
       { name: 'Maersk Drilling' },
       { name: 'Westco Miljostasjon' },
       { name: 'Westco 8cup' },
-      
     ]
-  }, {
-    name: 'Arrival',
-    children: [
-      { name:'01.01.2020'},
-      { name:'02.01.2020'},
-      { name:'03.01.2020'},
-    ]
-  }, {
+  },
+  {
     name: 'Weight',
     children: [
       { name: '1.6' },
@@ -131,7 +133,84 @@ const TREE_DATA: FoodNode[] = [
       { name: '2.1' },
       { name: '2.5' },
     ]
-  },
-];
+  },];
 
 
+// const TREE_DATA: FoodNode[] = [
+//   {
+//     name: 'Status',
+//     children: [
+//       { name: 'Backload' },
+//       { name: 'Empty'},
+//       { name: 'In use' },
+//     ]
+//   }, {
+//     name: 'Type',
+//     children: [
+//       { name: 'Basket' },
+//       { name: 'Container' },
+//       { name: 'Frame' },
+//       { name: 'Palet' },
+//       { name: 'Skip' },
+//       { name: 'Tank' },
+//     ]
+//   }, {
+//     name: 'Location',
+//     children: [
+//       { name: 'Area 1' },
+//       { name: 'Area 2' },
+//       { name: 'Area 3' },
+//       { name: 'Area 4' },
+//       { name: 'Cantilever C1' },
+//       { name: 'Cantilever C2' },
+//       { name: 'Cantilever C3' },
+//       { name: 'Cantilever C4' },
+//     ]
+//   }, {
+//     name: 'Size',
+//     children: [
+//       { name: ' 3 (1.6x1.9)' },
+//       { name: ' 3 (1.9 x 1.6)' },
+//       { name: '7.0 (6.5x1.2)' },
+//       { name: '7.3 (3x4.2)' },
+//     ]
+//   }, {
+//     name: 'DG',
+//     children: [
+//       { name: ' -' },
+//       { name:'1.4 UN 0352'},
+//     ]
+//   },{
+//     name: 'Sender',
+//     children: [
+//       { name: 'Ardyne AS' },
+//       { name: 'Baker Hughes' },
+//       { name: 'BH Fishing Service' },
+//       { name: 'D.Danielsen' },
+//       { name: 'Haliburton Baroid' },
+//       { name: 'Haliburton Bits' },
+//       { name: 'Haliburton BSS' },
+//       { name: 'Haliburton Cement' },
+//       { name: 'Haliburton CleanWell'},
+//       { name: 'Maersk Drilling' },
+//       { name: 'Westco Miljostasjon' },
+//       { name: 'Westco 8cup' },
+
+//     ]
+//   }, {
+//     name: 'Arrival',
+//     children: [
+//       { name:'01.01.2020'},
+//       { name:'02.01.2020'},
+//       { name:'03.01.2020'},
+//     ]
+//   }, {
+//     name: 'Weight',
+//     children: [
+//       { name: '1.6' },
+//       { name: '1.9' },
+//       { name: '2.1' },
+//       { name: '2.5' },
+//     ]
+//   },
+// ];
