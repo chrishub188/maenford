@@ -32,7 +32,7 @@ export class ContainertableComponent implements AfterViewInit, OnInit {
   displayedColumns = [
     'status',
     'containerID',
-    // 'content',
+    'content',
     'location',
     'type',
     'weight',
@@ -41,7 +41,7 @@ export class ContainertableComponent implements AfterViewInit, OnInit {
     'arrival',
     'sender'];
 
-  constructor(public dialog: MatDialog) { 
+  constructor(public dialog: MatDialog) {
     this.dataSource = new ContainertableDataSource();
   }
 
