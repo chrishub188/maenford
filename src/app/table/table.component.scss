@@ -103,138 +103,14 @@ table {
   // vertical-align: text-top;
   // padding-top: 18px;
 }
-.contentheader{
-  color: #00243d;
-  font: 24px Open Sans;
-  text-align: left;
-  border-bottom: 2px solid #292d5a;
-  height: 46px;
-  position: relative;
-  left: 19px;
-  
-}
-.contentcell{
-  text-align: left;
-  font: 16px Roboto;
-  letter-spacing: 0px;
-  color: #000000;
-  opacity: 1;
-  position: relative; 
-  left:17;
-}
-
-
-.typeheader {
-  color: #00243d;
-  font: 24px Open Sans;
-  text-align: left;
-  border-bottom: 2px solid #292d5a;
-  height: 46px;
-}
-.typecell {
-  text-align: left;
-  font: 16px Roboto;
-  letter-spacing: 0px;
-  color: #000000;
-  opacity: 1;
-  // vertical-align: text-top;
-  // padding-top: 18px;
-}
-.weightheader {
-  color: #00243d;
-  font: 24px Open Sans;
-  text-align: left;
-  border-bottom: 2px solid #292d5a;
-  height: 46px;
-}
-.weightcell {
-  text-align: left;
-  font: 16px Roboto;
-  letter-spacing: 0px;
-  color: #000000;
-  opacity: 1;
-  // vertical-align: text-top;
-  // padding-top: 18px;
-}.sizeheader {
-  color: #00243d;
-  font: 24px Open Sans;
-  text-align: left;
-  border-bottom: 2px solid #292d5a;
-  height: 46px;
-}
-.sizecell {
-  text-align: left;
-  font: 16px Roboto;
-  letter-spacing: 0px;
-  color: #000000;
-  opacity: 1;
-  // vertical-align: text-top;
-  // padding-top: 18px;
-}
-.dgheader {
-  color: #00243d;
-  font: 24px Open Sans;
-  text-align: left;
-  border-bottom: 2px solid #292d5a;
-  height: 46px;
-}
-.dgcell {
-  text-align: left;
-  font: 16px Roboto;
-  letter-spacing: 0px;
-  color: #000000;
-  opacity: 1;
-  // vertical-align: text-top;
-  // padding-top: 18px;
-}
-.arrivalheader {
-  color: #00243d;
-  font: 24px Open Sans;
-  text-align: left;
-  border-bottom: 2px solid #292d5a;
-  height: 46px;
-}
-.arrivalcell {
-  text-align: left;
-  font: 16px Roboto;
-  letter-spacing: 0px;
-  color: #000000;
-  opacity: 1;
-  // vertical-align: text-top;
-  // padding-top: 18px;
-}
-.senderheader {
-  color: #00243d;
-  font: 24px Open Sans;
-  text-align: left;
-  border-bottom: 2px solid #292d5a;
-  height: 46px;
-}
-.sendercell {
-  text-align: left;
-  font: 16px Roboto;
-  letter-spacing: 0px;
-  color: #000000;
-  opacity: 1;
-  // vertical-align: text-top;
-  // padding-top: 18px;
-}
-
-
-
-mat-expansion-panel {
-  width: 90%;
-}
-::ng-deep mat-expansion-panel {
-  box-shadow: unset !important;
-}
-
-::ng-deep .mat-drawer-container{
-  background-color: unset !important;
-}
-
-
 /* Circles from the status cell*/
+.statusheader{
+  color: #00243d;
+  font: 24px Open Sans;
+  text-align: left;
+  border-bottom: 2px solid #292d5a;
+  height: 46px;
+}
 
 .markerbuttonempty {
   border-radius: 50%;
@@ -275,6 +151,193 @@ mat-expansion-panel {
   left: 10px;
   top: 3px;
 }
+.containerIDheader{
+  color: #00243d;
+  font: 24px Open Sans;
+  text-align: left;
+  border-bottom: 2px solid #292d5a;
+  height: 46px;
+  position: relative; 
+  left:20px;
+}
+
+.containerIDcell{
+  text-align: left;
+  font: 16px Roboto;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+  position: relative; 
+  left: 20px;
+}
+
+.contentheader{
+  color: #00243d;
+  font: 24px Open Sans;
+  text-align: left;
+  border-bottom: 2px solid #292d5a;
+  height: 46px;
+  position: relative;
+  left:67px;
+  
+  
+}
+.contentcell{
+  text-align: left;
+  font: 16px Roboto;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+  position: relative; 
+  left:50px;
+  
+}
+.locationheader{
+  color: #00243d;
+  font: 24px Open Sans;
+  text-align: left;
+  border-bottom: 2px solid #292d5a;
+  height: 46px; 
+  position: relative;
+  left:-90px ;
+}
+.location-cell {
+  width: 100px;
+  position:relative;
+  left:-90px;
+}
+.table-location-icon {
+  color: #42b0d5;
+  width: 20px;
+  height: 20px;
+  background: 0% 0% no-repeat padding-box;
+  opacity: 1;
+  margin-bottom: 8px;
+  
+}
+
+.typeheader {
+  color: #00243d;
+  font: 24px Open Sans;
+  text-align: left;
+  border-bottom: 2px solid #292d5a;
+  height: 6px;
+  position:relative;
+  left:-83px;
+}
+.typecell {
+  text-align: left;
+  font: 16px Roboto;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+  position:relative;
+  left:-80px;
+}
+.weightheader {
+  color: #00243d;
+  font: 24px Open Sans;
+  text-align: left;
+  border-bottom: 2px solid #292d5a;
+  height: 46px;
+  position: relative;
+  left:-55px;
+}
+.weightcell {
+  text-align: left;
+  font: 16px Roboto;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+  position: relative;
+  left:-50px;
+
+}.sizeheader {
+  color: #00243d;
+  font: 24px Open Sans;
+  text-align: left;
+  border-bottom: 2px solid #292d5a;
+  height: 46px;
+  position: relative;
+  left:-32px;
+}
+.sizecell {
+  text-align: left;
+  font: 16px Roboto;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+  position: relative;
+  left:-30px;
+}
+.dgheader {
+  color: #00243d;
+  font: 24px Open Sans;
+  text-align: left;
+  border-bottom: 2px solid #292d5a;
+  height: 46px;
+  position: relative;
+  left:-30px;
+}
+.dgcell {
+  text-align: left;
+  font: 16px Roboto;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+  position: relative;
+  left:-30px;
+}
+.arrivalheader {
+  color: #00243d;
+  font: 24px Open Sans;
+  text-align: left;
+  border-bottom: 2px solid #292d5a;
+  height: 46px;
+  position: relative;
+  
+}
+.arrivalcell {
+  text-align: left;
+  font: 16px Roboto;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+ position:relative;
+ 
+}
+.senderheader {
+  color: #00243d;
+  font: 24px Open Sans;
+  text-align: left;
+  border-bottom: 2px solid #292d5a;
+  height: 46px;
+  
+}
+.sendercell {
+  text-align: left;
+  font: 16px Roboto;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+}
+
+
+
+mat-expansion-panel {
+  //width: 90%;
+  width:70%;
+}
+::ng-deep mat-expansion-panel {
+  box-shadow: unset !important;
+}
+
+::ng-deep .mat-drawer-container{
+  background-color: unset !important;
+}
+
+
+
 
 .mat-row {
   min-height: 30px;
@@ -317,14 +380,7 @@ mat-button-toggle.cdk-mouse-focused {
 mat-icon {
   color: white;
 }
-.table-location-icon {
-  color: #42b0d5;
-  width: 20px;
-  height: 20px;
-  background: 0% 0% no-repeat padding-box;
-  opacity: 1;
-  margin-bottom: 8px;
-}
+
 // remove default click outline border
 *:focus {
   outline: 0 !important;
@@ -336,9 +392,7 @@ mat-expansion-panel-header {
   color: #000000;
   opacity: 1;
 }
-.location-cell {
-  width: 100px;
-}
+
 .mat-elevation-z8 {
   box-shadow: unset;
 }

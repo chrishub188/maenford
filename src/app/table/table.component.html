@@ -47,7 +47,7 @@
                     
                 <!-- Status Column -->
                     <ng-container matColumnDef="status">
-                        <th mat-header-cell *matHeaderCellDef mat-sort-header width=13% class="header"> Status </th>
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header width=13% class="statusheader"> Status </th>
                             <td mat-cell  *matCellDef="let element" class="cell">
                                     <div *ngIf="element.status=='empty'">
                             <div matTooltip="{{element.status}}"><span class="markerbuttonempty"></span></div>
@@ -69,9 +69,9 @@
              -->
                 <!-- Container ID Column -->
                     <ng-container matColumnDef="containerID">
-                          <th mat-header-cell *matHeaderCellDef mat-sort-header width=20% class="header"> Container ID 
+                          <th mat-header-cell *matHeaderCellDef mat-sort-header width=20% class="containerIDheader"> Container ID 
                     </th>
-                          <td mat-cell *matCellDef="let element" class="cell"> {{element.containerID}} </td>
+                          <td mat-cell *matCellDef="let element" class="containerIDcell"> {{element.containerID}} </td>
                         </ng-container>
                     
                  
@@ -117,7 +117,7 @@
 
                                    </ng-container>
                     <ng-container matColumnDef="location">
-                          <th mat-header-cell *matHeaderCellDef mat-sort-header width=18% class="header"> Location </th>
+                          <th mat-header-cell *matHeaderCellDef mat-sort-header width=18% class="locationheader"> Location </th>
                           <td mat-cell *matCellDef="let element" class="cell location-cell"> 
                         <span>{{element.location}}</span>
                         <button mat-icon-button>
