@@ -34,10 +34,10 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import { InventoryComponent } from './inventory/inventory.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { MapComponent } from './map/map.component';
-import { TableComponent } from './table/table.component';
+//import { TableComponent } from './table/table.component';
 import {MatTableModule} from '@angular/material/table';
 import { MqttComponent } from './mqtt/mqtt.component';
-import { DialogOverviewExampleDialog } from './table/dialog-overview-example-dialog';
+import { DialogOverviewExampleDialog } from './containertable/dialog-overview-example-dialog';
 import {MatTreeModule} from '@angular/material/tree'; 
 import { RequestsComponent } from './requests/requests.component';
 import { BackloadComponent } from './backload/backload.component';
@@ -56,14 +56,13 @@ export const MQTT_SERVICE_OPTIONS: IMqttServiceOptions = {
 };
 
 
-
 @NgModule({
   declarations: [
     AppComponent,
     InventoryComponent,
     NavbarComponent,
     MapComponent,
-    TableComponent,
+    //TableComponent,
     MqttComponent,
     DialogOverviewExampleDialog,
     RequestsComponent,
