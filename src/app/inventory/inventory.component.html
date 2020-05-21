@@ -21,7 +21,7 @@
       </div>
       <div [ngSwitch]="mapPosition">
         <div class="map-table" *ngSwitchCase="'closed'">
-          <app-table></app-table>
+          <app-containertable></app-containertable>
         </div>
         <div class="only-table" *ngSwitchCase="'open'">
           <app-maptable></app-maptable>

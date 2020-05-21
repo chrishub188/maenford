@@ -1,5 +1,3 @@
-import { ArrayType } from '@angular/compiler';
-
 export interface ContainerElement{
   name: string;
   itemId: number; 
