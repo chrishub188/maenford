@@ -48,6 +48,7 @@ import { ItemtableComponent } from './itemtable/itemtable.component';
 
 /* MQTT imports and settings */
 import { MqttModule, IMqttServiceOptions } from 'ngx-mqtt';
+import { ContainertableComponent } from './containertable/containertable.component';
 export const MQTT_SERVICE_OPTIONS: IMqttServiceOptions = {
   hostname: 'localhost',
   port: 9001,
@@ -70,6 +71,7 @@ export const MQTT_SERVICE_OPTIONS: IMqttServiceOptions = {
     LoadoutComponent,
     MaptableComponent,
     ItemtableComponent,
+    ContainertableComponent,
   ],
   imports: [
     MqttModule.forRoot(MQTT_SERVICE_OPTIONS),
