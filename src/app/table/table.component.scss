@@ -94,19 +94,6 @@ table {
   border-bottom: 2px solid #292d5a;
   height: 46px;
 }
-.contentheader{
-  color: #00243d;
-  font: 24px Open Sans;
-  text-align: left;
-  border-bottom: 2px solid #292d5a;
-  height: 46px;
-}
-mat-expansion-panel {
-  width: 90%;
-}
-::ng-deep mat-expansion-panel {
-  box-shadow: unset !important;
-}
 .cell {
   text-align: left;
   font: 16px Roboto;
@@ -116,6 +103,132 @@ mat-expansion-panel {
   // vertical-align: text-top;
   // padding-top: 18px;
 }
+.contentheader{
+  color: #00243d;
+  font: 24px Open Sans;
+  text-align: left;
+  border-bottom: 2px solid #292d5a;
+  height: 46px;
+  position: relative;
+  left: 19px;
+  
+}
+.contentcell{
+  text-align: left;
+  font: 16px Roboto;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+  position: relative; 
+  left:17;
+}
+
+
+.typeheader {
+  color: #00243d;
+  font: 24px Open Sans;
+  text-align: left;
+  border-bottom: 2px solid #292d5a;
+  height: 46px;
+}
+.typecell {
+  text-align: left;
+  font: 16px Roboto;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+  // vertical-align: text-top;
+  // padding-top: 18px;
+}
+.weightheader {
+  color: #00243d;
+  font: 24px Open Sans;
+  text-align: left;
+  border-bottom: 2px solid #292d5a;
+  height: 46px;
+}
+.weightcell {
+  text-align: left;
+  font: 16px Roboto;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+  // vertical-align: text-top;
+  // padding-top: 18px;
+}.sizeheader {
+  color: #00243d;
+  font: 24px Open Sans;
+  text-align: left;
+  border-bottom: 2px solid #292d5a;
+  height: 46px;
+}
+.sizecell {
+  text-align: left;
+  font: 16px Roboto;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+  // vertical-align: text-top;
+  // padding-top: 18px;
+}
+.dgheader {
+  color: #00243d;
+  font: 24px Open Sans;
+  text-align: left;
+  border-bottom: 2px solid #292d5a;
+  height: 46px;
+}
+.dgcell {
+  text-align: left;
+  font: 16px Roboto;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+  // vertical-align: text-top;
+  // padding-top: 18px;
+}
+.arrivalheader {
+  color: #00243d;
+  font: 24px Open Sans;
+  text-align: left;
+  border-bottom: 2px solid #292d5a;
+  height: 46px;
+}
+.arrivalcell {
+  text-align: left;
+  font: 16px Roboto;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+  // vertical-align: text-top;
+  // padding-top: 18px;
+}
+.senderheader {
+  color: #00243d;
+  font: 24px Open Sans;
+  text-align: left;
+  border-bottom: 2px solid #292d5a;
+  height: 46px;
+}
+.sendercell {
+  text-align: left;
+  font: 16px Roboto;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+  // vertical-align: text-top;
+  // padding-top: 18px;
+}
+
+
+
+mat-expansion-panel {
+  width: 90%;
+}
+::ng-deep mat-expansion-panel {
+  box-shadow: unset !important;
+}
+
 ::ng-deep .mat-drawer-container{
   background-color: unset !important;
 }
