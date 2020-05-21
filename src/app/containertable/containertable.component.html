@@ -75,10 +75,18 @@
         <!-- content Column -->
         <ng-container matColumnDef="content">
           <th mat-header-cell *matHeaderCellDef mat-sort-header class="header">Content</th>
-          <td mat-cell *matCellDef="let row" class="cell">
-            <li *ngFor="let elem of row.content">
-              {{ elem.name }}
-            </li>
+          <td mat-cell *matCellDef="let row" class="cell" [ngSwitch]="status">
+              <div  *ngSwitchCase="'one'">
+                123
+              </div>
+              <div *ngSwitchCase="'multiple'">
+                1234
+              </div>
+              <div *ngSwitchCase="'collapse'">
+                <span *ngFor="let elem of row.content" class="content-element">
+                  {{ elem.name }}<br>
+                </span>
+              </div>
           </td>
         </ng-container>
 

@@ -20,13 +20,15 @@ export class ContainertableComponent implements AfterViewInit, OnInit {
 
   // Value of toggle-button containers and items
   toggleValue: string;
+  // Status of the content colummn
+  status: string;
   // Toolbar counter values
   containers: number;
   baskests: number;
   items: number;
   name: string;
-  selectedContainer: ManifestElement;
 
+  selectedContainer: ManifestElement;
 
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
   displayedColumns = [
@@ -49,6 +51,7 @@ export class ContainertableComponent implements AfterViewInit, OnInit {
   ngOnInit() {
     this.dataSource = new ContainertableDataSource();
     // Initial displayed table
+    this.status = 'collapse';
     this.toggleValue = 'containers';
 
     //Count items on the rig
