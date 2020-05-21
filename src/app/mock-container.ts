@@ -54,7 +54,7 @@ export const Manifest: ManifestElement[] = [
             { name: '1 ea 17 1/2" String Mill, 6 5/8" REG Box x Pin', itemId: undefined, amount: '1', weight: '', recipient: '' },
             { name: '1 ea ALO Valve, 6 5/8" REG Box x Pin', itemId: 0, amount: '1', weight: '', recipient: '' },
             { name: '1 ea Pup Joint, 5 7/8" OD Shank, 6 5/8" REG Box xPin', itemId: undefined, amount: '3', weight: '', recipient: '' },
-            { name: ' 1 ea Slip Joint, 6 5/8" REG Box x Pin', itemId: undefined, amount: '1', weight: '', recipient: '' },], location: 'Area 2', type: 'Basket', weight: '5.4', size: '12.3 (10.2x1.2)', DG: '-', arrival: '01.01.2020', sender: 'Ardyne AS Titan Systems'
+            { name: '1 ea Slip Joint, 6 5/8" REG Box x Pin', itemId: undefined, amount: '1', weight: '', recipient: '' },], location: 'Area 2', type: 'Basket', weight: '5.4', size: '12.3 (10.2x1.2)', DG: '-', arrival: '01.01.2020', sender: 'Ardyne AS Titan Systems'
     },
 
     {
@@ -100,7 +100,7 @@ export const Manifest: ManifestElement[] = [
     },
 
     {
-        status: 'in use', id: 589993, containerID: 'CBVA015', content: [{ name: ' 1 ea Drilling: 6 1/2" BULLNOSE premade, 4/14/32nozzles', itemId: 11565353, amount: '1', weight: '', recipient: '' },
+        status: 'in use', id: 589993, containerID: 'CBVA015', content: [{ name: '1 ea Drilling: 6 1/2" BULLNOSE premade, 4/14/32nozzles', itemId: 11565353, amount: '1', weight: '', recipient: '' },
         { name: '1 ea Drilling: Pup joint premade, 2.5 meter, 5 1/2" shank OWS-XOS-PJ- 1362', itemId: undefined, amount: '1', weight: '', recipient: '' },
         { name: '1 ea Drilling: UR800 body with 17.7" arm´s', itemId: 971866804, amount: '1', weight: '', recipient: '' },], location: 'Area 2', type: 'Basket', weight: '3.5', size: '8.9 (10.3x9)', DG: '-', arrival: '01.01.2020', sender: 'Haliburton Bits'
     },
