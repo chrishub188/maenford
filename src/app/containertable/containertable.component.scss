@@ -2,6 +2,10 @@
 .full-width-table {
   width: 100%;
 }
+//Remove box-shadow
+.mat-elevation-z8 {
+  box-shadow: unset;
+}
 // Style of the header row
 .header {
   color: #00243d;
