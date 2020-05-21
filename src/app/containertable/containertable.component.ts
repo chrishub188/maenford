@@ -41,10 +41,13 @@ export class ContainertableComponent implements AfterViewInit, OnInit {
     'arrival',
     'sender'];
 
-  constructor(public dialog: MatDialog) { }
+  constructor(public dialog: MatDialog) { 
+    this.dataSource = new ContainertableDataSource();
+  }
 
 
   ngOnInit() {
+    this.dataSource = new ContainertableDataSource();
     // Initial displayed table
     this.toggleValue = 'containers';
 
@@ -53,7 +56,6 @@ export class ContainertableComponent implements AfterViewInit, OnInit {
     this.countContainers();
     this.countItems();
     
-    this.dataSource = new ContainertableDataSource();
   }
 
   ngAfterViewInit() {
@@ -65,6 +67,7 @@ export class ContainertableComponent implements AfterViewInit, OnInit {
 
   // Change value to toggle between containers and items
   public onValChange(val: string) {
+    console.log (val);
     this.toggleValue = val;
   }
 

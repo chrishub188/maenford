@@ -1,21 +1,20 @@
 <!-- Toolbar -->
 <mat-toolbar color="primary">
   <button mat-flat-button (click)="openDialog()" color="primary">
-      <img style="width: 20px; height: 20px; padding-right: 5px;" class="counter-icon"
-          src="assets/img/Inventory List – equipment based/filter.svg">
-      <span style="font: 19px Open Sans;">Filter</span>
+    <img style="width: 20px; height: 20px; padding-right: 5px;" class="counter-icon"
+      src="assets/img/Inventory List – equipment based/filter.svg">
+    <span style="font: 19px Open Sans;">Filter</span>
   </button>
   <span id="spacer"></span>
   <span>
-      <mat-button-toggle-group #group="matButtonToggleGroup" [value]="toggleValue"
-          (change)="onValChange(group.value)">
-          <mat-button-toggle value="containers" style="line-height: 36px;">
-              <img class="counter-icon" src="assets/img/Inventory List – equipment based/cube.svg">
-          </mat-button-toggle>
-          <mat-button-toggle value="items" style="line-height: 36px;">
-              <img class="counter-icon" src="assets/img/Inventory List – equipment based/tool_grey.svg">
-          </mat-button-toggle>
-      </mat-button-toggle-group>
+    <mat-button-toggle-group #group="matButtonToggleGroup" [value]="toggleValue" (change)="onValChange(group.value)">
+      <mat-button-toggle value="containers" style="line-height: 36px;">
+        <img class="counter-icon" src="assets/img/Inventory List – equipment based/cube.svg">
+      </mat-button-toggle>
+      <mat-button-toggle value="items" style="line-height: 36px;">
+        <img class="counter-icon" src="assets/img/Inventory List – equipment based/tool_grey.svg">
+      </mat-button-toggle>
+    </mat-button-toggle-group>
   </span>
   <span class="example-fill-remaining-space"></span>
   <img class="counter-icon" src="assets/img/Inventory List – equipment based/blue_icons/cube.svg">
@@ -29,103 +28,112 @@
   <span class="counter-text">Items</span>
   <span style="width: 30px;"></span>
   <form action="#">
-      <input type="search" placeholder="Search..." (keyup)="applyFilter($event.target.value)">
+    <input type="search" placeholder="Search..." (keyup)="applyFilter($event.target.value)">
   </form>
 </mat-toolbar>
 
-<!-- Table -->
-<div class="mat-elevation-z8">
-  <table mat-table class="full-width-table" matSort aria-label="Elements">
 
-    <!-- status Column -->
-    <ng-container matColumnDef="status">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header class="header">Status</th>
-      <td mat-cell *matCellDef="let row" class="cell">
-        <div *ngIf="row.status=='empty'">
-          <div matTooltip="{{row.status}}"><span class="markerbuttonempty"></span></div>
-        </div>
-        <div *ngIf="row.status=='backload'">
-          <div matTooltip="{{row.status}}"><span class="markerbuttonbackload"></span></div>
-        </div>
-        <div *ngIf="row.status=='in use'">
-          <div matTooltip="{{row.status}}"><span class="markerbuttoninuse"></span></div>
-        </div>
-      </td>
-    </ng-container>
+<div [ngSwitch]="toggleValue">
+  <div class="items-div" *ngSwitchCase="'items'">
+    <app-itemtable></app-itemtable>
+  </div>
+  <div class="container-div" *ngSwitchCase="'containers'">
 
-    <!-- containerID Column -->
-    <ng-container matColumnDef="containerID">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header class="header">Container ID</th>
-      <td mat-cell *matCellDef="let row" class="cell">{{row.containerID}}</td>
-    </ng-container>
+    <!-- Containers Table -->
+    <div class="mat-elevation-z8">
+      <table mat-table class="full-width-table"  matSort aria-label="Elements">
+
+        <!-- status Column -->
+        <ng-container matColumnDef="status">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header class="header">Status</th>
+          <td mat-cell *matCellDef="let row" class="cell">
+            <div *ngIf="row.status=='empty'">
+              <div matTooltip="{{row.status}}"><span class="markerbuttonempty"></span></div>
+            </div>
+            <div *ngIf="row.status=='backload'">
+              <div matTooltip="{{row.status}}"><span class="markerbuttonbackload"></span></div>
+            </div>
+            <div *ngIf="row.status=='in use'">
+              <div matTooltip="{{row.status}}"><span class="markerbuttoninuse"></span></div>
+            </div>
+          </td>
+        </ng-container>
+
+        <!-- containerID Column -->
+        <ng-container matColumnDef="containerID">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header class="header">Container ID</th>
+          <td mat-cell *matCellDef="let row" class="cell">{{row.containerID}}</td>
+        </ng-container>
 
 
-    <!-- Id Column -->
-    <!-- <ng-container matColumnDef="id">
+        <!-- Id Column -->
+        <!-- <ng-container matColumnDef="id">
       <th mat-header-cell *matHeaderCellDef mat-sort-header class="header">ID</th>
       <td mat-cell *matCellDef="let row" class="cell">{{row.id}}</td>
     </ng-container> -->
 
-    <!-- content Column -->
-    <!-- <ng-container matColumnDef="content">
+        <!-- content Column -->
+        <!-- <ng-container matColumnDef="content">
       <th mat-header-cell *matHeaderCellDef mat-sort-header class="header">Content</th>
       <td mat-cell *matCellDef="let row" class="cell">{{row.content}}</td>
     </ng-container> -->
 
-    <!-- location Column -->
-    <ng-container matColumnDef="location">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header class="header">Location</th>
-      <td mat-cell *matCellDef="let row" class="cell">{{row.location}}
-        <button mat-icon-button>
-          <mat-icon class="table-location-icon" fontSet="material-icons-outlined">location_on_outlined
-          </mat-icon>
-      </button> 
-      </td>
-    </ng-container>
+        <!-- location Column -->
+        <ng-container matColumnDef="location">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header class="header">Location</th>
+          <td mat-cell *matCellDef="let row" class="cell">{{row.location}}
+            <button mat-icon-button>
+              <mat-icon class="table-location-icon" fontSet="material-icons-outlined">location_on_outlined
+              </mat-icon>
+            </button> 
+          </td>
+        </ng-container>
 
-    <!-- type Column -->
-    <ng-container matColumnDef="type">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header class="header">Type</th>
-      <td mat-cell *matCellDef="let row" class="cell">{{row.type}}</td>
-    </ng-container>
+        <!-- type Column -->
+        <ng-container matColumnDef="type">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header class="header">Type</th>
+          <td mat-cell *matCellDef="let row" class="cell">{{row.type}}</td>
+        </ng-container>
 
-    <!-- weight Column -->
-    <ng-container matColumnDef="weight">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header class="header">Weight</th>
-      <td mat-cell *matCellDef="let row" class="cell">{{row.weight}}</td>
-    </ng-container>
+        <!-- weight Column -->
+        <ng-container matColumnDef="weight">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header class="header">Weight</th>
+          <td mat-cell *matCellDef="let row" class="cell">{{row.weight}}</td>
+        </ng-container>
 
-    <!-- size Column -->
-    <ng-container matColumnDef="size">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header class="header">Size</th>
-      <td mat-cell *matCellDef="let row" class="cell">{{row.size}}</td>
-    </ng-container>
+        <!-- size Column -->
+        <ng-container matColumnDef="size">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header class="header">Size</th>
+          <td mat-cell *matCellDef="let row" class="cell">{{row.size}}</td>
+        </ng-container>
 
-    <!-- DG Column -->
-    <ng-container matColumnDef="DG">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header class="header">DG</th>
-      <td mat-cell *matCellDef="let row" class="cell">{{row.DG}}</td>
-    </ng-container>
+        <!-- DG Column -->
+        <ng-container matColumnDef="DG">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header class="header">DG</th>
+          <td mat-cell *matCellDef="let row" class="cell">{{row.DG}}</td>
+        </ng-container>
 
-    <!-- arrival Column -->
-    <ng-container matColumnDef="arrival">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header class="header">Arrival</th>
-      <td mat-cell *matCellDef="let row" class="cell">{{row.arrival}}</td>
-    </ng-container>
-
-
-    <!-- sender Column -->
-    <ng-container matColumnDef="sender">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header class="header">Sender</th>
-      <td mat-cell *matCellDef="let row" class="cell">{{row.sender}}</td>
-    </ng-container>
+        <!-- arrival Column -->
+        <ng-container matColumnDef="arrival">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header class="header">Arrival</th>
+          <td mat-cell *matCellDef="let row" class="cell">{{row.arrival}}</td>
+        </ng-container>
 
 
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-  </table>
+        <!-- sender Column -->
+        <ng-container matColumnDef="sender">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header class="header">Sender</th>
+          <td mat-cell *matCellDef="let row" class="cell">{{row.sender}}</td>
+        </ng-container>
 
-  <mat-paginator #paginator [length]="dataSource?.data.length" [pageIndex]="0" [pageSize]="50"
-    [pageSizeOptions]="[25, 50, 100, 250]">
-  </mat-paginator>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+
+      <mat-paginator #paginator [length]="dataSource?.data.length" [pageIndex]="0" [pageSize]="50"
+        [pageSizeOptions]="[25, 50, 100, 250]">
+      </mat-paginator>
+    </div>
+  </div>
 </div>
