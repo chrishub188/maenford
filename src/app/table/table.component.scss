@@ -94,6 +94,13 @@ table {
   border-bottom: 2px solid #292d5a;
   height: 46px;
 }
+.contentheader{
+  color: #00243d;
+  font: 24px Open Sans;
+  text-align: left;
+  border-bottom: 2px solid #292d5a;
+  height: 46px;
+}
 mat-expansion-panel {
   width: 90%;
 }
@@ -125,6 +132,9 @@ mat-expansion-panel {
   background: #f9381c40 0% 0% no-repeat padding-box;
   border: 2px solid #f9381c;
   opacity: 1;
+  position: relative;
+  left: 10px;
+  top: 15px;
 }
 .markerbuttoninuse {
   border-radius: 50%;
@@ -135,6 +145,9 @@ mat-expansion-panel {
   background: #a3bf0040 0% 0% no-repeat padding-box;
   border: 2px solid #a3bf00;
   opacity: 1;
+  position: relative;
+  left: 10px;
+  top: -6px;
 }
 .markerbuttonbackload {
   border-radius: 50%;
@@ -145,6 +158,9 @@ mat-expansion-panel {
   background: #ffa20140;
   border: 2px solid #ffa201;
   opacity: 1;
+  position: relative;
+  left: 10px;
+  top: 3px;
 }
 
 .mat-row {
