@@ -61,7 +61,7 @@ export class MapComponent implements OnInit, AfterViewInit, OnDestroy {
     L.easyButton(
       //'<span class="material-icons">location_on</span>',
       '<img src="assets/img/marker_white.svg" style="width: 20px; height: 20px; padding-right: 5px;">',
-      (btn, map) => { map.setView([56.465185, -2.926419], 19.5); }).addTo(this.map);
+      (btn, map) => { map.setView([56.465185, -2.926419], 19.7); }).addTo(this.map);
 
     // Add container marker with text popup
     this.containerMarker = L.icon({
@@ -82,12 +82,12 @@ export class MapComponent implements OnInit, AfterViewInit, OnDestroy {
 
 
     // Add rig image
-    const imageUrl = 'assets/img/dev_map/map_maersk_basis.svg';
+    const imageUrl = 'assets/img/dev_map/new/map_maersk_basis_new.svg';
     const imageBounds: LatLngBoundsExpression = [[56.465552, -2.927335], [56.464787, -2.925404]];
     const image = L.imageOverlay(imageUrl, imageBounds).addTo(this.map);
     L.imageOverlay('assets/img/dev_map/map_maersk_only_areas.svg', [[56.465552, -2.927335], [56.464787, -2.925404]]).addTo(this.map);
     // Set view on image
-    this.map.setView([56.465185, -2.926419], 19.5);
+    this.map.setView([56.465185, -2.926419], 19.7);
   }
 
   private subscribeNewTopic(topic: string): void {
@@ -104,9 +104,9 @@ export class MapComponent implements OnInit, AfterViewInit, OnDestroy {
     this.marker.setLatLng([lat, lng]).update();
   }
 
-  @HostListener('window:click', ['$event.target'])
-  onClick(targetElement: string) {
-      console.log(targetElement);
-  }
+  // @HostListener('window:click', ['$event.target'])
+  // onClick(targetElement: string) {
+  //     console.log(targetElement);
+  // }
 
 }
