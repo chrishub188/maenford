@@ -15,10 +15,6 @@ export const Manifest: ManifestElement[] = [
 
     { status: 'empty', id: 589988, containerID: 'AORU1013120', content: [{ name: 'Empty', itemId: 0, amount: '', weight: '', recipient: '' }], location: 'Area 2', type: 'Container', weight: '1.6', size: '3 (1.9x1.6)', DG: '-', arrival: '01.01.2020', sender: 'Maersk Drilling' },
 
-    {
-        status: 'empty', id: 589291, containerID: 'FR198', content: [
-            { name: 'Empty Food Container', itemId: -1, amount: '0', weight: '', recipient: '' },], location: 'Area 2', type: 'Container', weight: '3.2', size: '6.4 (3x2.1)', DG: '-', arrival: '01.01.2020', sender: 'D.Danielsen Proviant'
-    },
 
     {
         status: 'empty', id: 589292, containerID: 'FR217', content: [
