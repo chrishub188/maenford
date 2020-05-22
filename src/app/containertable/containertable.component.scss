@@ -26,6 +26,7 @@
   color: #000000;
   opacity: 1;
   vertical-align: text-top;
+  border: 0px;
   // padding-top: 18px;
 }
 // Style for content row list items
@@ -119,6 +120,7 @@
   background: #42b0d5 0% 0% no-repeat padding-box;
   border: 1px solid #42b0d5;
   border-radius: 2px;
+  box-shadow: 0px 2px 2px #0000003D;
   opacity: 1;
 }
 #spacer {
@@ -129,6 +131,7 @@
   height: 36px;
   background: #ffffff 0% 0% no-repeat padding-box;
   border: 1px solid #42b0d5;
+  box-shadow: 0px 2px 2px #0000003D;
   border-radius: 2px;
   opacity: 1;
 }
