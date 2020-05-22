@@ -3,20 +3,42 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { map } from 'rxjs/operators';
 import { Observable, of as observableOf, merge, from } from 'rxjs';
-import { DataTable } from './data';
+// import { DataTable } from './data';
+import { Manifest } from '../mock-container';
 
 // TODO: Replace this with your own data model type
+// export interface MaptableItem {
+//   id: number;
+//   containerID: string;
+//   status: string;
+//   content: string;
+//   location: string;
+// }
+
+export interface ContainerElement {
+  name: string;
+  itemId: number;
+  amount: string;
+  weight: string;
+  recipient: string;
+}
 export interface MaptableItem {
+  status: string;
   id: number;
   containerID: string;
-  status: string;
-  content: string;
+  content: ContainerElement[];
   location: string;
+  type: string;
+  weight: string;
+  size: string;
+  DG: string;
+  arrival: string;
+  sender: string;
 }
 
 
 // TODO: replace this with real data from your application
-const EXAMPLE_DATA: MaptableItem[] = DataTable;
+const EXAMPLE_DATA: MaptableItem[] = Manifest;
 
 /**
  * Data source for the Maptable view. This class should
@@ -79,11 +101,21 @@ export class MaptableDataSource extends DataSource<MaptableItem> {
     return data.sort((a, b) => {
       const isAsc = this.sort.direction === 'asc';
       switch (this.sort.active) {
+        // case 'id': return compare(+a.id, +b.id, isAsc);
+        // case 'containerID': return compare(a.containerID, b.containerID, isAsc);
+        // case 'status': return compare(a.status, b.status, isAsc);
+        // case 'content': return compare(a.content, b.content, isAsc);
+        // case 'location': return compare(a.location, b.location, isAsc);
+        case 'status': return compare(a.status, b.status, isAsc);
         case 'id': return compare(+a.id, +b.id, isAsc);
         case 'containerID': return compare(a.containerID, b.containerID, isAsc);
-        case 'status': return compare(a.status, b.status, isAsc);
-        case 'content': return compare(a.content, b.content, isAsc);
+        case 'content': return compare(+a.content, +b.content, isAsc);
         case 'location': return compare(a.location, b.location, isAsc);
+        case 'type': return compare(a.type, b.type, isAsc);
+        case 'weight': return compare(a.weight, b.weight, isAsc);
+        case 'DG': return compare(a.DG, b.DG, isAsc);
+        case 'arrival': return compare(a.arrival, b.arrival, isAsc);
+        case 'sender': return compare(a.sender, b.sender, isAsc);
         default: return 0;
       }
     });
