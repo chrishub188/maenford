@@ -40,7 +40,7 @@
   margin-bottom: 4px;
 }
 
-// Red circles from the status cell
+// Red circles from the status cell- backload
 .markerbuttonempty {
   border-radius: 50%;
   display: inline-block;
@@ -53,7 +53,7 @@
   margin-left: 25%;
   margin-right: 25%;
 }
-// Green circles from the status cell
+// Green circles from the status cell- in use
 .markerbuttoninuse {
   border-radius: 50%;
   display: inline-block;
@@ -66,7 +66,7 @@
   margin-left: 25%;
   margin-right: 25%;
 }
-// organge circles from the status cell
+// organge circles from the status cell -empty
 .markerbuttonbackload {
   border-radius: 50%;
   display: inline-block;
