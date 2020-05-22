@@ -13,29 +13,7 @@ export const Manifest: ManifestElement[] = [
         { name: '5 ea MST Stinger protector', itemId: 300908252, amount: '1', weight: ' ', recipient: ' ' },], location: 'Area 2', type: 'Container', weight: '1.9', size: '3 (1.6x1.9)', DG: '-', arrival: '01.01.2020', sender: 'Haliburton Cement'
     },
 
-    {
-        status: 'empty', id: 589985, containerID: 'AORU1004279', content: [
-            { name: 'Empty', itemId: 0, amount: '', weight: '', recipient: '' }], location: 'Area 2', type: 'Container', weight: '1.6', size: '3 (1.9x1.6)', DG: '-', arrival: '01.01.2020', sender: 'Maersk Drilling'
-    },
-
-    {
-        status: 'empty', id: 589992, containerID: 'AORU6301449', content: [
-            { name: 'Empty', itemId: 0, amount: '', weight: '', recipient: '' },], location: 'Area 2', type: 'Basket', weight: '1.9', size: '7.0 (6.5x1.2)', DG: '-', arrival: '01.01.2020', sender: 'Maersk Drilling'
-    },
-
-    { status: 'empty', id: 589987, containerID: 'AUR1010116O', content: [{ name: 'Empty', itemId: 0, amount: '', weight: '', recipient: '' }], location: 'Area 2', type: 'Container', weight: '1.6', size: '3 (1.9x1.6)', DG: '-', arrival: '01.01.2020', sender: 'Maersk Drilling' },
-
     { status: 'empty', id: 589988, containerID: 'AORU1013120', content: [{ name: 'Empty', itemId: 0, amount: '', weight: '', recipient: '' }], location: 'Area 2', type: 'Container', weight: '1.6', size: '3 (1.9x1.6)', DG: '-', arrival: '01.01.2020', sender: 'Maersk Drilling' },
-
-    { status: 'empty', id: 589989, containerID: 'AURO1013985', content: [{ name: 'Empty', itemId: 0, amount: '', weight: '', recipient: '' },], location: 'Area 2', type: 'Container', weight: '1.6', size: '3 (1.9x1.6)', DG: '-', arrival: '02.01.2020', sender: 'Maersk Drilling' },
-
-    { status: 'empty', id: 577228, containerID: 'AURO2302513', content: [{ name: 'Empty', itemId: 0, amount: '', weight: '', recipient: '' },], location: 'Area 2', type: 'Container', weight: '2.5', size: '7.3 (3x2.4)', DG: '-', arrival: '03.01.2020', sender: 'Maersk Drilling' },
-
-    {
-        status: 'in use', id: 585895, containerID: 'BL-14-14', content: [
-            { name: '1 ea Down Hole Power Tool (DHPT), XT 57 Box x 65/8" REG Pin', itemId: undefined, amount: '2', weight: '', recipient: '' },
-            { name: '1 ea Pup Joint, 6 5/8" REG Box x XT 57 Pin', itemId: undefined, amount: '2', weight: '', recipient: '' },], location: 'Area 2', type: 'Container', weight: '13.7', size: '17.1 (14.2x1.2)', DG: '-', arrival: '01.01.2020', sender: 'Ardyne AS Titan Systems'
-    },
 
     {
         status: 'empty', id: 589291, containerID: 'FR198', content: [
@@ -45,28 +23,6 @@ export const Manifest: ManifestElement[] = [
     {
         status: 'empty', id: 589292, containerID: 'FR217', content: [
             { name: 'Empty Food Container', itemId: -1, amount: '0', weight: '', recipient: '' },], location: 'Area 2', type: 'Container', weight: '3.1', size: '6.4 (3x2.1)', DG: '-', arrival: '01.01.2020', sender: 'D.Danielsen Proviant'
-    },
-
-    {
-        status: 'in use', id: 585893, containerID: 'BL-10-02', content: [
-            { name: '1ea 14 1/4" Taper Mill, 6/8" REG Box x Pin', itemId: undefined, amount: '1', weight: '', recipient: '' },
-            { name: '1ea 14 1/4" Taper Mill, 6/8" REG Box x Pin', itemId: undefined, amount: '1', weight: '', recipient: '' },
-            { name: '1 ea 17 1/2" String Mill, 6 5/8" REG Box x Pin', itemId: undefined, amount: '1', weight: '', recipient: '' },
-            { name: '1 ea ALO Valve, 6 5/8" REG Box x Pin', itemId: 0, amount: '1', weight: '', recipient: '' },
-            { name: '1 ea Pup Joint, 5 7/8" OD Shank, 6 5/8" REG Box xPin', itemId: undefined, amount: '3', weight: '', recipient: '' },
-            { name: '1 ea Slip Joint, 6 5/8" REG Box x Pin', itemId: undefined, amount: '1', weight: '', recipient: '' },], location: 'Area 2', type: 'Basket', weight: '5.4', size: '12.3 (10.2x1.2)', DG: '-', arrival: '01.01.2020', sender: 'Ardyne AS Titan Systems'
-    },
-
-    {
-        status: 'in use', id: 585894, containerID: 'BL-12-01', content: [
-            { name: '1 ea 11 3/4" IP Cutter, 6 5/8" REG Box x Box', itemId: undefined, amount: '2', weight: '', recipient: '' },
-            { name: '1 ea 12 1/4" String Stabilizer, 6 5/8" REG Box x Pin', itemId: undefined, amount: '2', weight: '', recipient: '' },
-            { name: '1 ea 12 1/4" Taper Mill, 6 5/8" REG Pin', itemId: undefined, amount: '2', weight: '', recipient: '' },
-            { name: '1 ea 13 3/8" FRM Spaer, 6 5/8" REG Box x Pin', itemId: undefined, amount: '1', weight: '', recipient: '' },
-            { name: '1 ea ALO Valve, 6 5/8" REG Box x Pin', itemId: undefined, amount: '1', weight: '', recipient: '' },
-            { name: '1 ea ALU box spare parts', itemId: undefined, amount: '1', weight: '', recipient: '' },
-            { name: '1 ea Pup Joint, 5 7/8" OD Shank, 6 5/8" REG Box xPin', itemId: undefined, amount: '3', weight: '', recipient: '' },
-            { name: '1 ea Slip Joint, 6 5/8" REG Box x Pin', itemId: undefined, amount: '', weight: '', recipient: '' },], location: 'Area 2', type: 'Basket', weight: '7.5', size: '14.7 (12.2x1.2)', DG: '-', arrival: '01.01.2020', sender: 'Ardyne AS Titan Systems'
     },
 
     {
@@ -142,45 +98,13 @@ export const Manifest: ManifestElement[] = [
             { name: '1 ea Tools for ALO and FRM Spear', itemId: undefined, amount: '1', weight: '', recipient: '' },], location: 'Area 2', type: 'Basket', weight: '1.9', size: '6 (3.7x1.6)', DG: '-', arrival: '01.01.2020', sender: 'Ardyne AS'
     },
 
-    {
-        status: 'backload', id: 577238, containerID: 'R87', content: [
-            { name: '1 ea Waste Misc Glass & Tins ', itemId: 9600, amount: '1', weight: '', recipient: '' },
-        ], location: 'Area 2', type: 'Frame', weight: '9', size: '3.8 (2.5x1.5)', DG: '-', arrival: '01.01.2020', sender: 'Westco Miljostasjon'
-    },
+   
 
     {
         status: 'backload', id: 582074, containerID: 'S7698', content: [
             { name: '1 ea Waste Misc Scrap Hoses ', itemId: 9002, amount: '1', weight: '', recipient: '' },
         ], location: 'Area 2', type: 'Skip', weight: '1.9', size: '8 (4x2)', DG: '-', arrival: '01.01.2020', sender: 'Westco 8cup'
     },
-
-    {
-        status: 'in use', id: 589289, containerID: 'T-27-306', content: [
-            { name: '2.5m^3 Mud Chemicals 1.7sg. Calcium Bromide Brine ', itemId: undefined, amount: '1', weight: '', recipient: '' },
-        ], location: 'Area 2', type: 'Tank', weight: '6.4', size: '4 (2.2x1.9)', DG: '-', arrival: '01.01.2020', sender: 'Haliburton Baroid'
-    },
-
-    {
-        status: 'in use', id: 588537, containerID: 'T-27-311', content: [
-            { name: '2.5m^3 Mud Chemicals 1.7sg. Calcium Bromide Brine ', itemId: undefined, amount: '1', weight: '', recipient: '' },
-        ], location: 'Area 2', type: 'Tank', weight: '6.4', size: '4 (2.2x1.9)', DG: '-', arrival: '01.01.2020', sender: 'Haliburton Baroid'
-    },
-    {
-        status: 'in use', id: 588538, containerID: 'T-27-314', content: [
-            { name: '2.5m^3 Mud Chemicals 1.7sg. Calcium Bromide Brine ', itemId: undefined, amount: '1', weight: '', recipient: '' },
-        ], location: 'Area 2', type: 'Tank', weight: '6.4', size: '4 (2.2x1.9)', DG: '-', arrival: '01.01.2020', sender: 'Haliburton Baroid'
-    },
-    {
-        status: 'in use', id: 588539, containerID: 'T-27-419', content: [
-            { name: '2.5m^3 Mud Chemicals 1.7sg. Calcium Bromide Brine ', itemId: undefined, amount: '1', weight: '', recipient: '' },
-        ], location: 'Area 2', type: 'Tank', weight: '6.4', size: '4 (2.2x1.9)', DG: '-', arrival: '01.01.2020', sender: 'Haliburton Baroid'
-    },
-    {
-        status: 'in use', id: 588540, containerID: 'T-27-431', content: [
-            { name: '2.5m^3 Mud Chemicals 1.7sg. Calcium Bromide Brine ', itemId: undefined, amount: '1', weight: '', recipient: '' },
-        ], location: 'Area 2', type: 'Tank', weight: '6.4', size: '4 (2.2x1.9)', DG: '-', arrival: '01.01.2020', sender: 'Haliburton Baroid'
-    },
-
 
 ];
 
