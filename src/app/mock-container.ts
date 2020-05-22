@@ -67,12 +67,6 @@ export const Manifest: ManifestElement[] = [
     },
 
     {
-        status: 'in use', id: 568956, containerID: 'CBX024', content: [{ name: '1 ea BOP Jetting assy', itemId: undefined, amount: '1', weight: '', recipient: '' },
-        { name: '1 ea Box with shovels to clean magnet', itemId: undefined, amount: '1', weight: '', recipient: '' },
-        { name: '2 ea Magnet Assy', itemId: undefined, amount: '1', weight: '', recipient: '' },], location: 'Area 2', type: 'Basket', weight: '10', size: '19.4 (16.2x1.2x)', DG: '-', arrival: '01.01.2020', sender: 'Haliburton CleanWell'
-    },
-
-    {
         status: 'in use', id: 580616, containerID: 'CBXN026', content: [
             { name: '1 ea 13 3/8" Hanger milling Assembly', itemId: undefined, amount: '2', weight: '', recipient: '' },
             { name: '1 ea B/U 13 3/8" Hanger milling assembly', itemId: undefined, amount: '1', weight: '', recipient: '' },], location: 'Area 2', type: 'Container', weight: '12.7', size: '19.3 (16.3x1.2)', DG: '-', arrival: '01.01.2020', sender: 'Baker Hughes'
