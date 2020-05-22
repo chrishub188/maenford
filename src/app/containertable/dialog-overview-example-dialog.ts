@@ -72,10 +72,6 @@ const TREE_DATA: FoodNode[] = [
     children: [
       { name: 'Basket' },
       { name: 'Container' },
-      { name: 'Frame' },
-      { name: 'Palet' },
-      { name: 'Skip' },
-      { name: 'Tank' },
     ]
   }, {
     name: 'Location',
@@ -84,7 +80,6 @@ const TREE_DATA: FoodNode[] = [
       { name: 'Area 2' },
       { name: 'Area 3' },
       { name: 'Area 4' },
-      { name: 'Cantilever'},
     ]
   },{
     name: 'Arrival',
@@ -100,15 +95,11 @@ const TREE_DATA: FoodNode[] = [
     children: [
       { name: ' 3 (1.6x1.9)' },
       { name: ' 3 (1.9 x 1.6)' },
-      { name: '4 (2.2x1.9)' }, 
       { name: '4.9 (2.7x1.8)' },
-      { name: '6.4 (3x2.1)' },
       { name: '7.3 (3x4.2)' },
       { name: '8.9 (10.3x0.9)' },
       { name: '12.2 (10.2x1.2)' },
-      { name: '12.3 (10.2x1.2)' },
       { name: '14.6 (12.3x1.2)' },
-      { name: '14.7 (12.2x1.2)' },
       { name: '15.8 (13.3x1.2)' },
       { name: '17.1 (14.2x1.2)' },
       { name: '19.3 (16.3x1.2)' },
@@ -127,13 +118,10 @@ const TREE_DATA: FoodNode[] = [
       { name: 'Ardyne AS' },
       { name: 'Baker Hughes' },
       { name: 'D.Danielsen' },
-      { name: 'Haliburton Baroid' },
       { name: 'Haliburton Bits' },
       { name: 'Haliburton BSS' },
       { name: 'Haliburton Cement' },
-      { name: 'Haliburton CleanWell'},
       { name: 'Maersk Drilling' },
-      { name: 'Westco Miljostasjon' },
       { name: 'Westco 8cup' },
     ]
   },
@@ -150,14 +138,9 @@ const TREE_DATA: FoodNode[] = [
       { name: '4.3' },
       { name: '5.4' },
       { name: '5.6' },
-      { name: '6.4' },
-      { name: '7.5' },
-      { name: '9' },
-      { name: '9.8' },
-      { name: '10' }, 
+      { name: '9.8' }, 
       { name: '10.3' },
       { name: '12.7' },
-      { name: '13.7' }, 
     ]
   },];
 
