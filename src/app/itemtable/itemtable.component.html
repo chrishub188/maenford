@@ -4,7 +4,7 @@
     <!-- Name status -->
     <ng-container matColumnDef="status">
       <th mat-header-cell *matHeaderCellDef mat-sort-header class="header" style="width: 59px;">Status</th>
-      <td mat-cell *matCellDef="let row">
+      <td mat-cell *matCellDef="let row" style="border-bottom: 0px;">
         <div *ngIf="row.status=='empty'">
           <div matTooltip="{{row.status}}"><span class="markerbuttonempty"></span></div>
         </div>
