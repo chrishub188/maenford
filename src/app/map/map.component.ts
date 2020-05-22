@@ -5,6 +5,7 @@ import { Subscription } from 'rxjs';
 import { IMqttMessage, MqttService } from 'ngx-mqtt';
 import 'leaflet-easybutton';
 import 'leaflet-easybutton/src/easy-button.css';
+import 'leaflet-rotatedmarker';
 
 
 @Component({
@@ -62,17 +63,6 @@ export class MapComponent implements OnInit, AfterViewInit, OnDestroy {
     '<img src="assets/img/marker_white.svg" style="width: 20px; height: 20px; padding-right: 5px;">',
     (btn, map) => {map.setView([56.465185, -2.926419], 19.8); }).addTo(this.map);
 
-    // let toggle = L.easyButton ({
-    //   position: 'topright',
-    //   states: [{
-    //   stateName: 'remove-legend',
-    //   icon: '<img src="assets/img/marker_white.svg" style="width: 20px; height: 20px">',
-    //   title: 'masquer la légende',
-    //   onClick: (btn, map) => {map.setView([56.465185, -2.926419], 19.8); }
-    //     }]
-    //   });
-    //   toggle.addTo(map);
-
     // Add container marker with text popup
     this.containerMarker = L.icon({
       iconUrl: 'assets/img/dev_map/containers/map_container_small_green.svg',
@@ -81,13 +71,23 @@ export class MapComponent implements OnInit, AfterViewInit, OnDestroy {
     });
     this.marker = L.marker([56.465070, -2.926915], { icon: this.containerMarker });
     this.marker.addTo(this.map);
+
+    this.containerMarker = L.icon({
+      iconUrl: 'assets/img/dev_map/containers/map_container_big_orange.svg',
+      iconSize: [30, 42],
+      iconAnchor: [15, 42],
+    });
+    this.marker = L.marker([56.464995, -2.926910], { icon: this.containerMarker, rotationAngle: 120 });
+    this.marker.addTo(this.map);
+    
+
     // Add rig image
     const imageUrl = 'assets/img/dev_map/map_maersk_basis.svg';
     const imageBounds: LatLngBoundsExpression = [[56.465552, -2.927335], [56.464787, -2.925404]];
     const image = L.imageOverlay(imageUrl, imageBounds).addTo(this.map);
     L.imageOverlay('assets/img/dev_map/map_maersk_only_areas.svg', [[56.465552, -2.927335], [56.464787, -2.925404]]).addTo(this.map);
     // Set view on image
-    this.map.setView([56.465185, -2.926419], 19.8);
+    this.map.setView([56.465185, -2.926419], 19.7);
   }
 
   private subscribeNewTopic(topic: string): void {
