@@ -102,7 +102,7 @@ export const Manifest: ManifestElement[] = [
     {
         status: 'in use', id: 589993, containerID: 'CBVA015', content: [{ name: ' 1 ea Drilling: 6 1/2" BULLNOSE premade, 4/14/32nozzles', itemId: 11565353, amount: '1', weight: '', recipient: '' },
         { name: '1 ea Drilling: Pup joint premade, 2.5 meter, 5 1/2" shank OWS-XOS-PJ- 1362', itemId: undefined, amount: '1', weight: '', recipient: '' },
-        { name: '1 ea Drilling: UR800 body with 17.7" arm´s', itemId: 971866804, amount: '1', weight: '', recipient: '' },], location: 'Area 2', type: 'Basket', weight: '3.5', size: '8.9 (10.3x9)', DG: '-', arrival: '01.01.2020', sender: 'Haliburton Bits'
+        { name: '1 ea Drilling: UR800 body with 17.7" arm´s', itemId: 971866804, amount: '1', weight: '', recipient: '' },], location: 'Area 2', type: 'Basket', weight: '3.5', size: '8.9 (10.3x0.9)', DG: '-', arrival: '01.01.2020', sender: 'Haliburton Bits'
     },
 
     {
@@ -131,7 +131,7 @@ export const Manifest: ManifestElement[] = [
     {
         status: 'in use', id: 589289, containerID: 'F712', content: [
             { name: 'I-MOP for rep. (Premiere Produkter)', itemId: undefined, amount: '1', weight: '', recipient: '' },
-        ], location: 'Area 2', type: 'Container', weight: '2.5', size: '4.9(2.7x1.8)', DG: '-', arrival: '01.01.2020', sender: 'D.Danielsen Proviant'
+        ], location: 'Area 2', type: 'Container', weight: '2.5', size: '4.9 (2.7x1.8)', DG: '-', arrival: '01.01.2020', sender: 'D.Danielsen Proviant'
     },
 
     {
@@ -151,34 +151,34 @@ export const Manifest: ManifestElement[] = [
     {
         status: 'backload', id: 582074, containerID: 'S7698', content: [
             { name: '1 ea Waste Misc Scrap Hoses ', itemId: 9002, amount: '1', weight: '', recipient: '' },
-        ], location: 'Area 2', type: 'Skip', weight: '1.9', size: '8(4x2)', DG: '-', arrival: '01.01.2020', sender: 'Westco 8cup'
+        ], location: 'Area 2', type: 'Skip', weight: '1.9', size: '8 (4x2)', DG: '-', arrival: '01.01.2020', sender: 'Westco 8cup'
     },
 
     {
         status: 'in use', id: 589289, containerID: 'T-27-306', content: [
             { name: '2.5m^3 Mud Chemicals 1.7sg. Calcium Bromide Brine ', itemId: undefined, amount: '1', weight: '', recipient: '' },
-        ], location: 'Area 2', type: 'Tank', weight: '6.4', size: '4(2.2x1.9)', DG: '-', arrival: '01.01.2020', sender: 'Haliburton Baroid'
+        ], location: 'Area 2', type: 'Tank', weight: '6.4', size: '4 (2.2x1.9)', DG: '-', arrival: '01.01.2020', sender: 'Haliburton Baroid'
     },
 
     {
         status: 'in use', id: 588537, containerID: 'T-27-311', content: [
             { name: '2.5m^3 Mud Chemicals 1.7sg. Calcium Bromide Brine ', itemId: undefined, amount: '1', weight: '', recipient: '' },
-        ], location: 'Area 2', type: 'Tank', weight: '6.4', size: '4(2.2x1.9)', DG: '-', arrival: '01.01.2020', sender: 'Haliburton Baroid'
+        ], location: 'Area 2', type: 'Tank', weight: '6.4', size: '4 (2.2x1.9)', DG: '-', arrival: '01.01.2020', sender: 'Haliburton Baroid'
     },
     {
         status: 'in use', id: 588538, containerID: 'T-27-314', content: [
             { name: '2.5m^3 Mud Chemicals 1.7sg. Calcium Bromide Brine ', itemId: undefined, amount: '1', weight: '', recipient: '' },
-        ], location: 'Area 2', type: 'Tank', weight: '6.4', size: '4(2.2x1.9)', DG: '-', arrival: '01.01.2020', sender: 'Haliburton Baroid'
+        ], location: 'Area 2', type: 'Tank', weight: '6.4', size: '4 (2.2x1.9)', DG: '-', arrival: '01.01.2020', sender: 'Haliburton Baroid'
     },
     {
         status: 'in use', id: 588539, containerID: 'T-27-419', content: [
             { name: '2.5m^3 Mud Chemicals 1.7sg. Calcium Bromide Brine ', itemId: undefined, amount: '1', weight: '', recipient: '' },
-        ], location: 'Area 2', type: 'Tank', weight: '6.4', size: '4(2.2x1.9)', DG: '-', arrival: '01.01.2020', sender: 'Haliburton Baroid'
+        ], location: 'Area 2', type: 'Tank', weight: '6.4', size: '4 (2.2x1.9)', DG: '-', arrival: '01.01.2020', sender: 'Haliburton Baroid'
     },
     {
         status: 'in use', id: 588540, containerID: 'T-27-431', content: [
             { name: '2.5m^3 Mud Chemicals 1.7sg. Calcium Bromide Brine ', itemId: undefined, amount: '1', weight: '', recipient: '' },
-        ], location: 'Area 2', type: 'Tank', weight: '6.4', size: '4(2.2x1.9)', DG: '-', arrival: '01.01.2020', sender: 'Haliburton Baroid'
+        ], location: 'Area 2', type: 'Tank', weight: '6.4', size: '4 (2.2x1.9)', DG: '-', arrival: '01.01.2020', sender: 'Haliburton Baroid'
     },
 
 
