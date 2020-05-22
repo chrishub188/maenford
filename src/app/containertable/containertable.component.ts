@@ -58,7 +58,7 @@ export class ContainertableComponent implements AfterViewInit, OnInit {
     this.countBaskets();
     this.countContainers();
     this.countItems();
-    
+
   }
 
   ngAfterViewInit() {
@@ -108,6 +108,28 @@ export class ContainertableComponent implements AfterViewInit, OnInit {
   // Counts all items from items in "database/file"
   private countItems(): void {
     this.items = 289;
+  }
+
+  public showMore(): void {
+    let dots = document.getElementById('dots');
+    let moreText = document.getElementById('more');
+    let btnText = document.getElementById('myBtn');
+    let dotsC = document.getElementById('dots');
+    let moreTextC = document.getElementById('more');
+    let btnTextC = document.getElementsByClassName('myBtn');
+    console.log(dotsC);
+    console.log(moreTextC);
+    console.log(btnTextC);
+
+    if (dots.style.display === 'none') {
+      dots.style.display = 'inline';
+      btnText.innerHTML = 'Read more';
+      moreText.style.display = 'none';
+    } else {
+      dots.style.display = 'none';
+      btnText.innerHTML = 'Read less';
+      moreText.style.display = 'inline';
+    }
   }
 
 }

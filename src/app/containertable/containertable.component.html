@@ -75,18 +75,35 @@
         <!-- content Column -->
         <ng-container matColumnDef="content">
           <th mat-header-cell *matHeaderCellDef mat-sort-header class="header">Content</th>
-          <td mat-cell *matCellDef="let row" class="cell" [ngSwitch]="status">
-              <div  *ngSwitchCase="'one'">
-                123
-              </div>
-              <div *ngSwitchCase="'multiple'">
-                1234
-              </div>
-              <div *ngSwitchCase="'collapse'">
-                <span *ngFor="let elem of row.content" class="content-element">
-                  {{ elem.name }}<br>
-                </span>
-              </div>
+          <td mat-cell *matCellDef="let row" class="cell" [ngSwitch]="row.content.length">
+            <!-- <div *ngSwitchCase="row.content.length === 0">
+              <span>Empty</span>
+              {{row.conten}}
+            </div>
+            <div *ngSwitchCase="row.content.length === 1">
+              <span *ngFor="let elem of row.content" class="content-element">
+                {{ elem.name }}<br>
+              </span>
+            </div>
+            <div *ngSwitchCase="row.content.length === 2">   
+              <span *ngFor="let elem of row.content" class="content-element">
+                {{ elem.name }}<br>
+              </span>
+            </div> -->
+            <div *ngSwitchDefault>
+              <!-- <span *ngFor="let elem of row.content; let i = index" class="content-element">
+                <div *ngIf="i<=1">
+                  <span id="dots">{{ elem.name }}<br></span>
+                </div>
+                <div *ngIf="i==1">
+                  <button (click)="showMore()" id="myBtn">Read more</button>
+                  <span id="more">{{ elem.name }}<br></span>
+                </div>                            
+              </span> -->
+              <ul *ngFor="let elem of row.content" class="content-element" style="list-style-type: none;">
+                <li >{{ elem.name }}<br></li>
+              </ul>
+            </div>
           </td>
         </ng-container>
 

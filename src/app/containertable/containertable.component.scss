@@ -2,6 +2,10 @@
 .full-width-table {
   width: 100%;
 }
+// Height for each row
+.mat-row {
+  height: 90px;
+}
 //Remove box-shadow
 .mat-elevation-z8 {
   box-shadow: unset;
@@ -21,7 +25,7 @@
   letter-spacing: 0px;
   color: #000000;
   opacity: 1;
-  // vertical-align: text-top;
+  vertical-align: text-top;
   // padding-top: 18px;
 }
 // Style for content row list items
@@ -91,6 +95,8 @@
 .mat-row:nth-child(odd) {
   background-color: #F2F2F299  ;
 }
+// Content cell collapsible text
+.more {display: none;}
 
 // Remmove box shadow from table
 ::ng-deep mat-expansion-panel {
@@ -207,4 +213,9 @@ mat-icon {
 #Search::-webkit-search-cancel-button{
 
   -webkit-appearance: none;
+}
+
+//Test for list style
+.nobull{
+  list-style-type: none;
 }
