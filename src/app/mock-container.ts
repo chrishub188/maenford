@@ -53,7 +53,7 @@ export const Manifest: ManifestElement[] = [
 
     {
         status: 'in use', id: 589993, containerID: 'CBVA015', content: [{ name: '1 ea Drilling: 6 1/2" BULLNOSE premade, 4/14/32nozzles', itemId: 11565353, amount: '1', weight: '', recipient: '' },
-        { name: 'Drilling: Pup joint premade, 2.5 meter, 5 1/2" shank OWS-XOS-PJ- 1362', itemId: undefined, amount: '1', weight: '', recipient: '' },
+        { name: 'Drilling: Pup joint premade, 2.5 meter,', itemId: undefined, amount: '1', weight: '', recipient: '' },
         { name: 'Drilling: UR800 body with 17.7" arm´s', itemId: 971866804, amount: '1', weight: '', recipient: '' },], location: 'Area 2', type: 'Basket', weight: '3.5', size: '8.9 (10.3x0.9)', DG: '-', arrival: '01.01.2020', sender: 'Haliburton Bits'
     },
 
