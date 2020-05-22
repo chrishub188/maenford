@@ -64,3 +64,12 @@ a:hover{
   color: #ffffff;
   opacity: 1;
 }
+//test for the toolbar positioning behaviour
+.sticky {
+  // position: sticky;
+  // position: -webkit-sticky;
+  top: 0;
+  z-index: 5;
+  position: fixed;
+
+}

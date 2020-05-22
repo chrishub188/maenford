@@ -108,7 +108,8 @@
 /************************Filter toolbar style*******************************/
 .mat-toolbar.mat-primary {
   background: white;
-  height: 121px;
+  margin-top: 87px;
+  height: 121px !important;
 }
 .mat-flat-button.mat-primary {
   background: #42b0d5;
@@ -222,3 +223,8 @@ mat-icon {
 .nobull{
   list-style-type: none;
 }
+//moved paginator menu to the left
+mat-paginator.mat-paginator {
+  display: flex;
+  justify-content: left;
+} 
