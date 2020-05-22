@@ -40,7 +40,7 @@
 .icon-bar-left {
   position: fixed;
   top: 50%;
-  right: 950px;
+  right: 930px;
   -webkit-transform: translateY(-45%);
   -ms-transform: translateY(-45%);
   transform: translateY(-45%);
@@ -68,7 +68,7 @@
 // Change style of sidenav container
 ::ng-deep .mat-drawer-inner-container {
   background-color: #C3ECFF33 !important;
-  padding: 25px
+  padding: 25px;
 }
 // Remove button outline onclick
 *:focus {

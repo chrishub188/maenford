@@ -12,7 +12,7 @@
   <span style="width: 210px;"></span>
   <span class="button-label">Areas</span>
   <span style="width: 15px;"></span>
-  <mat-slide-toggle class="example-margin" [color]="color" [checked]="checked" [disabled]="disabled">
+  <mat-slide-toggle class="example-margin" id="layerswitch"(change)="onChange()" [color]="color" [checked]="checked" [disabled]="disabled">
   </mat-slide-toggle>
 </mat-toolbar>
 
@@ -41,15 +41,15 @@
     </ng-container>
     <!-- containerID Column -->
     <ng-container matColumnDef="containerID">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header class="header">Container ID</th>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header class="header">ID</th>
       <td mat-cell *matCellDef="let row" class="cell">{{row.containerID}}</td>
     </ng-container>
     <!-- content Column -->
     <ng-container matColumnDef="content">
       <th mat-header-cell *matHeaderCellDef mat-sort-header class="header">Content</th>
       <td mat-cell *matCellDef="let row" class="cell">
-        <ul *ngFor="let elem of row.content" class="content-element" style="list-style-type: none;">
-          <li >{{ elem.name }}<br></li>
+        <ul *ngFor="let elem of row.content" class="content-element" style="list-style-type: none; text-align: left;">
+          <li style="text-align: left;" >{{ elem.name }}<br></li>
         </ul>
       </td>
     </ng-container>

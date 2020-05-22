@@ -41,4 +41,8 @@ export class MaptableComponent implements AfterViewInit, OnInit {
     //     this.dataSource.paginator.firstPage();
     // }
 }
+onChange() {
+  console.log('checked: ' + this.checked);
+  console.log('Disabled: ' + this.disabled);
+}
 }

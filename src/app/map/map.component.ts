@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, AfterViewInit, OnDestroy, HostListener } from '@angular/core';
 import * as L from 'leaflet';
 import { LatLngBoundsExpression } from 'leaflet';
 import { Subscription } from 'rxjs';
@@ -59,14 +59,14 @@ export class MapComponent implements OnInit, AfterViewInit, OnDestroy {
     }).addTo(this.map);
     //Add easy button to center location
     L.easyButton(
-    //'<span class="material-icons">location_on</span>',
-    '<img src="assets/img/marker_white.svg" style="width: 20px; height: 20px; padding-right: 5px;">',
-    (btn, map) => {map.setView([56.465185, -2.926419], 19.7); }).addTo(this.map);
+      //'<span class="material-icons">location_on</span>',
+      '<img src="assets/img/marker_white.svg" style="width: 20px; height: 20px; padding-right: 5px;">',
+      (btn, map) => { map.setView([56.465185, -2.926419], 19.5); }).addTo(this.map);
 
     // Add container marker with text popup
     this.containerMarker = L.icon({
       iconUrl: 'assets/img/dev_map/containers/map_container_small_green.svg',
-      iconSize: [30, 42],
+      iconSize: [27, 30],
       iconAnchor: [15, 42]
     });
     this.marker = L.marker([56.465070, -2.926915], { icon: this.containerMarker });
@@ -79,7 +79,7 @@ export class MapComponent implements OnInit, AfterViewInit, OnDestroy {
     });
     this.marker = L.marker([56.464995, -2.926910], { icon: this.containerMarker, rotationAngle: 120 });
     this.marker.addTo(this.map);
-    
+
 
     // Add rig image
     const imageUrl = 'assets/img/dev_map/map_maersk_basis.svg';
@@ -87,7 +87,7 @@ export class MapComponent implements OnInit, AfterViewInit, OnDestroy {
     const image = L.imageOverlay(imageUrl, imageBounds).addTo(this.map);
     L.imageOverlay('assets/img/dev_map/map_maersk_only_areas.svg', [[56.465552, -2.927335], [56.464787, -2.925404]]).addTo(this.map);
     // Set view on image
-    this.map.setView([56.465185, -2.926419], 19.7);
+    this.map.setView([56.465185, -2.926419], 19.5);
   }
 
   private subscribeNewTopic(topic: string): void {
@@ -103,4 +103,10 @@ export class MapComponent implements OnInit, AfterViewInit, OnDestroy {
   private updateMarker(lat, lng): void {
     this.marker.setLatLng([lat, lng]).update();
   }
+
+  @HostListener('window:click', ['$event.target'])
+  onClick(targetElement: string) {
+      console.log(targetElement);
+  }
+
 }
