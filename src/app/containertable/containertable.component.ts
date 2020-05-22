@@ -90,6 +90,7 @@ export class ContainertableComponent implements AfterViewInit, OnInit {
       height: '321px',
       data: { name: this.name, func: this.applyFilter, dataSource: this.dataSource }
     });
+    
 
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
