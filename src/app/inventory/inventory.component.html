@@ -1,7 +1,7 @@
 <div class="sidebarcontainer">
   <!-- Map-->
   <mat-drawer-container class="example-container" [hasBackdrop]="false">
-    <mat-drawer #sidenav [mode]="mode.value" [disableClose]="true" position="end">
+    <mat-drawer #sidenav [mode]="mode.value" [disableClose]="true" position="end" class="position-fixed">
       <div class="icon-bar-left">
         <button mat-icon-button  class="sidebutton-left" (click)="sidenav.toggle();switchTable('closed');">
           <mat-icon fontSet="material-icons-outlined">location_on

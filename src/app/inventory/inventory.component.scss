@@ -74,3 +74,12 @@
 *:focus {
   outline: 0 !important;
 }
+
+.position-fixed{
+  position: fixed;
+  top: 87px;
+  right: 930px;
+  -webkit-transform: translateY(-45%);
+  -ms-transform: translateY(-45%);
+  transform: translateY(-45%);
+}
