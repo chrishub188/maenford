@@ -7,14 +7,6 @@ import { Observable, of as observableOf, merge, from } from 'rxjs';
 import { Manifest } from '../mock-container';
 
 // TODO: Replace this with your own data model type
-// export interface MaptableItem {
-//   id: number;
-//   containerID: string;
-//   status: string;
-//   content: string;
-//   location: string;
-// }
-
 export interface ContainerElement {
   name: string;
   itemId: number;
