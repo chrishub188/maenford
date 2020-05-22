@@ -96,7 +96,8 @@ input.mat-input-element {
 }
 /* Circles from the status cell*/
 
-.markerbuttonempty {
+// Red circles from the status cell
+.markerbuttonbackload {
   border-radius: 50%;
   display: inline-block;
   border: solid 1px;
@@ -105,7 +106,10 @@ input.mat-input-element {
   background: #f9381c40 0% 0% no-repeat padding-box;
   border: 2px solid #f9381c;
   opacity: 1;
+  margin-left: 25%;
+  margin-right: 25%;
 }
+// Green circles from the status cell
 .markerbuttoninuse {
   border-radius: 50%;
   display: inline-block;
@@ -115,8 +119,11 @@ input.mat-input-element {
   background: #a3bf0040 0% 0% no-repeat padding-box;
   border: 2px solid #a3bf00;
   opacity: 1;
+  margin-left: 25%;
+  margin-right: 25%;
 }
-.markerbuttonbackload {
+// organge circles from the status cell
+.markerbuttonempty {
   border-radius: 50%;
   display: inline-block;
   border: solid 1px;
@@ -125,6 +132,8 @@ input.mat-input-element {
   background: #ffa20140;
   border: 2px solid #ffa201;
   opacity: 1;
+  margin-left: 25%;
+  margin-right: 25%;
 }
 
 /*************************************Table****************************************************/
