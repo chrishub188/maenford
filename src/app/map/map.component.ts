@@ -61,7 +61,7 @@ export class MapComponent implements OnInit, AfterViewInit, OnDestroy {
     L.easyButton(
     //'<span class="material-icons">location_on</span>',
     '<img src="assets/img/marker_white.svg" style="width: 20px; height: 20px; padding-right: 5px;">',
-    (btn, map) => {map.setView([56.465185, -2.926419], 19.8); }).addTo(this.map);
+    (btn, map) => {map.setView([56.465185, -2.926419], 19.7); }).addTo(this.map);
 
     // Add container marker with text popup
     this.containerMarker = L.icon({

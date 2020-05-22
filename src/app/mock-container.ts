@@ -9,7 +9,7 @@ export const Manifest: ManifestElement[] = [
     },
 
     {
-        status: 'in use', id: 571414, containerID: 'AMN550', content: [{ name: 'instrument package (Gauges, transducer, debooster, hexnuts)', itemId: undefined, amount: '1', weight: '1.9', recipient: '' },
+        status: 'in use', id: 571414, containerID: 'AMN550', content: [{ name: 'instrument package (Gauges, transducer, debooster)', itemId: undefined, amount: '1', weight: '1.9', recipient: '' },
         { name: '5 ea MST Stinger protector', itemId: 300908252, amount: '1', weight: ' ', recipient: ' ' },], location: 'Area 2', type: 'Container', weight: '1.9', size: '3 (1.6x1.9)', DG: '-', arrival: '01.01.2020', sender: 'Haliburton Cement'
     },
 
