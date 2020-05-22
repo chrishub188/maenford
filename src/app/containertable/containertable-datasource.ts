@@ -38,6 +38,7 @@ export class ContainertableDataSource extends DataSource<ContainertableItem> {
   data: ContainertableItem[] = EXAMPLE_DATA;
   paginator: MatPaginator;
   sort: MatSort;
+  filter: string;
 
   constructor() {
     super();

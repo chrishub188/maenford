@@ -70,17 +70,17 @@ export class ContainertableComponent implements AfterViewInit, OnInit {
 
   // Change value to toggle between containers and items
   public onValChange(val: string) {
-    console.log (val);
+    console.log(val);
     this.toggleValue = val;
   }
 
-  applyFilter(filterValue: string) {
-    //const filterValue=(event.target as HTMLInputElement).value;
-    // this.dataSource.filter = filterValue.trim().toLowerCase();
-    // console.log(3)
-    // if (this.dataSource.paginator) {
-    //     this.dataSource.paginator.firstPage();
-    // }
+  applyFilter(event: Event) {
+    const filterValue = (event.target as HTMLInputElement).value;
+    this.dataSource.filter = filterValue.trim().toLowerCase();
+
+    if (this.dataSource.paginator) {
+      this.dataSource.paginator.firstPage();
+    }
   }
 
 
@@ -90,7 +90,6 @@ export class ContainertableComponent implements AfterViewInit, OnInit {
       height: '321px',
       data: { name: this.name, func: this.applyFilter, dataSource: this.dataSource }
     });
-    
 
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
@@ -112,12 +111,12 @@ export class ContainertableComponent implements AfterViewInit, OnInit {
   }
 
   public showMore(): void {
-    let dots = document.getElementById('dots');
-    let moreText = document.getElementById('more');
-    let btnText = document.getElementById('myBtn');
-    let dotsC = document.getElementById('dots');
-    let moreTextC = document.getElementById('more');
-    let btnTextC = document.getElementsByClassName('myBtn');
+    const dots = document.getElementById('dots');
+    const moreText = document.getElementById('more');
+    const btnText = document.getElementById('myBtn');
+    const dotsC = document.getElementById('dots');
+    const moreTextC = document.getElementById('more');
+    const btnTextC = document.getElementsByClassName('myBtn');
     console.log(dotsC);
     console.log(moreTextC);
     console.log(btnTextC);
