@@ -35,3 +35,8 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 @import "~bootstrap/scss/bootstrap";
 @import "~leaflet/dist/leaflet.css";
 @import '~@angular/cdk/overlay-prebuilt.css';
+
+//Removed outline on toggle button in toolbar
+.mat-button-toggle-button:focus {
+    outline: none;
+  }
