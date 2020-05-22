@@ -71,6 +71,14 @@ input.mat-input-element {
 
   -webkit-appearance: none;
 }
+// Remove blue x on webkit browsers
+input[type="search"]::-webkit-search-cancel-button {
+  display: none;
+}
+//Change input font color
+input.search-query{
+  color: #42b0d5;
+}
 
 ::ng-deep .mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-bar {
   background-color: #42B0D555;

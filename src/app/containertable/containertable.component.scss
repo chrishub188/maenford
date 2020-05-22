@@ -191,6 +191,7 @@ input[type="search"] {
   outline: none;
   border: solid #42b0d5 2px;
   background: url("src/assets/img/Inventory List – equipment based/lens.svg") 7px center no-repeat;
+  font-style: #42b0d5 ;
 }
 /* Font color */
 input.mat-input-element {
@@ -218,6 +219,14 @@ mat-icon {
 #Search::-webkit-search-cancel-button{
 
   -webkit-appearance: none;
+}
+// Remove blue x on webkit browsers
+input[type="search"]::-webkit-search-cancel-button {
+  display: none;
+}
+//Change input font color
+input.search-query{
+  color: #42b0d5;
 }
 
 //Test for list style
