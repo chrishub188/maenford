@@ -2,6 +2,7 @@
   .mat-icon-rtl-mirror{
 color:#42b0d5;
 background-color: white;
+
   }
 
 .mat-expansion-panel:not([class*='mat-elevation-z']) {
@@ -37,7 +38,7 @@ background-color: white;
 .example-tree-two{
   position: relative;
    right:-200px;
-   top:-170px;
+   top:-167px;
 }
 
 .counter{
@@ -124,7 +125,8 @@ opacity: 1;
   right: 50px;
 }
 
-.dialogfenster{
-  width: 750px;
-}
 
+
+::ng-deep.dialogfenster{
+  overflow: hidden;
+}
