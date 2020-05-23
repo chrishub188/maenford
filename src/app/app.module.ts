@@ -45,6 +45,8 @@ import { LoadoutComponent } from './loadout/loadout.component';
 import { MaptableComponent } from './maptable/maptable.component';
 import { ItemtableComponent } from './itemtable/itemtable.component';
 
+import { MatTableFilterModule } from 'mat-table-filter';
+
 
 /* MQTT imports and settings */
 import { MqttModule, IMqttServiceOptions } from 'ngx-mqtt';
@@ -100,7 +102,8 @@ export const MQTT_SERVICE_OPTIONS: IMqttServiceOptions = {
     MatSidenavModule,
     MatTooltipModule,
     MatTreeModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    MatTableFilterModule
   ],
   providers: [{ provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { appearance: 'fill' } },
 ],
