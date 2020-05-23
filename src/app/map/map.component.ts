@@ -34,6 +34,8 @@ export class MapComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngOnInit(): void {
+    // id, anker, lat, 56.465185, long,-2.926419
+    this._mqttService.unsafePublish('beacon/input', 'id, anker, lat, 56.465185, long,-2.926419');
     this.subscribeNewTopic('beacon/output');
   }
 
@@ -47,31 +49,28 @@ export class MapComponent implements OnInit, AfterViewInit, OnDestroy {
       zoomControl: false
     });
 
-
-    //add zoom control with topright option
+    //add zoom control again with topright option
     L.control.zoom({
       position: 'topright'
     }).addTo(this.map);
+
     // Add  open streetmap map layer to the map
-    this.tiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    this.tiles = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+      attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
       maxZoom: 25,
-      attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+      id: 'mapbox://styles/chrishub68/ck9mvkw5726kf1immmnqoj9gb',
+      tileSize: 512,
+      zoomOffset: -1,
+      accessToken: 'pk.eyJ1IjoiY2hyaXNodWI2OCIsImEiOiJjazlqcXBsamowNWtoM2ZxbmU1eTk0ZXN6In0._rn1h8GNssL9jpOBahB6mg'
     }).addTo(this.map);
+
     //Add easy button to center location
     L.easyButton(
       //'<span class="material-icons">location_on</span>',
       '<img src="assets/img/marker_white.svg" style="width: 20px; height: 20px; padding-right: 5px;">',
       (btn, map) => { map.setView([56.465185, -2.926419], 19.7); }).addTo(this.map);
 
-    // Add container marker with text popup
-    this.containerMarker = L.icon({
-      iconUrl: 'assets/img/dev_map/containers/map_container_small_green.svg',
-      iconSize: [27, 30],
-      iconAnchor: [15, 42]
-    });
-    this.marker = L.marker([56.465070, -2.926915], { icon: this.containerMarker });
-    this.marker.addTo(this.map);
-
+    // Add another container marker
     this.containerMarker = L.icon({
       iconUrl: 'assets/img/dev_map/containers/map_container_big_orange.svg',
       iconSize: [30, 42],
@@ -80,6 +79,14 @@ export class MapComponent implements OnInit, AfterViewInit, OnDestroy {
     this.marker = L.marker([56.464995, -2.926910], { icon: this.containerMarker, rotationAngle: 120 });
     this.marker.addTo(this.map);
 
+    // Add container marker
+    this.containerMarker = L.icon({
+      iconUrl: 'assets/img/dev_map/containers/map_container_small_green.svg',
+      iconSize: [27, 30],
+      iconAnchor: [15, 42]
+    });
+    this.marker = L.marker([56.465070, -2.926915], { icon: this.containerMarker });
+    this.marker.addTo(this.map);
 
     // Add rig image
     const imageUrl = 'assets/img/dev_map/new/map_maersk_basis_new.svg';
@@ -95,6 +102,7 @@ export class MapComponent implements OnInit, AfterViewInit, OnDestroy {
     this.subscription = this._mqttService.observe(this.topicname).subscribe((message: IMqttMessage) => {
       this.msg = message;
       console.log(message.payload.toString().split(','));
+      console.log(message.payload.toString());
       let messageItems = message.payload.toString().split(',');
       this.updateMarker(messageItems[3], messageItems[5]);
     });
@@ -103,6 +111,7 @@ export class MapComponent implements OnInit, AfterViewInit, OnDestroy {
   private updateMarker(lat, lng): void {
     this.marker.setLatLng([lat, lng]).update();
   }
+
 
   // @HostListener('window:click', ['$event.target'])
   // onClick(targetElement: string) {
