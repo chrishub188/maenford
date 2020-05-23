@@ -1,0 +1,20 @@
+Shell service commands:
+
+sudo systemctl start mosquitto.service
+sudo systemctl start snap.node-red.node-red.service
+
+sudo systemctl stop mosquitto.service
+sudo systemctl stop snap.node-red.node-red.service
+
+sudo systemctl status mosquitto.service
+sudo systemctl status snap.node-red.node-red.service
+
+Test open ports:
+sudo lsof -i -P -n
+sudo lsof -i -P -n | grep LISTEN
+
+Shell test commands for mosquitto:
+
+mosquitto_sub -v -t 'beacon/output'
+mosquitto_pub -t 'beacon/output' -m 'helloWorld'
+
