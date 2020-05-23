@@ -34,8 +34,8 @@ export class MapComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    // id, anker, lat, 56.465185, long,-2.926419
-    this._mqttService.unsafePublish('beacon/input', 'id, anker, lat, 56.465185, long,-2.926419');
+    // ID,A0,Lat,56.465185,Long,-2.926419
+    this._mqttService.unsafePublish('server/position_in', 'ID,A0,Lat,56.465185,Long,-2.926419');
     this.subscribeNewTopic('beacon/output');
   }
 
@@ -111,7 +111,6 @@ export class MapComponent implements OnInit, AfterViewInit, OnDestroy {
   private updateMarker(lat, lng): void {
     this.marker.setLatLng([lat, lng]).update();
   }
-
 
   // @HostListener('window:click', ['$event.target'])
   // onClick(targetElement: string) {
