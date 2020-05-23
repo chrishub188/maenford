@@ -35,8 +35,9 @@ export class MapComponent implements OnInit, AfterViewInit, OnDestroy {
 
   ngOnInit(): void {
     // ID,A0,Lat,56.465185,Long,-2.926419
-    this._mqttService.unsafePublish('server/position_in', 'ID,A0,Lat,56.465185,Long,-2.926419');
-    this.subscribeNewTopic('beacon/output');
+    //this._mqttService.unsafePublish('server/position_in', 'Anchor,Lat,56.465185,Long,-2.926419');
+    this._mqttService.unsafePublish('server/position_in', 'Anchor,Lat,56.465185,Long,-2.926419');
+    this.subscribeNewTopic('server/position_out');
   }
 
   private initMap(): void {
@@ -58,7 +59,7 @@ export class MapComponent implements OnInit, AfterViewInit, OnDestroy {
     this.tiles = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
       attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
       maxZoom: 25,
-      id: 'mapbox://styles/chrishub68/ck9mvkw5726kf1immmnqoj9gb',
+      id: 'mapbox/streets-v11',
       tileSize: 512,
       zoomOffset: -1,
       accessToken: 'pk.eyJ1IjoiY2hyaXNodWI2OCIsImEiOiJjazlqcXBsamowNWtoM2ZxbmU1eTk0ZXN6In0._rn1h8GNssL9jpOBahB6mg'
