@@ -18,7 +18,7 @@ export const Manifest: ManifestElement[] = [
 
     {
         status: 'empty', id: 589292, containerID: 'FR217', content: [
-            { name: 'Empty Food Container', itemId: -1, amount: '0', weight: '', recipient: '' },], location: 'Area 2', type: 'Container', weight: '3.1', size: '6.4 (3x2.1)', DG: '-', arrival: '01.01.2020', sender: 'D.Danielsen Proviant'
+            { name: 'Empty Food Container', itemId: -1, amount: '0', weight: '', recipient: '' },], location: 'Area 1', type: 'Container', weight: '3.1', size: '6.4 (3x2.1)', DG: '-', arrival: '01.01.2020', sender: 'D.Danielsen Proviant'
     },
 
     {
@@ -36,12 +36,12 @@ export const Manifest: ManifestElement[] = [
             { name: ' SSV Valve, NC 50 Box x Pin', itemId: undefined, amount: '1', weight: '', recipient: '' },
             { name: ' Slip Joint, 6 5/8" REG Box x Pin', itemId: undefined, amount: '1', weight: '', recipient: '' },
             { name: ' X-over sub, 4 1/2" REG Pin x 6 5/8" REG Pin', itemId: undefined, amount: '1', weight: '', recipient: '' },
-            { name: ' X-over sub, 6 5/8" REG Box x DPM DS 50 Pin', itemId: undefined, amount: '3', weight: '', recipient: '' },], location: 'Area 2', type: 'Basket', weight: '10.3', size: '19.5 (16.2x1.2)', DG: '-', arrival: '01.01.2020', sender: 'Ardyne AS'
+            { name: ' X-over sub, 6 5/8" REG Box x DPM DS 50 Pin', itemId: undefined, amount: '3', weight: '', recipient: '' },], location: 'Area 3', type: 'Basket', weight: '10.3', size: '19.5 (16.2x1.2)', DG: '-', arrival: '01.01.2020', sender: 'Ardyne AS'
     },
 
     {
         status: 'in use', id: 589446, containerID: 'BL-14-16', content: [
-            { name: ' Ardyne div. Equipment', itemId: undefined, amount: '1', weight: '', recipient: '' }], location: 'Area 2', type: 'Container', weight: '5.4', size: '17.1 (14.2x1.2)', DG: '-', arrival: '01.01.2020', sender: 'Ardyne AS'
+            { name: ' Ardyne div. Equipment', itemId: undefined, amount: '1', weight: '', recipient: '' }], location: 'Area 3', type: 'Container', weight: '5.4', size: '17.1 (14.2x1.2)', DG: '-', arrival: '01.01.2020', sender: 'Ardyne AS'
     },
 
     { status: 'in use', id: 576416, containerID: 'C-10-250', content: [{ name: '1 ea Båt slange', itemId: undefined, amount: '1', weight: '', recipient: ' Halliburton for lagring' },], location: 'Area 2', type: 'Container', weight: '4.3', size: '7.3 (3x2.4)', DG: '-', arrival: '01.01.2020', sender: 'Haliburton BSS' },
@@ -54,30 +54,30 @@ export const Manifest: ManifestElement[] = [
     {
         status: 'in use', id: 589993, containerID: 'CBVA015', content: [{ name: '1 ea Drilling: 6 1/2" BULLNOSE premade, 4/14/32nozzles', itemId: 11565353, amount: '1', weight: '', recipient: '' },
         { name: 'Drilling: Pup joint premade, 2.5 meter,', itemId: undefined, amount: '1', weight: '', recipient: '' },
-        { name: 'Drilling: UR800 body with 17.7" arm´s', itemId: 971866804, amount: '1', weight: '', recipient: '' },], location: 'Area 2', type: 'Basket', weight: '3.5', size: '8.9 (10.3x0.9)', DG: '-', arrival: '01.01.2020', sender: 'Haliburton Bits'
+        { name: 'Drilling: UR800 body with 17.7" arm´s', itemId: 971866804, amount: '1', weight: '', recipient: '' },], location: 'Area 1', type: 'Basket', weight: '3.5', size: '8.9 (10.3x0.9)', DG: '-', arrival: '01.01.2020', sender: 'Haliburton Bits'
     },
 
     {
         status: 'in use', id: 579683, containerID: 'CBW211', content: [
-            { name: ' 13 3/8" Cutting assembly', itemId: undefined, amount: '2', weight: '', recipient: '' },], location: 'Area 2', type: 'Basket', weight: '9.8', size: '15.8 (13.3x1.2)', DG: '-', arrival: '01.01.2020', sender: 'Baker Hughes'
+            { name: ' 13 3/8" Cutting assembly', itemId: undefined, amount: '2', weight: '', recipient: '' },], location: 'Area 1', type: 'Basket', weight: '9.8', size: '15.8 (13.3x1.2)', DG: '-', arrival: '01.01.2020', sender: 'Baker Hughes'
     },
 
     {
         status: 'in use', id: 580616, containerID: 'CBXN026', content: [
             { name: '13 3/8" Hanger milling Assembly', itemId: undefined, amount: '2', weight: '', recipient: '' },
-            { name: 'B/U 13 3/8" Hanger milling assembly', itemId: undefined, amount: '1', weight: '', recipient: '' },], location: 'Area 2', type: 'Container', weight: '12.7', size: '19.3 (16.3x1.2)', DG: '-', arrival: '01.01.2020', sender: 'Baker Hughes'
+            { name: 'B/U 13 3/8" Hanger milling assembly', itemId: undefined, amount: '1', weight: '', recipient: '' },], location: 'Area 1', type: 'Container', weight: '12.7', size: '19.3 (16.3x1.2)', DG: '-', arrival: '01.01.2020', sender: 'Baker Hughes'
     },
 
     {
         status: 'in use', id: 583639, containerID: 'CBZ087', content: [
             { name: '17 1/2" Milling assembly for 13 3/8" hanger', itemId: undefined, amount: '2', weight: '', recipient: '' },
-        ], location: 'Area 2', type: 'Basket', weight: '9.8', size: '14.6 (12.3x1.2)', DG: '-', arrival: '01.01.2020', sender: 'Baker Hughes'
+        ], location: 'Area 4', type: 'Basket', weight: '9.8', size: '14.6 (12.3x1.2)', DG: '-', arrival: '01.01.2020', sender: 'Baker Hughes'
     },
 
     {
         status: 'in use', id: 589289, containerID: 'F712', content: [
             { name: 'I-MOP for rep. (Premiere Produkter)', itemId: undefined, amount: '1', weight: '', recipient: '' },
-        ], location: 'Area 2', type: 'Container', weight: '2.5', size: '4.9 (2.7x1.8)', DG: '-', arrival: '01.01.2020', sender: 'D.Danielsen Proviant'
+        ], location: 'Area 4', type: 'Container', weight: '2.5', size: '4.9 (2.7x1.8)', DG: '-', arrival: '01.01.2020', sender: 'D.Danielsen Proviant'
     },
 
     {
@@ -85,7 +85,7 @@ export const Manifest: ManifestElement[] = [
             { name: '11 1/4" Casing Slips', itemId: undefined, amount: '1', weight: '', recipient: '' },
             { name: '11 1/4" Safety Clamp', itemId: undefined, amount: '1', weight: '', recipient: '' },
             { name: 'ALU box Spare parts', itemId: undefined, amount: '1', weight: '', recipient: '' },
-            { name: 'Tools for ALO and FRM Spear', itemId: undefined, amount: '1', weight: '', recipient: '' },], location: 'Area 2', type: 'Basket', weight: '1.9', size: '6 (3.7x1.6)', DG: '-', arrival: '01.01.2020', sender: 'Ardyne AS'
+            { name: 'Tools for ALO and FRM Spear', itemId: undefined, amount: '1', weight: '', recipient: '' },], location: 'Area 3', type: 'Basket', weight: '1.9', size: '6 (3.7x1.6)', DG: '-', arrival: '01.01.2020', sender: 'Ardyne AS'
     },
 
    
@@ -93,7 +93,7 @@ export const Manifest: ManifestElement[] = [
     {
         status: 'backload', id: 582074, containerID: 'S7698', content: [
             { name: 'Waste Misc Scrap Hoses ', itemId: 9002, amount: '1', weight: '', recipient: '' },
-        ], location: 'Area 2', type: 'Skip', weight: '1.9', size: '8 (4x2)', DG: '-', arrival: '01.01.2020', sender: 'Westco 8cup'
+        ], location: 'Area 1', type: 'Skip', weight: '1.9', size: '8 (4x2)', DG: '-', arrival: '01.01.2020', sender: 'Westco 8cup'
     },
 
 ];
