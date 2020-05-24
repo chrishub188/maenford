@@ -18,3 +18,5 @@ Shell test commands for mosquitto:
 mosquitto_sub -v -t 'beacon/output'
 mosquitto_pub -t 'beacon/output' -m 'helloWorld'
 
+mosquitto_pub -h 18.194.100.47 -t beacon/output -m "Hello"
+mosquitto_sub -h 18.194.100.47 -t beacon/output
