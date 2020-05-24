@@ -59,8 +59,8 @@ export class MapComponent implements OnInit, AfterViewInit, OnDestroy {
     this.tiles = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
       attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
       maxZoom: 25,
-      //id: 'mapbox/streets-v11',
-      id: 'mapbox/',
+      id: 'mapbox/streets-v11',
+      //id: 'mapbox/',
       tileSize: 512,
       zoomOffset: -1,
       accessToken: 'pk.eyJ1IjoiY2hyaXNodWI2OCIsImEiOiJjazlqcXBsamowNWtoM2ZxbmU1eTk0ZXN6In0._rn1h8GNssL9jpOBahB6mg'
@@ -84,10 +84,10 @@ export class MapComponent implements OnInit, AfterViewInit, OnDestroy {
     // Add container marker
     this.containerMarker = L.icon({
       iconUrl: 'assets/img/dev_map/containers/map_container_small_green.svg',
-      iconSize: [27, 30],
+      iconSize: [38, 40],
       iconAnchor: [15, 42]
     });
-    this.marker = L.marker([56.465070, -2.926915], { icon: this.containerMarker });
+    this.marker = L.marker([56.465000, -2.927000], { icon: this.containerMarker });
     this.marker.addTo(this.map);
 
     // Add rig image
