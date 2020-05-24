@@ -93,7 +93,7 @@ export const Manifest: ManifestElement[] = [
     {
         status: 'backload', id: 582074, containerID: 'S7698', content: [
             { name: 'Waste Misc Scrap Hoses ', itemId: 9002, amount: '1', weight: '', recipient: '' },
-        ], location: 'Area 1', type: 'Skip', weight: '1.9', size: '8 (4x2)', DG: '-', arrival: '01.01.2020', sender: 'Westco 8cup'
+        ], location: 'Area 1', type: 'Container', weight: '1.9', size: '8 (4x2)', DG: '-', arrival: '01.01.2020', sender: 'Westco 8cup'
     },
 
 ];
