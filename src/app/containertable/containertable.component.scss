@@ -138,12 +138,13 @@
   opacity: 1;
 }
 mat-button-toggle-group {
-  border: 1px solid #42b0d5;
+  border: 2px solid #42b0d5;
   border-radius: 2px;
   opacity: 1;
   // width: 71px;
   // height: 36px;
   line-height: 36px;
+  box-shadow: 0px 2px 2px #0000003D !important;
 }
 // Needed for toggle-button!!
 ::ng-deep .mat-button-toggle-label-content {
