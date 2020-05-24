@@ -59,7 +59,8 @@ export class MapComponent implements OnInit, AfterViewInit, OnDestroy {
     this.tiles = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
       attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
       maxZoom: 25,
-      id: 'mapbox/streets-v11',
+      //id: 'mapbox/streets-v11',
+      id: 'mapbox/',
       tileSize: 512,
       zoomOffset: -1,
       accessToken: 'pk.eyJ1IjoiY2hyaXNodWI2OCIsImEiOiJjazlqcXBsamowNWtoM2ZxbmU1eTk0ZXN6In0._rn1h8GNssL9jpOBahB6mg'
@@ -72,13 +73,13 @@ export class MapComponent implements OnInit, AfterViewInit, OnDestroy {
       (btn, map) => { map.setView([56.465185, -2.926419], 19.7); }).addTo(this.map);
 
     // Add another container marker
-    this.containerMarker = L.icon({
-      iconUrl: 'assets/img/dev_map/containers/map_container_big_orange.svg',
-      iconSize: [30, 42],
-      iconAnchor: [15, 42],
-    });
-    this.marker = L.marker([56.464995, -2.926910], { icon: this.containerMarker, rotationAngle: 120 });
-    this.marker.addTo(this.map);
+    // this.containerMarker = L.icon({
+    //   iconUrl: 'assets/img/dev_map/containers/map_container_big_orange.svg',
+    //   iconSize: [30, 42],
+    //   iconAnchor: [15, 42],
+    // });
+    // this.marker = L.marker([56.464995, -2.926910], { icon: this.containerMarker, rotationAngle: 120 });
+    // this.marker.addTo(this.map);
 
     // Add container marker
     this.containerMarker = L.icon({
@@ -94,6 +95,7 @@ export class MapComponent implements OnInit, AfterViewInit, OnDestroy {
     const imageBounds: LatLngBoundsExpression = [[56.465552, -2.927335], [56.464787, -2.925404]];
     const image = L.imageOverlay(imageUrl, imageBounds).addTo(this.map);
     L.imageOverlay('assets/img/dev_map/map_maersk_only_areas.svg', [[56.465552, -2.927335], [56.464787, -2.925404]]).addTo(this.map);
+    L.imageOverlay('assets/img/dev_map/map_maersk_only_containers.svg', [[56.465552, -2.927335], [56.464787, -2.925404]]).addTo(this.map);
     // Set view on image
     this.map.setView([56.465185, -2.926419], 19.7);
   }
