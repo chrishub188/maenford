@@ -1,4 +1,4 @@
-Shell service commands:
+#Shell service commands:
 
 sudo systemctl start mosquitto.service
 sudo systemctl start snap.node-red.node-red.service
@@ -9,14 +9,17 @@ sudo systemctl stop snap.node-red.node-red.service
 sudo systemctl status mosquitto.service
 sudo systemctl status snap.node-red.node-red.service
 
-Test open ports:
+#Test open ports:
 sudo lsof -i -P -n
 sudo lsof -i -P -n | grep LISTEN
 
-Shell test commands for mosquitto:
+#Shell test commands for mosquitto:
 
 mosquitto_sub -v -t 'beacon/output'
 mosquitto_pub -t 'beacon/output' -m 'helloWorld'
 
 mosquitto_pub -h 3.127.172.28 -t beacon/output -m "Hello"
 mosquitto_sub -h 3.127.172.28 -t beacon/output
+
+#Connect to server (!!first add your ssh key!!)
+ssh ubuntu@3.127.172.28
