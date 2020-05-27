@@ -48,10 +48,10 @@
           <th mat-header-cell *matHeaderCellDef mat-sort-header class="header">Status</th>
           <td mat-cell *matCellDef="let row" class="cell">
             <div *ngIf="row.status=='empty'">
-              <div matTooltip="{{row.status}}"><span class="markerbuttonbackload"></span></div>
+              <div matTooltip="{{row.status}}"><span class="markerbuttonempty"></span></div>
             </div>
             <div *ngIf="row.status=='backload'">
-              <div matTooltip="{{row.status}}"><span class="markerbuttonempty"></span></div>
+              <div matTooltip="{{row.status}}"><span class="markerbuttonbackload"></span></div>
             </div>
             <div *ngIf="row.status=='in use'">
               <div matTooltip="{{row.status}}"><span class="markerbuttoninuse"></span></div>
