@@ -1,7 +1,5 @@
 #define CAMERA_MODEL_AI_THINKER
-//#include <NMEAGPS.h>
 
-#include <HardwareSerial.h>
 #include <TinyGPS.h>
 
 #include <PubSubClient.h>
@@ -13,7 +11,7 @@
 //#include <I2Cdev.h>
 
 //Name of the beacon
-const String BeaconName = "B2";
+const String BeaconName = "B3";
 const char* RaspberryPiIP = "3.127.172.28";
 
 //Pin defines
@@ -36,6 +34,12 @@ String Container = "";
 String ContainerList[200];
 uint8_t ContainerListLength = 200;
 
+//Array storing the longs and lat
+//Store the last 20 values
+float flon_array[30];
+float flat_array[30];
+uint8_t ArrayLength = 30;
+
 //Initialize Wifi MQTT
 EspMQTTClient client{
   "maenford", //SSID
@@ -45,6 +49,9 @@ EspMQTTClient client{
 
 //Initialize GPS
 TinyGPS gps;
+
+//Timing
+unsigned long Interval = 1000;
   
 void setup() {
   //Initialize ports
@@ -64,6 +71,11 @@ void setup() {
 }
 
 void loop() {
+  //uint32_t currentMillis = millis();
+  //static uint32_t TimeA = 1000;
+  //static uint32_t TimeB = 2000;
+  static bool CheckWifi = false;
+  
   //Update MQTT
   client.loop();
 
@@ -75,26 +87,31 @@ void loop() {
   //Serial.println(ButtonStatus);
 
   //Display wifi and MQTT connection
-  digitalWrite(Light_1, HIGH);
-  if(client.isWifiConnected()){
-    digitalWrite(Light_2, HIGH);
+  if(CheckWifi){
+     digitalWrite(Light_1, HIGH);
+    if(client.isWifiConnected()){
+      digitalWrite(Light_2, HIGH);
+    }
+    else{
+      digitalWrite(Light_2, LOW);
+    }
+    CheckWifi = false;
   }
   else{
-    digitalWrite(Light_2, LOW);
+    digitalWrite(Light_1, LOW);
+    if(client.isMqttConnected()){
+      digitalWrite(Light_2, HIGH);
+    }
+    else{
+      digitalWrite(Light_2, LOW);
+    }
+    CheckWifi = true;
   }
-  delay(1500);
-  digitalWrite(Light_1, LOW);
-  if(client.isMqttConnected()){
-    digitalWrite(Light_2, HIGH);
+  delay(300);
+  //Update the GPS reading if available
+  if(Serial.available()){
+    UpdateGPS();
   }
-  else{
-    digitalWrite(Light_2, LOW);
-  }
-  delay(1500);
-  digitalWrite(Light_2, LOW);
-
-  //Update the GPS reading
-  UpdateGPS();
 }
 
 //Updates the battery level
@@ -141,6 +158,27 @@ void UpdateGPS(){
   float flat, flon;
   unsigned long age;
   gps.f_get_position(&flat, &flon, &age);
+  //Add the new value to the array
+  static uint8_t ArrayIndex = 0;
+  flat_array[ArrayIndex] = flat;
+  flon_array[ArrayIndex] = flon;
+  
+  //Increment the array index
+  ++ArrayIndex;
+  if(ArrayIndex >= ArrayLength){
+    ArrayIndex = 0;
+  }
+
+  //Get the average value
+  double flat_average = 0;
+  double flon_average = 0;
+  for(uint8_t i = 0; i < ArrayLength; ++i){
+    flat_average += flat_array[i];
+    flon_average += flon_array[i];
+  }
+  flat = flat_average/ArrayLength;
+  flon = flon_average/ArrayLength;
+  
   String LatTemp = String(flat == TinyGPS::GPS_INVALID_F_ANGLE ? 0.0 : flat, 6);
   String LongTemp = String(flon == TinyGPS::GPS_INVALID_F_ANGLE ? 0.0 : flon, 6);
 
