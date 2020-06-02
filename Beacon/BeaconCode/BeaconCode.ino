@@ -11,7 +11,7 @@
 //#include <I2Cdev.h>
 
 //Name of the beacon
-const String BeaconName = "B3";
+const String BeaconName = "A0";
 const char* RaspberryPiIP = "3.127.172.28";
 
 //Pin defines
@@ -36,9 +36,9 @@ uint8_t ContainerListLength = 200;
 
 //Array storing the longs and lat
 //Store the last 20 values
-float flon_array[30];
-float flat_array[30];
-uint8_t ArrayLength = 30;
+float flon_array[10];
+float flat_array[10];
+uint8_t ArrayLength = 10;
 
 //Initialize Wifi MQTT
 EspMQTTClient client{
@@ -84,6 +84,9 @@ void loop() {
 
   //Check button
   ButtonStatus = digitalRead(Button);
+    if(ButtonStatus == LOW){
+      UpdateDataMQTT();
+    }
   //Serial.println(ButtonStatus);
 
   //Display wifi and MQTT connection
@@ -187,7 +190,10 @@ void UpdateGPS(){
     Lat = LatTemp;
     Long = LongTemp;
     //Send the updated data via MQTT
-    UpdateDataMQTT();
+    ButtonStatus = digitalRead(Button);
+    if(ButtonStatus == LOW){
+      UpdateDataMQTT();
+    }
   }
 }
 
