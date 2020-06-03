@@ -5,8 +5,9 @@ import * as L from 'leaflet';
 export interface Container{
   // Primary key
   containerID: string;
-  marker: L.Marker;
   beaconID: string;
+  marker: L.Marker;
+  viewStatus: string;
 }
 
 @Injectable({
@@ -36,15 +37,6 @@ export class MarkerService {
     console.log(this.containersList);
   }
   // Todo not tested
-  public findByContainerID(containerId: string): Container{
-    this.containersList.forEach(element => {
-      if ( element.containerID.localeCompare(containerId) === 0){
-        return element;
-      }
-    });
-    return null;
-  }
-  // Todo not tested
   public removeContainerFromMap(map: L.Map, container: Container  ): void{
      map.removeLayer(container.marker);
      const index = this.containersList.indexOf(container);
@@ -52,13 +44,20 @@ export class MarkerService {
       this.containersList.splice(index);
      }
    }
+  // Todo
+  public findByContainerID(containerId: string): Container{
+    // this.containersList.forEach(element => {
+    //   if ( element.containerID.localeCompare(containerId) === 0){
+    //     return element;
+    //   }
+    // });
+    return null;
+  }
   public updateContainerPosition(container: Container, lat, lng): void{
-    const index  = this.containersList.indexOf(container);
-    this.marker = container.marker;
-    this.marker.setLatLng([lat, lng]).update();
+    //Todo
   }
 
-  public updatePositionByBeaconID(beaconID: string, lat, lng): void{
+  public updatePositionByBeaconID(map: L.Map, beaconID: string, lat, lng): void{
     this.containersList.forEach( (element, index) => {
       // console.log(index);
       // console.log(element);

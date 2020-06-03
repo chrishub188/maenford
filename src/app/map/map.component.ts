@@ -72,8 +72,9 @@ export class MapComponent implements OnInit, AfterViewInit, OnDestroy {
 
     this.container = {
       containerID: 'AME170',
-      marker: null,
       beaconID: 'B1',
+      marker: null,
+     viewStatus: 'inuse',
     } as Container;
     this.markerService.addContainerToMap(this.map, this.container);
   }
@@ -85,7 +86,7 @@ export class MapComponent implements OnInit, AfterViewInit, OnDestroy {
       //console.log(message.payload.toString().split(','));
       console.log(message.payload.toString());
       let messageItems = message.payload.toString().split(',');
-      this.markerService.updatePositionByBeaconID('B1', messageItems[3], messageItems[5]);
+      this.markerService.updatePositionByBeaconID(this.map, 'B1', messageItems[3], messageItems[5]);
     });
   }
 
