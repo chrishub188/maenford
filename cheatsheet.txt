@@ -18,8 +18,8 @@ sudo lsof -i -P -n | grep LISTEN
 mosquitto_sub -v -t 'beacon/output'
 mosquitto_pub -t 'beacon/output' -m 'helloWorld'
 
-mosquitto_pub -h 3.127.172.28 -t beacon/output -m "Hello"
-mosquitto_sub -h 3.127.172.28 -t beacon/output
+mosquitto_pub -h 3.127.172.28 -t server/position_out -m "ID,B1,Lat,56.465168,Long,-2.926301"
+mosquitto_sub -h 3.127.172.28 -t server/position_out
 
 #Connect to server (!!first add your ssh key!!)
 ssh ubuntu@3.127.172.28
