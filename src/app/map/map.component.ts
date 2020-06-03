@@ -72,7 +72,7 @@ export class MapComponent implements OnInit, AfterViewInit, OnDestroy {
     this.map.setView([56.465185, -2.926419], 19.7);
 
     this.container1 = {
-      containerID: 'AME170',
+      containerID: 'AME171',
       beaconID: 'B3',
       marker: null,
      viewStatus: 'inuse',
