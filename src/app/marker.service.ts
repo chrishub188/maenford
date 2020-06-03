@@ -53,9 +53,6 @@ export class MarkerService {
     // });
     return null;
   }
-  public updateContainerPosition(container: Container, lat, lng): void{
-    //Todo
-  }
 
   public updatePositionByBeaconID(map: L.Map, beaconID: string, lat, lng): void{
     this.containersList.forEach( (element, index) => {

@@ -21,7 +21,8 @@ export class MapComponent implements OnInit, AfterViewInit, OnDestroy {
   msg: any;
   isConnected = false;
   private map;
-  container: Container;
+  container1: Container;
+  container2: Container;
 
   constructor(private mqttService: MqttService, private markerService: MarkerService) { }
 
@@ -70,13 +71,22 @@ export class MapComponent implements OnInit, AfterViewInit, OnDestroy {
     // Set view on image
     this.map.setView([56.465185, -2.926419], 19.7);
 
-    this.container = {
+    this.container1 = {
       containerID: 'AME170',
-      beaconID: 'B1',
+      beaconID: 'B3',
       marker: null,
      viewStatus: 'inuse',
     } as Container;
-    this.markerService.addContainerToMap(this.map, this.container);
+
+    this.container2 = {
+      containerID: 'AMN550',
+      beaconID: 'B2',
+      marker: null,
+      viewStatus: 'empty',
+    } as Container;
+
+    this.markerService.addContainerToMap(this.map, this.container1);
+    this.markerService.addContainerToMap(this.map, this.container2);
   }
 
   private subscribeNewTopic(topic: string): void {
@@ -86,7 +96,7 @@ export class MapComponent implements OnInit, AfterViewInit, OnDestroy {
       //console.log(message.payload.toString().split(','));
       console.log(message.payload.toString());
       let messageItems = message.payload.toString().split(',');
-      this.markerService.updatePositionByBeaconID(this.map, 'B1', messageItems[3], messageItems[5]);
+      this.markerService.updatePositionByBeaconID(this.map, messageItems[1], messageItems[3], messageItems[5]);
     });
   }
 
