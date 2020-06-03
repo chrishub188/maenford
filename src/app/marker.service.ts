@@ -36,22 +36,13 @@ export class MarkerService {
     console.log('Container List');
     console.log(this.containersList);
   }
-  // Todo not tested
+  
   public removeContainerFromMap(map: L.Map, container: Container  ): void{
      map.removeLayer(container.marker);
      const index = this.containersList.indexOf(container);
      if (index > -1){
       this.containersList.splice(index);
      }
-   }
-  // Todo
-  public findByContainerID(containerId: string): Container{
-    // this.containersList.forEach(element => {
-    //   if ( element.containerID.localeCompare(containerId) === 0){
-    //     return element;
-    //   }
-    // });
-    return null;
   }
 
   public updatePositionByBeaconID(map: L.Map, beaconID: string, lat, lng): void{
