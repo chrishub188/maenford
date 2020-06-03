@@ -1,12 +1,14 @@
 import { Component, OnInit, AfterViewInit, OnDestroy, HostListener } from '@angular/core';
-import * as L from 'leaflet';
-import { LatLngBoundsExpression } from 'leaflet';
 import { Subscription } from 'rxjs';
 import { IMqttMessage, MqttService } from 'ngx-mqtt';
+import { MarkerService,Container } from '../marker.service';
+
+//Leaflet plus addons 
+import * as L from 'leaflet';
+import { LatLngBoundsExpression } from 'leaflet';
 import 'leaflet-easybutton';
 import 'leaflet-easybutton/src/easy-button.css';
 import 'leaflet-rotatedmarker';
-
 
 @Component({
   selector: 'app-map',
@@ -19,24 +21,23 @@ export class MapComponent implements OnInit, AfterViewInit, OnDestroy {
   msg: any;
   isConnected = false;
   private map;
-  private tiles;
-  private marker;
-  private containerMarker;
+  container: Container;
 
-  constructor(private _mqttService: MqttService) { }
+  constructor(private mqttService: MqttService, private markerService: MarkerService) { }
 
   ngOnDestroy(): void {
     this.subscription.unsubscribe();
   }
 
   ngAfterViewInit(): void {
+    // Set configuration of the rig
     this.initMap();
   }
 
   ngOnInit(): void {
-    // ID,A0,Lat,56.465185,Long,-2.926419
-    //this._mqttService.unsafePublish('server/position_in', 'Anchor,Lat,56.465185,Long,-2.926419');
-    this._mqttService.unsafePublish('server/position_in', 'Anchor,Lat,56.465185,Long,-2.926419');
+    // Publish anker position of the rig 
+    //Message format ID,A0,Lat,56.465185,Long,-2.926419
+    this.mqttService.unsafePublish('server/position_in', 'Anchor,Lat,56.465185,Long,-2.926419');
     this.subscribeNewTopic('server/position_out');
   }
 
@@ -55,41 +56,10 @@ export class MapComponent implements OnInit, AfterViewInit, OnDestroy {
       position: 'topright'
     }).addTo(this.map);
 
-    // Add  open streetmap map layer to the map
-    this.tiles = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
-      attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-      maxZoom: 25,
-      id: '',
-      //id: 'mapbox/streets-v11',
-      //id: 'mapbox://styles/chrishub68/ck9mvkw5726kf1immmnqoj9gb',
-      tileSize: 512,
-      zoomOffset: -1,
-      accessToken: 'pk.eyJ1IjoiY2hyaXNodWI2OCIsImEiOiJjazlqcXBsamowNWtoM2ZxbmU1eTk0ZXN6In0._rn1h8GNssL9jpOBahB6mg'
-    }).addTo(this.map);
-
     //Add easy button to center location
     L.easyButton(
-      //'<span class="material-icons">location_on</span>',
       '<img src="assets/img/marker_white.svg" style="width: 20px; height: 20px; padding-right: 5px;">',
       (btn, map) => { map.setView([56.465185, -2.926419], 19.7); }).addTo(this.map);
-
-    // Add another container marker
-    // this.containerMarker = L.icon({
-    //   iconUrl: 'assets/img/dev_map/containers/map_container_big_orange.svg',
-    //   iconSize: [30, 42],
-    //   iconAnchor: [15, 42],
-    // });
-    // this.marker = L.marker([56.464995, -2.926910], { icon: this.containerMarker, rotationAngle: 120 });
-    // this.marker.addTo(this.map);
-
-    // Add container marker
-    this.containerMarker = L.icon({
-      iconUrl: 'assets/img/dev_map/containers/map_container_small_green.svg',
-      iconSize: [38, 40],
-      iconAnchor: [15, 42]
-    });
-    this.marker = L.marker([56.465000, -2.927000], { icon: this.containerMarker });
-    this.marker.addTo(this.map);
 
     // Add rig image
     const imageUrl = 'assets/img/dev_map/new/map_maersk_basis_new.svg';
@@ -99,26 +69,24 @@ export class MapComponent implements OnInit, AfterViewInit, OnDestroy {
     L.imageOverlay('assets/img/dev_map/map_maersk_only_containers.svg', [[56.465552, -2.927335], [56.464787, -2.925404]]).addTo(this.map);
     // Set view on image
     this.map.setView([56.465185, -2.926419], 19.7);
+
+    this.container = {
+      containerID: 'AME170',
+      marker: null,
+      beaconID: 'B1',
+    } as Container;
+    this.markerService.addContainerToMap(this.map, this.container);
   }
 
   private subscribeNewTopic(topic: string): void {
     this.topicname = topic;
-    this.subscription = this._mqttService.observe(this.topicname).subscribe((message: IMqttMessage) => {
+    this.subscription = this.mqttService.observe(this.topicname).subscribe((message: IMqttMessage) => {
       this.msg = message;
-      console.log(message.payload.toString().split(','));
+      //console.log(message.payload.toString().split(','));
       console.log(message.payload.toString());
       let messageItems = message.payload.toString().split(',');
-      this.updateMarker(messageItems[3], messageItems[5]);
+      this.markerService.updatePositionByBeaconID('B1', messageItems[3], messageItems[5]);
     });
   }
-
-  private updateMarker(lat, lng): void {
-    this.marker.setLatLng([lat, lng]).update();
-  }
-
-  // @HostListener('window:click', ['$event.target'])
-  // onClick(targetElement: string) {
-  //     console.log(targetElement);
-  // }
 
 }
