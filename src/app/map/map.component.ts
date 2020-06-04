@@ -23,6 +23,7 @@ export class MapComponent implements OnInit, AfterViewInit, OnDestroy {
   private map;
   container1: Container;
   container2: Container;
+  togglecounter: number;
 
   constructor(private mqttService: MqttService, private markerService: MarkerService) { }
 
@@ -85,8 +86,8 @@ export class MapComponent implements OnInit, AfterViewInit, OnDestroy {
       viewStatus: 'empty',
     } as Container;
 
-    this.markerService.addContainerToMap(this.map, this.container1);
-    this.markerService.addContainerToMap(this.map, this.container2);
+    this.markerService.addContainerToMap(this.map, this.container1, 56.465025, -2.927000);
+    this.markerService.addContainerToMap(this.map, this.container2, 56.465135, -2.926326);
   }
 
   private subscribeNewTopic(topic: string): void {
