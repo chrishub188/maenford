@@ -11,7 +11,7 @@
 //#include <I2Cdev.h>
 
 //Name of the beacon
-const String BeaconName = "A0";
+const String BeaconName = "B2";
 const char* RaspberryPiIP = "3.127.172.28";
 
 //Pin defines
@@ -199,7 +199,7 @@ void UpdateGPS(){
 
 //Command sent when beacon connection is established
 void onConnectionEstablished() {
-  UpdateDataMQTT();
+  //UpdateDataMQTT();
 }
 
 //Sent whenever we need to update data
